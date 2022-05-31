@@ -1,0 +1,25 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# seiScraper
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+O objetivo deste pacote é construir um scraper do SEI. Inicialmente nosso objetivo é somente baixar dados para o projeto do Observatório do Mercado de Capitais, mas depois podemos evoluir para ficar mais geral.
+
+As funções principais do pacote são `sei_download_processo()` e `sei_parse_processo()`.
+
+O pacote já é capaz de resolver o captcha.
