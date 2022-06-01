@@ -5,8 +5,8 @@
 
 ssl <- httr::config(ssl_verifypeer = FALSE)
 u_sei <- "https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar&id_orgao_acesso_externo=0"
-r_sei <- httr::GET(u_sei, ssl, httr::write_disk("output/sei.html", overwrite = TRUE))
-html_sei <- xml2::read_html("output/sei.html")
+r_sei <- httr::GET(u_sei, ssl)
+html_sei <- xml2::read_html(r_sei)
 
 # captcha -----------------------------------------------------------------
 sei_all_numbers <- function() {
@@ -61,10 +61,17 @@ ans <- captcha_classify_sei(xy[1], xy[2])
 # id ----------------------------------------------------------------------
 
 id <- "10372100225201917"
+id |>
+  download_processo() |>
+  parse_processo()
+
+da <- id |>
+  download_mov() |>
+  parse_mov()
 
 # body --------------------------------------------------------------------
 
-body_full <- list(
+body <- list(
   "txtProtocoloPesquisa" = id,
   "txtCaptcha" = ans,
   "sbmPesquisar" = "Pesquisar",
@@ -97,7 +104,48 @@ body_full <- list(
 
 # POST --------------------------------------------------------------------
 
-r_id <- httr::POST(u_sei, ssl, body = body_full,
-                   httr::write_disk(paste0("output/processos/", id, ".html"),overwrite = TRUE))
+httr::POST(u_sei, ssl, body = body,
+                   httr::write_disk(glue::glue("{path}/{id}.html"),overwrite = TRUE))
+
+html_resultado <- xml2::read_html(glue::glue("{path}/{id}.html"))
+
+endpoint_resultado <- html_resultado |>
+  xml2::xml_find_first("//table/tr/td/a") |>
+  xml2::xml_attr("href")
+
+u_id <- glue::glue("https://sei.economia.gov.br/sei/modulos/pesquisa/{endpoint_resultado}")
 
 
+# id ----------------------------------------------------------------------
+
+r_id <- httr::GET(u_id, ssl, httr::write_disk(glue::glue("output/processos/{id}.html"), overwrite = TRUE))
+html_id <- xml2::read_html(glue::glue("output/processos/{id}.html"))
+
+tables_id <- html_id |>
+  xml2::xml_find_all("//table")
+
+table_id2 <- tables_id[2] |>
+  rvest::html_table() |>
+  as.data.frame()
+
+readr::write_rds(table_id2, glue::glue("data-raw/movs/movs_{id}.rds"))
+
+
+# proximos passos ---------------------------------------------------------
+# não precisa fazer uma função para baixar a página r0
+# fazer uma função para baixar a página principal com o link (armazenar as páginas principais com os links)
+# uma segunda função para receber um arquivo html e pegar o link. Ela retorna o link
+# uma terceira função para baixar a página do processo a partir do link (armazenar essas páginas também)
+# e uma quarta função para processar o html e retornar uma tibble
+# não precisa ness quarta função salvar as movs
+# depois disso a gente usa o purrr::map_dfr() para empilhar todas as movs, o map ja vai deixar a gente criar uma coluna nova para cada processo
+# # no parâmetro .id a gente coloca o nome do arquivo como o nome da coluna
+#
+# Estrutura dos arquivos
+# 1. Colocar o output dentro do data-raw
+# 2. Fazer pastas pareadas com os nomes das funções
+# Digamos que a função que baixa o nome dos links seja "download-processos", então a pasta vai se chamar "processos". E eu coloco os brutos lá.
+# E digamos que a função os links seja "download-movimentacoes", então a pasta se chama "movs".
+#
+# Depois disso, eu faço a iteração
+# A iteração eu faço direto no data-raw. Pra ter controle de erros.
