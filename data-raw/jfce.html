@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<!-- html desenvolvido para ser totalmente responsivo-->
+<!-- Desenvolvido pela Secao de Inovacao, Padronizacao e Integracao Tecnologica do TRF5 -->
+<!-- Utilizamos JQuery versao 1.11.1 para ter compatibilidade com IE9 (ou menor) e Bootstrap para facilitar a formatacao das paginas -->
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+	<base href="https://www.jfce.jus.br/institucional/composicao" />
+	<meta name="author" content="Justiça Federal no Ceará" />
+	<meta name="description" content="Portal JFCE" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Composição - Portal JFCE</title>
+	<link href="/templates/portalresponsivotrf5/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://www.jfce.jus.br/component/search/?Itemid=727&amp;format=opensearch" rel="search" title="Pesquisar Portal JFCE" type="application/opensearchdescription+xml" />
+	<link href="/media/plg_content_mavikthumbnails/slimbox2/css/slimbox2.css" rel="stylesheet" />
+	<style>
+a.thumbnail {display: inline-block; zoom: 1; *display: inline;}
+	</style>
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"affc84a250e70d4c30b44229e23a1460","system.paths":{"root":"","base":""}}</script>
+	<script src="/media/jui/js/jquery.min.js?1cfaa5cd0fb09ec7bf6d66afa0d6ea41"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?1cfaa5cd0fb09ec7bf6d66afa0d6ea41"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?1cfaa5cd0fb09ec7bf6d66afa0d6ea41"></script>
+	<script src="/media/plg_content_mavikthumbnails/slimbox2/js/slimbox2.js"></script>
+	<script src="/media/system/js/caption.js?1cfaa5cd0fb09ec7bf6d66afa0d6ea41"></script>
+	<script src="/media/jui/js/bootstrap.min.js?1cfaa5cd0fb09ec7bf6d66afa0d6ea41"></script>
+	<script src="/media/system/js/mootools-core.js?1cfaa5cd0fb09ec7bf6d66afa0d6ea41"></script>
+	<script src="/media/system/js/core.js?1cfaa5cd0fb09ec7bf6d66afa0d6ea41"></script>
+	<script src="https://www.jfce.jus.br/templates/portalresponsivotrf5/js/bootbox.min.js"></script>
+	<script src="https://www.jfce.jus.br/templates/portalresponsivotrf5/js/jquery.mask.js"></script>
+	<script src="https://www.jfce.jus.br/templates/portalresponsivotrf5/js/script.js"></script>
+	<script src="https://www.jfce.jus.br/templates/portalresponsivotrf5/js/slick.min.js"></script>
+	<script src="/modules/mod_jvbingtranslator/assets/js/default.js"></script>
+	<script>
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+	</script>
+	<meta property="og:image" content="https://www.jfce.jus.br/images/thumbnails/images/institucional/composicao/Alcides_Saldanha/Alcides_Saldanha_Lima_2-fill-75x75.jpg" />
+
+    <meta name="contact" content="sipit@trf5.jus.br">
+    <meta name="author"
+          content="Tribunal Regional Federal da 5ª Região, Subsecretaria de Tecnologia da Informação, SIPIT, Setor de Portais e Usabilidade de Software e Seção de Arquitetura de Sistemas">
+
+    <!-- O Modernizr e chamado de polyfill cujo objetivo e apenas oferecer facilidades nao implementadas em navegadores antigos -->
+    <!-- O Normalizer e um pequeno arquivo CSS que melhora a consistencia nos estilos padroes dos navegadores em elementos HTML -->
+
+    <link rel="stylesheet" type="text/css"
+          href="/templates/portalresponsivotrf5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/media/jui/css/icomoon.css" type="text/css"/>
+    <link rel="stylesheet" href="/templates/portalresponsivotrf5/css/slick.css"
+          type="text/css"/>
+        <link rel="stylesheet" type="text/css"
+          href="/templates/portalresponsivotrf5/css/font-awesome/css/font-awesome.min.css"/>
+    
+    
+                
+    
+    <link rel="stylesheet" href="/templates/portalresponsivotrf5/css/style.css"
+          type="text/css"/>
+    <link rel="stylesheet" type="text/css"
+          href="/templates/portalresponsivotrf5/css/style_mediaqueries.css"/>
+
+    <!-- CSS provisório para contador de atos processuais-->
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <link href="/templates/portalresponsivotrf5/css/styleIE8.css" rel="stylesheet">
+    <script src="/templates/portalresponsivotrf5/js/html5shiv.min.js"></script>
+    <script src="/templates/portalresponsivotrf5/js/respond.min.js"></script>
+    <![endif]-->
+
+    <base href="https://www.jfce.jus.br/">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-223667636-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Universal Google Analytics Plugin by PB Web Development -->
+
+
+</head>
+<body>
+<div id="MicrosoftTranslatorWidget"
+     style="width: 100%; min-height: 83px; border-color: #3A5770; background-color: #78ADD0; display:block"></div>
+<script type="text/javascript">
+    getBingWidget('pt');
+</script>
+
+
+<header>
+    <div class="div-header-top">
+        <span class="menu-anchor"></span>
+        <a href="https://www.jfce.jus.br/" title="Composição - Portal JFCE">
+            <figure>
+                <img src="/templates/portalresponsivotrf5/imagens/bg-top.png"
+                     title="Logo da República Federativa do Brasil - Justiça Federal da 5ª Região"
+                     alt="Logo da República do Brasil - Justiça Federal da 5ª Região"/>
+            </figure>
+        </a>
+        <a href="http://http://www.trf5.jus.br" target="_blank">
+            <figure>
+                <img src="/templates/portalresponsivotrf5/imagens/ico-trf5.png"
+                     title="Link do Tribunal Regional Federal da 5ª Região"
+                     alt="Link do Tribunal Regional Federal da 5ª Região" class="margem_icone"/>
+            </figure>
+        </a>
+        <nav id="Div_Nav_Topo">
+            <p>Seções judiciárias</p>
+<ul  id="Div_Secoes">
+    <li class="item-524"><a href="http://www.trf5.jus.br" title="Tribunal Regional Federal da 5ª Região" target="_blank" rel="noopener noreferrer">TRF5</a></li><li class="item-525"><a href="http://www.jfal.jus.br/" title="Justiça Federal em Alagoas" target="_blank" rel="noopener noreferrer">JFAL</a></li><li class="item-526"><a href="http://www.jfce.jus.br/" title="Justiça Federal no Ceará" class="TRF5_destaque active ico-jfce" target="_blank" rel="noopener noreferrer">JFCE</a></li><li class="item-527"><a href="http://www.jfpb.jus.br/" title="Justiça Federal na Paraíba" target="_blank" rel="noopener noreferrer">JFPB</a></li><li class="item-528"><a href="http://www.jfpe.jus.br/" title="Justiça Federal em Pernambuco" target="_blank" rel="noopener noreferrer">JFPE</a></li><li class="item-529"><a href="http://www.jfrn.jus.br/" title="Justiça Federal no Rio Grande do Norte" target="_blank" rel="noopener noreferrer">JFRN</a></li><li class="item-530"><a href="http://www.jfse.jus.br/" title="Justiça Federal em Sergipe" target="_blank" rel="noopener noreferrer">JFSE</a></li></ul>
+<p>Acessibilidade</p>
+<ul class="div-acessibilidade">
+    <li>
+        <a href="/mapa-do-site?view=default" tabindex="1" title="Acesso ao Mapa do Site" data-toggle="tooltip"
+           data-placement="bottom">
+            <figure>
+                <i class="fa fa-sitemap" aria-hidden="true" style="font-size: 18px;"></i>
+                <!--<img src="https://www.jfce.jus.br/templates/portalresponsivotrf5/imagens/icones_extra/ico-mapasite.png"
+                     title="Acesso ao Mapa do Site" data-toggle="tooltip" data-placement="bottom"
+                     alt="Acesso ao Mapa do Site"/>-->
+            </figure>
+            <p>Mapa do site</p>
+        </a>
+    </li>
+    <li id="accessibilityBtn">
+        <a href="/pagina_acessibilidade.html" accesskey="v" tabindex="2" title="Acessibilidade (Shift + Alt + v)"
+           data-toggle="tooltip" data-placement="bottom">
+            <figure>
+                <i class="fa fa-wheelchair" aria-hidden="true" style="font-size: 18px;"></i>
+                <!--<img src="https://www.jfce.jus.br/templates/portalresponsivotrf5/imagens/icones_extra/ico-acessibilidade.png"
+                     title="Acessibilidade (Shift + Alt + v)" data-toggle="tooltip" data-placement="bottom"
+                     alt="Instruções para ter acessibilidade"/>-->
+            </figure>
+            <p>Acessibilidade</p>
+        </a>
+    </li>
+    <li id="zoomInBtn">
+        <a href="javascript:void(0)" accesskey="a" tabindex="3">
+            <figure>
+                <img src="https://www.jfce.jus.br/templates/portalresponsivotrf5/imagens/icones_extra/ico-font-plus.png"
+                     title="Aumentar fonte (Shift + Alt + a)" data-toggle="tooltip" data-placement="bottom"
+                     alt="Clique aqui para aumentar a letra"/>
+            </figure>
+            <p>Aumentar fonte</p>
+        </a>
+    </li>
+    <li id="zoomOutBtn">
+        <a href="javascript:void(0)" accesskey="d" tabindex="4">
+            <figure>
+                <img src="https://www.jfce.jus.br/templates/portalresponsivotrf5/imagens/icones_extra/ico-font-minus.png"
+                     title="Diminuir fonte (Shift + Alt + d)" data-toggle="tooltip" data-placement="bottom"
+                     alt="Clique aqui para diminuir a letra"/>
+            </figure>
+            <p>Diminuir fonte</p>
+        </a>
+    </li>
+    <li id="highContrastBtn">
+        <a tabindex="5" href="javascript:void(0)" accesskey="t">
+            <figure>
+                <img src="https://www.jfce.jus.br/templates/portalresponsivotrf5/imagens/icones_extra/ico-contrast.png"
+                     title="Alto contraste (Shift + Alt + t)" data-toggle="tooltip" data-placement="bottom"
+                     alt="Clique aqui para utilizar o alto contraste"/>
+            </figure>
+            <p>Alto contraste</p>
+        </a>
+    </li>
+    <li id="resetBtn">
+        <a accesskey="r" tabindex="6" href="javascript:void(0)">
+            <figure>
+                <img src="https://www.jfce.jus.br/templates/portalresponsivotrf5/imagens/icones_extra/ico-reload.png"
+                     title="Retornar ao normal (Shift + Alt + r)" data-toggle="tooltip" data-placement="bottom"
+                     alt="Clique aqui para voltar às configurações originais"/>
+            </figure>
+            <p>Retornar ao normal</p>
+        </a>
+    </li>
+    <li id="translateBtn">
+        <a href="javascript:void(0)" tabindex="7">
+            <figure>
+                <img src="https://www.jfce.jus.br//templates/portalresponsivotrf5/imagens/icones_extra/ico-translator.png"
+                     title="Clique aqui para utilizar o Google Tradutor" data-toggle="tooltip" data-placement="bottom"
+                     alt="Clique aqui para utilizar o Google Tradutor"/>
+            </figure>
+            <p>Tradutor</p>
+        </a>
+    </li>
+            <li id="login_logoffBtn">
+            <a href="/component/users/?view=login&amp;Itemid=707" data-toggle="tooltip"
+               data-placement="bottom"
+               title="Clique aqui para ter acesso ao Sistema de Atualização de Informações no Portal">
+                <figure>
+                    <i class="fa fa-user" aria-hidden="true" style="font-size: 18px;"></i>
+                    <!--<img src="https://www.jfce.jus.br/templates/portalresponsivotrf5/imagens/icones_extra/ico-login.png"
+                         data-toggle="tooltip" data-placement="bottom"
+                         title="Clique aqui para ter acesso ao Sistema de Atualização de Informações no Portal"
+                         alt="Clique aqui para ter acesso ao Sistema de Atualização de Informações no Portal"/>-->
+                </figure>
+                <p>Login</p>
+            </a>
+        </li>
+    </ul>
+        </nav>
+        <span class="opcoes-anchor"><span class="round-button"></span></span>
+    </div>
+</header>
+<div id="Container">
+    <div id="Div_HeaderMedium">
+        <div id="Div_Imagens">
+            <a href="https://www.jfce.jus.br/" accesskey="1">
+                <figure>
+                    
+                     
+      <img src="/templates/portalresponsivotrf5/imagens/logo-jfce.png"
+                         title="Imagem do Portal da Justiça Federal" alt="Imagem do Portal da Justiça Federal"/>                    
+                  
+                </figure>
+            </a>
+        </div>
+        <div class="div-buscar">
+            <form action="/component/search/" method="get" class="form-inline">
+    <div class="form-group search-field">
+        <input type="search" name="searchword" id="busca" maxlength="200"  class="inputbox form-control" type="text" size="60" placeholder="Pesquise e aperte enter"  onblur="if (this.value=='') this.value='Pesquise e aperte enter';" onfocus="if (this.value=='Pesquise e aperte enter') this.value='';" />        <input type="hidden" name="task" value="search"/>
+        <input type="hidden" name="option" value="com_search">
+                    <input type="hidden" name="Itemid" value="727"/>
+            </div>
+</form>
+        </div>
+    </div>
+    <div id="Div_HeaderBottom">
+        <nav id="Div_Navigator">
+            <ul class="nav nav-pills nav-hover"
+    >
+    <li><a href="/">Início</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="11" title="Institucional" alt="Institucional">Institucional</a><ul class="dropdown-menu"><h2 class="titleMenu">Institucional</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/institucional/composicao">Composição</a></li><li><a href="/institucional/gestao-documentos">Gestão de documentos</a></li><li><a href="/institucional/horarios-funcionamento">Horários de Funcionamento</a></li><li><a href="/institucional/normas-gerais-portarias">Normas Gerais/Portarias</a></li><li><a href="/institucional/historico">Histórico</a></li><li><a href="/institucional/telefones">Telefones e Endereços</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/institucional/jurisdicao" pai="2" tabindex="18" title="Jurisdição" alt="Jurisdição">Jurisdição</a><ul class="dropdown-menu"><h2 class="titleMenu">Jurisdição</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/institucional/jurisdicao/jurisdicao-crateus">Crateús</a></li><li><a href="/institucional/jurisdicao/jurisdicao-fortaleza">Fortaleza</a></li><li><a href="/institucional/jurisdicao/jurisdicao-iguatu">Iguatu</a></li><li><a href="/institucional/jurisdicao/jurisdicao-itapipoca">Itapipoca</a></li><li><a href="/institucional/jurisdicao/jurisdicao-juazeiro-do-norte">Juazeiro do Norte</a></li><li><a href="/institucional/jurisdicao/jurisdicao-limoeiro-do-norte">Limoeiro do Norte</a></li><li><a href="/institucional/jurisdicao/jurisdicao-quixada">Quixadá</a></li><li><a href="/institucional/jurisdicao/jurisdicao-sobral">Sobral</a></li><li><a href="/institucional/jurisdicao/jurisdicao-taua">Tauá</a></li><li><a href="/institucional/jurisdicao/maracanaú">Maracanaú</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/institucional/organizacao" pai="2" tabindex="29" title="Organização" alt="Organização">Organização</a><ul class="dropdown-menu"><h2 class="titleMenu">Organização</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/institucional/organizacao/classificacao-varas">Classificação das Varas</a></li><li><a href="https://www.jfce.jus.br/images/institucional/organizacao/Organograma/Resolues-Estrutura-Organizacional.pdf#">Estrutura Organizacional</a></li><li><a href="https://www.jfce.jus.br/images/institucional/organizacao/Organograma/Organograma.pdf#">Organograma</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/institucional/jfcesustentavel" pai="2" tabindex="33" title="JFCE Sustentável" alt="JFCE Sustentável">JFCE Sustentável</a><ul class="dropdown-menu"><h2 class="titleMenu">JFCE Sustentável</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/institucional/jfcesustentavel/gestaodocumentos">Gestão de documentos</a></li><li><a href="/institucional/jfcesustentavel/linksassociados">Links associados</a></li><li><a href="/institucional/jfcesustentavel/normativostextosinformativos">Normativos e textos informativos</a></li><li><a href="https://www.jfce.jus.br/images/PLS_CE.pdf#">Plano de logística Sustentável - PLS JFCE</a></li></ul></li><li><a href="/institucional/memoria">Memória</a></li><li><a href="https://autogestao.trf5.jus.br/">Autogestão em Saúde</a></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/institucional/biblioteca" pai="2" tabindex="40" title="Biblioteca" alt="Biblioteca">Biblioteca</a><ul class="dropdown-menu"><h2 class="titleMenu">Biblioteca</h2><a href="javascript:;" class="ico-close" ></a><li><a href="https://www2.cjf.jus.br/pergamum/biblioteca/index.php?id=jfce">Catálogo Online e Reserva</a></li><li><a href="/institucional/biblioteca/como-consultar">Como Consultar</a></li><li><a href="/institucional/biblioteca/portarias">Portarias</a></li></ul></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="44" title="Subseções" alt="Subseções">Subseções</a><ul class="dropdown-menu"><h2 class="titleMenu">Subseções</h2><a href="javascript:;" class="ico-close" ></a><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/crateus" pai="2" tabindex="45" title="Crateús" alt="Crateús">Crateús</a><ul class="dropdown-menu"><h2 class="titleMenu">Crateús</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/crateus/jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/crateus/audiencias">Audiências</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/itapipoca" pai="2" tabindex="48" title="Itapipoca" alt="Itapipoca">Itapipoca</a><ul class="dropdown-menu"><h2 class="titleMenu">Itapipoca</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/itapipoca/jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/itapipoca/audiencias">Audiências</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/limoeiro-do-norte" pai="2" tabindex="51" title="Limoeiro do Norte" alt="Limoeiro do Norte">Limoeiro do Norte</a><ul class="dropdown-menu"><h2 class="titleMenu">Limoeiro do Norte</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/limoeiro-do-norte/localizacao">Localização</a></li><li><a href="/subsecoes/limoeiro-do-norte/histórico">Histórico</a></li><li><a href="/subsecoes/limoeiro-do-norte/tour-fotografico">Tour fotográfico</a></li><li><a href="/subsecoes/limoeiro-do-norte/limoeiro-do-norte-jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/limoeiro-do-norte/limoeiro-do-norte-eventos">Eventos</a></li><li><a href="/subsecoes/limoeiro-do-norte/pericia-judicial">Perícia Judicial</a></li><li><a href="/subsecoes/limoeiro-do-norte/noticias">Notícias</a></li><li><a href="/subsecoes/limoeiro-do-norte/composicao">Composição</a></li><li><a href="/subsecoes/limoeiro-do-norte/legislacao-normas">Legislação/Normas</a></li><li><a href="/subsecoes/limoeiro-do-norte/audiencias">Audiências</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/sobral" pai="2" tabindex="62" title="Sobral" alt="Sobral">Sobral</a><ul class="dropdown-menu"><h2 class="titleMenu">Sobral</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/sobral/jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/sobral/composicao">Composição</a></li><li><a href="/subsecoes/sobral/tour-fotografico">Tour fotográfico</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/iguatu" pai="2" tabindex="66" title="Iguatu" alt="Iguatu">Iguatu</a><ul class="dropdown-menu"><h2 class="titleMenu">Iguatu</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/iguatu/jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/iguatu/audiencias">Audiências</a></li><li><a href="/subsecoes/iguatu/processo_concluidos">Processos Conclusos para Sentença</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/juazeiro-do-norte" pai="2" tabindex="70" title="Juazeiro do Norte" alt="Juazeiro do Norte">Juazeiro do Norte</a><ul class="dropdown-menu"><h2 class="titleMenu">Juazeiro do Norte</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/juazeiro-do-norte/composicao">Composição</a></li><li><a href="/subsecoes/juazeiro-do-norte/tour-fotografico">Tour fotográfico</a></li><li><a href="/subsecoes/juazeiro-do-norte/jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/juazeiro-do-norte/editais-juazeiro-do-norte">Editais</a></li><li><a href="/subsecoes/juazeiro-do-norte/audiencias">Audiências</a></li><li><a href="/subsecoes/juazeiro-do-norte/noticias">Notícias</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/quixada" pai="2" tabindex="77" title="Quixadá" alt="Quixadá">Quixadá</a><ul class="dropdown-menu"><h2 class="titleMenu">Quixadá</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/quixada/jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/quixada/audiencias">Audiências</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/taua" pai="2" tabindex="80" title="Tauá" alt="Tauá">Tauá</a><ul class="dropdown-menu"><h2 class="titleMenu">Tauá</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/taua/jurisdicao-e-competencia">Jurisdição e competência</a></li><li><a href="/subsecoes/taua/audiencias">Audiências</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/subsecoes/maracanau" pai="2" tabindex="83" title="Maracanaú " alt="Maracanaú ">Maracanaú </a><ul class="dropdown-menu"><h2 class="titleMenu">Maracanaú </h2><a href="javascript:;" class="ico-close" ></a><li><a href="/subsecoes/maracanau/jurisdição-e-competência">Jurisdição e competência</a></li><li><a href="/subsecoes/maracanau/audiências">Audiências</a></li></ul></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="86" title="Turmas Recursais" alt="Turmas Recursais">Turmas Recursais</a><ul class="dropdown-menu"><h2 class="titleMenu">Turmas Recursais</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/turmas-recursais/composicao">Composição</a></li><li><a href="/turmas-recursais/historico-da-composicao">Histórico da Composição</a></li><li><a href="/turmas-recursais/sessoes-de-julgamento">Sessões de Julgamento</a></li><li><a href="/turmas-recursais/regimento-interno">Regimento Interno</a></li><li><a href="/turmas-recursais/legislacao">Legislação</a></li><li><a href="/turmas-recursais/sustentacoes-orais">Sustentações Orais</a></li><li><a href="/turmas-recursais/informativo-de-jurisprudencia">Informativo de Jurisprudência</a></li><li><a href="/turmas-recursais/atas-das-sessões">Atas das Sessões</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="95" title="Juizados Especiais" alt="Juizados Especiais">Juizados Especiais</a><ul class="dropdown-menu"><h2 class="titleMenu">Juizados Especiais</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/juizados-especiais/informacoes">Informações</a></li><li><a href="/juizados-especiais/duvidas-frequentes">Dúvidas Frequentes</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="98" title="Audiências" alt="Audiências">Audiências</a><ul class="dropdown-menu"><h2 class="titleMenu">Audiências</h2><a href="javascript:;" class="ico-close" ></a><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/audiencias/processos-fisicos" pai="2" tabindex="99" title="Processos Físicos" alt="Processos Físicos">Processos Físicos</a><ul class="dropdown-menu"><h2 class="titleMenu">Processos Físicos</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/audiencias/processos-fisicos/audiencias-2012">2012</a></li><li><a href="/audiencias/processos-fisicos/audiencias-2013">2013</a></li></ul></li><li><a href="/audiencias/consultar-audiencias">Audiências de Conciliação</a></li><li><a href="/audiencias/audiencias-criminais">Audiências Criminais</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="104" title="Processos" alt="Processos">Processos</a><ul class="dropdown-menu"><h2 class="titleMenu">Processos</h2><a href="javascript:;" class="ico-close" ></a><li><a href="http://www.trf5.jus.br/index.php?option=com_content&amp;view=article&amp;id=476&amp;Itemid=403">Processo Judicial Eletrônico - PJe</a></li><li><a href="/processos-judiciais/processos-eletronicos-jefs-creta">Processos Eletrônicos JEFs - Creta</a></li><li><a href="/processos-judiciais/processos-consulta-processo">Consulta Processo</a></li><li><a href="/processos-judiciais/processos-suspensos-e-sobrestados">Processos Suspensos e Sobrestados</a></li><li><a href="/processos-judiciais/processos-calculo-custas">Cálculo de Custas</a></li><li><a href="/processos-judiciais/processos-jurisprudencia-tr">Jurisprudência de TR</a></li><li><a href="/processos-judiciais/processos-sistema-numeracao">Sistema de Numeração de Processos</a></li><li><a href="/images/processos/CNJ.pdf">Número de Processo Guia de Depósito</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="113" title="Transparência Pública" alt="Transparência Pública">Transparência Pública</a><ul class="dropdown-menu"><h2 class="titleMenu">Transparência Pública</h2><a href="javascript:;" class="ico-close" ></a><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/transparencia-publica/consultar" pai="2" tabindex="114" title="Consultar" alt="Consultar">Consultar</a><ul class="dropdown-menu"><h2 class="titleMenu">Consultar</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/transparencia-publica/consultar/compras-e-servicos">Compras e Serviços</a></li><li><a href="/transparencia-publica/consultar/contratos">Contratos</a></li><li><a href="/transparencia-publica/consultar/atas">Atas</a></li><li><a href="/transparencia-publica/consultar/pac">PAC</a></li><li><a href="/transparencia-publica/consultar/auditoria-interna">Auditoria Interna</a></li><li><a href="/transparencia-publica/consultar/outros">Outros</a></li></ul></li><li><a href="/transparencia-publica/licitacoes">Licitações</a></li><li><a href="http://www5.trf5.jus.br/transparencia/#CE">Portal da Transparência</a></li><li><a href="/transparencia-publica/lei-de-acesso-a-informacao">Lei de acesso a informação</a></li><li><a href="/transparencia-publica/auditoria-interna">Auditoria Interna</a></li><li><a href="https://www.trf5.jus.br/index.php/transparencia-e-prestacao-de-contas">Transparência e Prestação de Contas 2020</a></li><li><a href="https://www.jfce.jus.br/images/Obras_2020.pdf">Obras e Reformas</a></li><li><a href="/transparencia-publica/gestao-de-pessoas">Gestão de pessoas</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="128" title="LGPD" alt="LGPD">LGPD</a><ul class="dropdown-menu"><h2 class="titleMenu">LGPD</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/lgpd/apresentacao">Apresentação</a></li><li><a href="/lgpd/normativos">Normativos</a></li><li><a href="/lgpd/perguntas-frequentes">Perguntas frequentes</a></li><li><a href="/lgpd/politica-privacidade">Política de privacidade</a></li><li><a href="/lgpd/encarregado">Encarregado</a></li><li><a href="https://sei.trf5.jus.br/sei/controlador_externo.php?acao=lgpd_ouvidoria&amp;id_orgao_acesso_externo=5">Fale com o encarregado de dados</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="135" title="Imprensa" alt="Imprensa">Imprensa</a><ul class="dropdown-menu"><h2 class="titleMenu">Imprensa</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/noticias/noticias">Notícias</a></li><li><a href="/noticias/releases">Releases</a></li><li><a href="/noticias/jornal-mural-conecta">Jornal Mural - Conecta</a></li><li><a href="/noticias/banco-de-imagens">Banco de Imagens</a></li><li><a href="/noticias/contatos">Contatos </a></li><li><a href="/noticias/guia-pratico-do-judiciario-federal">Guia Pratico do Judiciario Federal</a></li></ul></li><li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" pai="1" tabindex="142" title="Inovação" alt="Inovação">Inovação</a><ul class="dropdown-menu"><h2 class="titleMenu">Inovação</h2><a href="javascript:;" class="ico-close" ></a><li><a href="/inovajus/fale-conosco">Fale Conosco</a></li><li><a href="/inovajus/noticias">Notícias</a></li><li><a href="/inovajus/projetos">Projetos</a></li></ul></li></ul>
+        </nav>
+        <div class="div-glossario">
+            <a href="/component/dicionario/"
+               title="Justiça Federal da do Ceará 5ª Região de A a Z" tabindex="19">
+                <span class="glyphicon glyphicon-bookmark"></span>JFCE de A a Z
+            </a>
+        </div>
+    </div>
+    <div class="main">
+        <div id="system-message-container">
+	</div>
+
+                    <div aria-label="Breadcrumbs" role="navigation">
+	<ul itemscope itemtype="https://schema.org/BreadcrumbList" class="breadcrumb">
+					<li>
+				Você está aqui: &#160;
+			</li>
+		
+						<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/" class="pathway"><span itemprop="name">Página Principal</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="1">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+											<a itemprop="item" href="/institucional" class="pathway"><span itemprop="name">Institucional</span></a>
+					
+											<span class="divider">
+							<img src="/media/system/images/arrow.png" alt="" />						</span>
+										<meta itemprop="position" content="2">
+				</li>
+							<li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" class="active">
+					<span itemprop="name">
+						Composição					</span>
+					<meta itemprop="position" content="3">
+				</li>
+				</ul>
+</div>
+
+            <br/>
+            <div id="Div_Lateral" class="hidden-xs hidden-sm">
+                ﻿<aside id="Div_TodasNoticias">
+    <a href="/noticias/noticias" tabindex="20">
+        <div class="tituloAside" title="Clique aqui para ver a lista completa das notícias">
+            Todas as Notícias
+        </div>
+    </a>
+    <ul class="mainlevel side-list">
+        <li id="aviso">
+            <a href="/uteis/avisos" style="background-image: url('/images/ico/ico-spechbubble_sq_line.png');">Avisos</a>
+        </li>
+        <li id="avisoNovo" style="display: none;">
+            <a style="background-image: url(/images/ico/ico-spechbubble_sq_line.png);" href="/uteis/avisos">
+                Avisos &nbsp; <span id="entradaAviso" class="destaqueNegativo">06/07 - Expediente: 7h às 12h</span>
+            </a>
+        </li>
+        <li>
+                    </li>
+        <li><a href="/uteis/jornalconecta" style="background-image: url('/images/ico/ico-document.png');">Jornal Mural - Conecta</a></li>
+        <li><a href="http://facebook.com/justicafederalnoceara" target="_blank" style="background-image: url('/images/ico/ico-fb.png');">Curta-nos no Facebook</a></li>
+        <li><a href="http://twitter.com/jfce_oficial" target="_blank" style="background-image: url('/images/ico/ico-twitter.png');">Siga-nos no Twitter</a></li>
+        <li><a href="https://www.youtube.com/user/JFCEoficial" target="_blank" style="background-image: url('/images/ico/ico-yt.png');">Inscreva-se no nosso canal</a></li>
+        <li><a href="https://ava.jfce.jus.br" target="_blank" style="background-image: url('/images/ico/ico-moodle.png');">Ambiente Virtual de Aprendizagem</a></li>
+       <!--  <li><a href="http://www.trf5.jus.br/eventosinternet/?secao=jfce" target="_blank" style="background-image: url('/images/ico/ico-eventos.png');">Eventos JFCE</a></li> -->
+    </ul>
+    <div class="clearfix visible-lg"></div>
+</aside>
+
+<script type="text/javascript">
+
+    function ativarAvisoNovo(ativo) {
+        if (ativo) {
+            setInterval(function () {
+                var aviso = jQuery('#aviso');
+                var avisoNovo = jQuery('#avisoNovo');
+                if (jQuery(aviso).is(':visible')) {
+                    jQuery(aviso).hide();
+                    jQuery(avisoNovo).show();
+                } else {
+                    jQuery(avisoNovo).hide();
+                    jQuery(aviso).show();
+                }
+            }, 1000);
+        } else {
+            jQuery('#aviso').show();
+            jQuery('#avisoNovo').hide();
+        }
+    }
+
+    jQuery(function () {
+
+        jQuery('#btnEditarAviso').on('click', function (e) {
+            e.preventDefault();
+            bootbox.confirm({
+                title: 'Editar aviso',
+                message: '<form method="post" id="form-mod_aviso">'
+                + '<div class="form-group">'
+                + '<label for="pwd">Aviso:</label>'
+                + '<input type="text" class="form-control" name="jform[params][textoAviso]" value="06/07 - Expediente: 7h às 12h">'
+                + '</div>'
+                + '<div class="form-group">'
+                + '<label for="pwd">Ativar:</label>'
+                + '<label class="radio-inline"><input type="radio" value="1" name="jform[params][habilitarAviso]" >Sim</label>'
+                + '<label class="radio-inline"><input type="radio" value="0" name="jform[params][habilitarAviso]" checked="checked">Não</label>'
+                + '</div>'
+                + '<div class="form-group hide">'
+                + '<div class="alert alert-danger pull-right" id="alert-mod_aviso"></div>'
+                + '<div class="clearfix"></div>'
+                + '</div>'
+                + '</form>',
+                buttons: {
+                    cancel: {
+                        label: '<i class="fa fa-times"></i> Cancelar',
+                        className: 'btn-danger'
+                    },
+                    confirm: {
+                        label: '<i class="fa fa-check"></i> Salvar'
+                    }
+                },
+                callback: function (result) {
+                    if (result) {
+                        if (!jQuery('input[name="jform[params][textoAviso]"]').val()) {
+                            jQuery('#alert-mod_aviso').html('Campo Aviso obrigatorio!');
+                            jQuery('#alert-mod_aviso').parent().removeClass('hide');
+                            jQuery('input[name="jform[params][textoAviso]"]').focus();
+                            return false;
+                        }
+                        if (!jQuery('input[name="jform[params][habilitarAviso]"]').is(':checked')) {
+                            jQuery('#alert-mod_aviso').html('Selecione um status de Ativar!');
+                            jQuery('#alert-mod_aviso').parent().removeClass('hide');
+                            return false;
+                        }
+                        jQuery('#form-mod_aviso').submit();
+                    }
+                }
+            });
+        });
+
+        var habilitado = parseInt(0);
+        if (habilitado == '1') {
+            ativarAvisoNovo(true);
+        } else {
+            ativarAvisoNovo(false);
+        }
+    });
+
+</script>
+                <div class="clearfix"></div>
+
+                
+            </div>
+            
+            <div id="component-content">
+                <div class="item-page" itemscope itemtype="https://schema.org/Article">
+    <meta itemprop="inLanguage"
+          content="pt-BR"/>
+    
+        
+                <div class="page-header">
+                            <h2 itemprop="headline">
+                    Composição                </h2>
+                                                        </div>
+                            
+<div class="icons">
+	
+					<div class="btn-group pull-right">
+				<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton-83" aria-label="User tools"
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="icon-cog" aria-hidden="true"></span>
+					<span class="caret" aria-hidden="true"></span>
+				</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton-83">
+											<li class="print-icon"> <a href="/institucional/composicao?tmpl=component&amp;print=1" title="Imprimir o artigo < Composição >" onclick="window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no'); return false;" rel="nofollow">			<span class="icon-print" aria-hidden="true"></span>
+		Imprimir	</a> </li>
+																<li class="email-icon"> <a href="/component/mailto/?tmpl=component&amp;template=portalresponsivotrf5&amp;link=43333e59885f7bab0b855eeeec7a4da51bc03480" title="Envie este link a um amigo" onclick="window.open(this.href,'win2','width=400,height=450,menubar=yes,resizable=yes'); return false;" rel="nofollow">			<span class="icon-envelope" aria-hidden="true"></span>
+		Email	</a> </li>
+														</ul>
+			</div>
+		
+	</div>
+            
+            	<dl class="article-info muted">
+
+		
+			<dt class="article-info-term">
+									Detalhes							</dt>
+
+			
+			
+										<dd class="category-name">
+													Categoria: <span itemprop="genre">Institucional</span>							</dd>			
+			
+										<dd class="published">
+				<span class="icon-calendar" aria-hidden="true"></span>
+				<time datetime="2019-01-23T11:19:00+00:00" itemprop="datePublished">
+					Publicado: 23 Janeiro 2019				</time>
+			</dd>			
+		
+					
+			
+						</dl>
+    
+    
+                
+                                        <div itemprop="articleBody">
+            <h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Diretor do Foro</strong></span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak99285739eaaa9fddd7827636bd1c9e56">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak99285739eaaa9fddd7827636bd1c9e56').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy99285739eaaa9fddd7827636bd1c9e56 = 'd&#105;rf&#111;r&#111;' + '&#64;';
+				addy99285739eaaa9fddd7827636bd1c9e56 = addy99285739eaaa9fddd7827636bd1c9e56 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text99285739eaaa9fddd7827636bd1c9e56 = 'd&#105;rf&#111;r&#111;' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak99285739eaaa9fddd7827636bd1c9e56').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy99285739eaaa9fddd7827636bd1c9e56 + '\'>'+addy_text99285739eaaa9fddd7827636bd1c9e56+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><img src="/images/institucional/composicao/Alcides_Saldanha/Alcides_Saldanha_Lima_2.jpg" alt="Alcides Saldanha Lima 2" class="" /></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Alcides Saldanha Lima</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>Vice-Diretora do Foro</strong></span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><img src="/images/esmafe/diretoria-juizes/imagens/Gisele_Chaves_Alcantara_2.JPG" alt="Gisele Chaves Alcantara 2" width="75" height="100" style="font-family: arial, helvetica, sans-serif; font-size: 10pt;" class="" /></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Gisele Chaves Sampaio Alc&acirc;ntara</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Diretora Administrativa</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak501d0be6a7e136dc31f03666ed6592d7">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak501d0be6a7e136dc31f03666ed6592d7').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy501d0be6a7e136dc31f03666ed6592d7 = 's&#101;c&#97;d' + '&#64;';
+				addy501d0be6a7e136dc31f03666ed6592d7 = addy501d0be6a7e136dc31f03666ed6592d7 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text501d0be6a7e136dc31f03666ed6592d7 = 's&#101;c&#97;d' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak501d0be6a7e136dc31f03666ed6592d7').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy501d0be6a7e136dc31f03666ed6592d7 + '\'>'+addy_text501d0be6a7e136dc31f03666ed6592d7+'<\/a>';
+		</script></span></p>
+<table border="0" style="width: 257px; height: 137px;">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Raquel_Rolim_Pereira_Galv&atilde;o_de_Melo.jpg" alt="Raquel Rolim Pereira Galv&atilde;o de Melo" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Raquel Rolim Pereira Galv&atilde;o de Melo</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak01210bc28ad9a693d339729755eaae40">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak01210bc28ad9a693d339729755eaae40').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy01210bc28ad9a693d339729755eaae40 = 'd&#105;rv&#97;r&#97;1' + '&#64;';
+				addy01210bc28ad9a693d339729755eaae40 = addy01210bc28ad9a693d339729755eaae40 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text01210bc28ad9a693d339729755eaae40 = 'd&#105;rv&#97;r&#97;1' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak01210bc28ad9a693d339729755eaae40').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy01210bc28ad9a693d339729755eaae40 + '\'>'+addy_text01210bc28ad9a693d339729755eaae40+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Lu&iacute;s_Praxedes_Vieira_da_Silva1.jpg" alt="Lu&iacute;s Praxedes Vieira da Silva1" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Lu&iacute;s Praxedes Vieira da Silva</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">2&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak02c4720e7ef6931e87f720f244f0361c">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak02c4720e7ef6931e87f720f244f0361c').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy02c4720e7ef6931e87f720f244f0361c = 'd&#105;rv&#97;r&#97;2' + '&#64;';
+				addy02c4720e7ef6931e87f720f244f0361c = addy02c4720e7ef6931e87f720f244f0361c + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text02c4720e7ef6931e87f720f244f0361c = 'd&#105;rv&#97;r&#97;2' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak02c4720e7ef6931e87f720f244f0361c').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy02c4720e7ef6931e87f720f244f0361c + '\'>'+addy_text02c4720e7ef6931e87f720f244f0361c+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/jorgeLuisGirao.jpg" alt="jorgeLuisGirao" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Jorge Luis Gir&atilde;o Barreto</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">3&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloakd71aab959cd286580e3b40c51b5a9bc0">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakd71aab959cd286580e3b40c51b5a9bc0').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyd71aab959cd286580e3b40c51b5a9bc0 = 'd&#105;rv&#97;r&#97;3' + '&#64;';
+				addyd71aab959cd286580e3b40c51b5a9bc0 = addyd71aab959cd286580e3b40c51b5a9bc0 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_textd71aab959cd286580e3b40c51b5a9bc0 = 'd&#105;rv&#97;r&#97;3' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloakd71aab959cd286580e3b40c51b5a9bc0').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyd71aab959cd286580e3b40c51b5a9bc0 + '\'>'+addy_textd71aab959cd286580e3b40c51b5a9bc0+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/georgeMarmelstein.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular George Marmelstein Lima</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">4&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak3bed2fb41fa21b0a234b0b5e4c0c7366">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak3bed2fb41fa21b0a234b0b5e4c0c7366').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy3bed2fb41fa21b0a234b0b5e4c0c7366 = 'd&#105;rv&#97;r&#97;4' + '&#64;';
+				addy3bed2fb41fa21b0a234b0b5e4c0c7366 = addy3bed2fb41fa21b0a234b0b5e4c0c7366 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text3bed2fb41fa21b0a234b0b5e4c0c7366 = 'd&#105;rv&#97;r&#97;4' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak3bed2fb41fa21b0a234b0b5e4c0c7366').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3bed2fb41fa21b0a234b0b5e4c0c7366 + '\'>'+addy_text3bed2fb41fa21b0a234b0b5e4c0c7366+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloaka53c8cac7075d49ef4369092d22ed309">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloaka53c8cac7075d49ef4369092d22ed309').innerHTML = '';
+				var prefix = 'ma' + 'il' + 'to';
+				var path = 'hr' + 'ef' + '=';
+				var addya53c8cac7075d49ef4369092d22ed309 = 'dirvara4' + '@';
+				addya53c8cac7075d49ef4369092d22ed309 = addya53c8cac7075d49ef4369092d22ed309 + 'jfce' + '.' + 'jus' + '.' + 'br';
+				var addy_texta53c8cac7075d49ef4369092d22ed309 = '<img src="/images/esmafe/diretoria-juizes/imagens/joseVidalSilva.jpg" alt="joseVidalSilva" width="75" height="100" class="" />';document.getElementById('cloaka53c8cac7075d49ef4369092d22ed309').innerHTML += '<a ' + path + '\'' + prefix + ':' + addya53c8cac7075d49ef4369092d22ed309 + '\'>'+addy_texta53c8cac7075d49ef4369092d22ed309+'<\/a>';
+		</script></span></p>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Jos&eacute; Vidal Silva Neto</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">5&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloakba003ca9dbe27a3255c05969202a12bd">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakba003ca9dbe27a3255c05969202a12bd').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyba003ca9dbe27a3255c05969202a12bd = 'd&#105;rv&#97;r&#97;5' + '&#64;';
+				addyba003ca9dbe27a3255c05969202a12bd = addyba003ca9dbe27a3255c05969202a12bd + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_textba003ca9dbe27a3255c05969202a12bd = 'd&#105;rv&#97;r&#97;5' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloakba003ca9dbe27a3255c05969202a12bd').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyba003ca9dbe27a3255c05969202a12bd + '\'>'+addy_textba003ca9dbe27a3255c05969202a12bd+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Jo&atilde;o_Lu&iacute;s_Nogueira_Matias.jpg" alt="Jo&atilde;o Lu&iacute;s Nogueira Matias" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Jo&atilde;o Lu&iacute;s Nogueira Matias</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">6&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak51a3e45c3a53ef7f32870dd2d78adc64">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak51a3e45c3a53ef7f32870dd2d78adc64').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy51a3e45c3a53ef7f32870dd2d78adc64 = 'd&#105;rv&#97;r&#97;6' + '&#64;';
+				addy51a3e45c3a53ef7f32870dd2d78adc64 = addy51a3e45c3a53ef7f32870dd2d78adc64 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text51a3e45c3a53ef7f32870dd2d78adc64 = 'd&#105;rv&#97;r&#97;6' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak51a3e45c3a53ef7f32870dd2d78adc64').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy51a3e45c3a53ef7f32870dd2d78adc64 + '\'>'+addy_text51a3e45c3a53ef7f32870dd2d78adc64+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">&nbsp;<img src="/images/esmafe/diretoria-juizes/imagens/leonardoResendeMartins.jpg" alt="leonardoResendeMartins" width="75" height="100" class="" /></span></p>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Leonardo Resende Martins</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">7&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak347b85ecf9fe27d38ff1491b269a3b1b">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak347b85ecf9fe27d38ff1491b269a3b1b').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy347b85ecf9fe27d38ff1491b269a3b1b = 'd&#105;rv&#97;r&#97;7' + '&#64;';
+				addy347b85ecf9fe27d38ff1491b269a3b1b = addy347b85ecf9fe27d38ff1491b269a3b1b + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text347b85ecf9fe27d38ff1491b269a3b1b = 'd&#105;rv&#97;r&#97;7' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak347b85ecf9fe27d38ff1491b269a3b1b').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy347b85ecf9fe27d38ff1491b269a3b1b + '\'>'+addy_text347b85ecf9fe27d38ff1491b269a3b1b+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Karla_de_Almeida_Miranda.jpg" alt="Karla de Almeida Miranda" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Titular Karla de Almeida Miranda Maia</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">8&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak20848dc2b91b98c26d66742389565b5e">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak20848dc2b91b98c26d66742389565b5e').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy20848dc2b91b98c26d66742389565b5e = 'd&#105;rv&#97;r&#97;8' + '&#64;';
+				addy20848dc2b91b98c26d66742389565b5e = addy20848dc2b91b98c26d66742389565b5e + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text20848dc2b91b98c26d66742389565b5e = 'd&#105;rv&#97;r&#97;8' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak20848dc2b91b98c26d66742389565b5e').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy20848dc2b91b98c26d66742389565b5e + '\'>'+addy_text20848dc2b91b98c26d66742389565b5e+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Ricardo_Cunha_Porto2.jpg" alt="Ricardo Cunha Porto2" width="75" height="100" class="" /></span></p>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Juiz Federal Titular Ricardo Cunha Porto</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">9&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloaka2139ff91f2178a3751cb03b1479e72b">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloaka2139ff91f2178a3751cb03b1479e72b').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addya2139ff91f2178a3751cb03b1479e72b = 'd&#105;rv&#97;r&#97;9' + '&#64;';
+				addya2139ff91f2178a3751cb03b1479e72b = addya2139ff91f2178a3751cb03b1479e72b + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_texta2139ff91f2178a3751cb03b1479e72b = 'd&#105;rv&#97;r&#97;9' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloaka2139ff91f2178a3751cb03b1479e72b').innerHTML += '<a ' + path + '\'' + prefix + ':' + addya2139ff91f2178a3751cb03b1479e72b + '\'>'+addy_texta2139ff91f2178a3751cb03b1479e72b+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/germanaOliveiraMoraes.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Ju&iacute;za Federal Titular Germana de Oliveira Moraes</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/dartanhanVercingetorixAraujo.jpg" alt="dartanhanVercingetorixAraujo" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Substituto Dartanhan Vercinget&oacute;rix de Ara&uacute;jo e Rocha</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">10&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak9d7619f887a3e8b288bb354b247c73a3">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak9d7619f887a3e8b288bb354b247c73a3').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy9d7619f887a3e8b288bb354b247c73a3 = 'd&#105;rv&#97;r&#97;10' + '&#64;';
+				addy9d7619f887a3e8b288bb354b247c73a3 = addy9d7619f887a3e8b288bb354b247c73a3 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text9d7619f887a3e8b288bb354b247c73a3 = 'd&#105;rv&#97;r&#97;10' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak9d7619f887a3e8b288bb354b247c73a3').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy9d7619f887a3e8b288bb354b247c73a3 + '\'>'+addy_text9d7619f887a3e8b288bb354b247c73a3+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Alcides_Saldanha_Lima_2.jpg" alt="Alcides Saldanha Lima 2" width="75" height="100" class="" /></span></p>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Juiz Federal Titular Alcides Saldanha Lima</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">11&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak5a15ef2e31d1f846def62b9388b6a0c7">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak5a15ef2e31d1f846def62b9388b6a0c7').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy5a15ef2e31d1f846def62b9388b6a0c7 = 'd&#105;rv&#97;r&#97;11' + '&#64;';
+				addy5a15ef2e31d1f846def62b9388b6a0c7 = addy5a15ef2e31d1f846def62b9388b6a0c7 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text5a15ef2e31d1f846def62b9388b6a0c7 = 'd&#105;rv&#97;r&#97;11' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak5a15ef2e31d1f846def62b9388b6a0c7').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy5a15ef2e31d1f846def62b9388b6a0c7 + '\'>'+addy_text5a15ef2e31d1f846def62b9388b6a0c7+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Danilo-Fontenele.jpg" alt="juizSemFoto" width="75" height="100" class="" /></span></p>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Danilo Fontenelle Sampaio</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Heloisa_Silva_de_Melo.jpg" alt="Heloisa Silva de Melo" width="70" height="100" class="" /></span></p>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Substituta Heloisa Silva de Melo</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong style="font-size: 9pt;">12&ordf; Vara</strong></span></h4>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"><span id="cloak66545fa4f4276592bb9d599814108df5">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak66545fa4f4276592bb9d599814108df5').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy66545fa4f4276592bb9d599814108df5 = 'd&#105;rv&#97;r&#97;12' + '&#64;';
+				addy66545fa4f4276592bb9d599814108df5 = addy66545fa4f4276592bb9d599814108df5 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text66545fa4f4276592bb9d599814108df5 = 'd&#105;rv&#97;r&#97;12' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak66545fa4f4276592bb9d599814108df5').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy66545fa4f4276592bb9d599814108df5 + '\'>'+addy_text66545fa4f4276592bb9d599814108df5+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Marcos_Mairton_da_Silva.jpg" alt="Marcos Mairton da Silva" width="75" height="100" class="" /></span></p>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Marcos Mairton da Silva</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">(Juiz Instrutor do Superior Tribunal de Justi&ccedil;a)</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">&nbsp;<a href="/images/esmafe/diretoria-juizes/imagens/Foto_-_Dra_Gabriela.jpeg" class="thumbnail zoomin" style="" rel="lightbox-com_content_article_83" title="Foto Dra Gabriela"><img src="/images/thumbnails/images/esmafe/diretoria-juizes/imagens/Foto_-_Dra_Gabriela-fill-86x98.jpeg" alt="Foto Dra Gabriela" width="86" height="98" class="" style="" /></a><br /><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Ju&iacute;za Federal Substituta Gabriela Lima Fontenelle C&acirc;mara</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>13&ordf; Vara</strong></span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak6a92a745efdbe17a1c883e43f8f16907">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak6a92a745efdbe17a1c883e43f8f16907').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy6a92a745efdbe17a1c883e43f8f16907 = 'd&#105;rv&#97;r&#97;13' + '&#64;';
+				addy6a92a745efdbe17a1c883e43f8f16907 = addy6a92a745efdbe17a1c883e43f8f16907 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text6a92a745efdbe17a1c883e43f8f16907 = 'd&#105;rv&#97;r&#97;13' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak6a92a745efdbe17a1c883e43f8f16907').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy6a92a745efdbe17a1c883e43f8f16907 + '\'>'+addy_text6a92a745efdbe17a1c883e43f8f16907+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p>&nbsp;<img src="/images/esmafe/diretoria-juizes/imagens/Bruno_Leonardo_C&acirc;mara_Carr&aacute;_2.jpg" alt="Bruno Leonardo C&acirc;mara Carr&aacute; 2" width="75" height="100" style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;" class="" /><br /><br /><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Juiz Federal Bruno Leonardo C&acirc;mara Carr&aacute;</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><img src="/images/institucional/composicao/Flavio/Foto_-_Jos&eacute;_Fl&aacute;vio_-_site.jpg" alt="Foto Jos&eacute; Fl&aacute;vio site" class="" /></p>
+<p>Juiz Federal Substituto Jos&eacute; Fl&aacute;vio Fonseca de Oliveira</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">14&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak7e666f760b3de0adc7d13deda1dea9a5">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak7e666f760b3de0adc7d13deda1dea9a5').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy7e666f760b3de0adc7d13deda1dea9a5 = 'd&#105;rv&#97;r&#97;14' + '&#64;';
+				addy7e666f760b3de0adc7d13deda1dea9a5 = addy7e666f760b3de0adc7d13deda1dea9a5 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text7e666f760b3de0adc7d13deda1dea9a5 = 'd&#105;rv&#97;r&#97;14' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak7e666f760b3de0adc7d13deda1dea9a5').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy7e666f760b3de0adc7d13deda1dea9a5 + '\'>'+addy_text7e666f760b3de0adc7d13deda1dea9a5+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Niliane_Meira_Lima.jpg" alt="Niliane Meira Lima" width="75" height="100" class="" /></span></p>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Ju&iacute;za Federal Titular Niliane Meira Lima<br /></span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">&nbsp;<img src="/images/esmafe/diretoria-juizes/imagens/Andr&eacute;_Luiz_Cavalcanti_Silveira1.jpg" alt="Andr&eacute; Luiz Cavalcanti Silveira1" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Substituto Andr&eacute; Luiz Cavalcanti Silveira</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">15&ordf; Vara - Subse&ccedil;&atilde;o de Limoeiro do Norte</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak969c957a66db020a193dfcb56bd5f9d8">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak969c957a66db020a193dfcb56bd5f9d8').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy969c957a66db020a193dfcb56bd5f9d8 = 'd&#105;rv&#97;r&#97;15' + '&#64;';
+				addy969c957a66db020a193dfcb56bd5f9d8 = addy969c957a66db020a193dfcb56bd5f9d8 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text969c957a66db020a193dfcb56bd5f9d8 = 'd&#105;rv&#97;r&#97;15' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak969c957a66db020a193dfcb56bd5f9d8').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy969c957a66db020a193dfcb56bd5f9d8 + '\'>'+addy_text969c957a66db020a193dfcb56bd5f9d8+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Bernardo_Lima_Vasconcelos_Carneiro.jpg" alt="Bernardo Lima Vasconcelos Carneiro" width="75" height="100" class="" /></span></p>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Juiz Federal Titular Bernardo Lima Vasconcelos Carneiro</span></p>
+<p>Diretor da Subse&ccedil;&atilde;o de Limoeiro do Norte</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;"><img src="/images/institucional/composicao/Mario/juiz_federal_mario.jpg" alt="juiz federal mario" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Substituto&nbsp;</span><span style="font-size: 10pt; font-family: Arial, sans-serif;">M&aacute;rio S&eacute;rgio da Costa Carlos</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">16&ordf; Vara - Subse&ccedil;&atilde;o de Juazeiro do Norte<br /></span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak30b0300edcd48cddb35cfedb2f089a40">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak30b0300edcd48cddb35cfedb2f089a40').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy30b0300edcd48cddb35cfedb2f089a40 = 'd&#105;rv&#97;r&#97;16' + '&#64;';
+				addy30b0300edcd48cddb35cfedb2f089a40 = addy30b0300edcd48cddb35cfedb2f089a40 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text30b0300edcd48cddb35cfedb2f089a40 = 'd&#105;rv&#97;r&#97;16' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak30b0300edcd48cddb35cfedb2f089a40').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy30b0300edcd48cddb35cfedb2f089a40 + '\'>'+addy_text30b0300edcd48cddb35cfedb2f089a40+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><img src="/images/esmafe/diretoria-juizes/imagens/juizSemFoto.jpg" alt="" width="75" height="100" style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;" class="" />&nbsp;</p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Juiz Federal Titular Fl&aacute;vio Marcondes Soares Rodrigues</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Diretor da Subse&ccedil;&atilde;o de Juazeiro do Norte</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">17&ordf; Vara - Subse&ccedil;&atilde;o de Juazeiro do Norte</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak730d2c1a5a023c6ec6ef50767630426b">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak730d2c1a5a023c6ec6ef50767630426b').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy730d2c1a5a023c6ec6ef50767630426b = 'd&#105;rv&#97;r&#97;17' + '&#64;';
+				addy730d2c1a5a023c6ec6ef50767630426b = addy730d2c1a5a023c6ec6ef50767630426b + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text730d2c1a5a023c6ec6ef50767630426b = 'd&#105;rv&#97;r&#97;17' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak730d2c1a5a023c6ec6ef50767630426b').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy730d2c1a5a023c6ec6ef50767630426b + '\'>'+addy_text730d2c1a5a023c6ec6ef50767630426b+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Lucas_Mariano_Cunha_Arag&atilde;o_Albuquerque.jpg" alt="Lucas Mariano Cunha Arag&atilde;o Albuquerque" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Lucas Mariano Cunha Arag&atilde;o de Albuquerque</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><img src="/images/esmafe/diretoria-juizes/imagens/Fabr&iacute;cio_Lima_Borges.jpg" alt="Fabr&iacute;cio Lima Borges" width="70" height="100" style="font-family: arial, helvetica, sans-serif; font-size: 10pt;" class="" /></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Substituto Fabricio de Lima Borges</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">18&ordf; Vara - Subse&ccedil;&atilde;o de Sobral</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak556314d18c79eeacb2d2e2357732f3dd">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak556314d18c79eeacb2d2e2357732f3dd').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy556314d18c79eeacb2d2e2357732f3dd = 'd&#105;rv&#97;r&#97;18' + '&#64;';
+				addy556314d18c79eeacb2d2e2357732f3dd = addy556314d18c79eeacb2d2e2357732f3dd + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text556314d18c79eeacb2d2e2357732f3dd = 'd&#105;rv&#97;r&#97;18' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak556314d18c79eeacb2d2e2357732f3dd').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy556314d18c79eeacb2d2e2357732f3dd + '\'>'+addy_text556314d18c79eeacb2d2e2357732f3dd+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Milfont.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular S&eacute;rgio de Nor&otilde;es Milfont J&uacute;nior</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">19&ordf; Vara - Subse&ccedil;&atilde;o de Sobral</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak64c3d53820097125f4565e37e4a636e2">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak64c3d53820097125f4565e37e4a636e2').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy64c3d53820097125f4565e37e4a636e2 = 'd&#105;rv&#97;r&#97;19' + '&#64;';
+				addy64c3d53820097125f4565e37e4a636e2 = addy64c3d53820097125f4565e37e4a636e2 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text64c3d53820097125f4565e37e4a636e2 = 'd&#105;rv&#97;r&#97;19' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak64c3d53820097125f4565e37e4a636e2').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy64c3d53820097125f4565e37e4a636e2 + '\'>'+addy_text64c3d53820097125f4565e37e4a636e2+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Thiago_Mesquita_Teles_de_Carvalho.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Thiago Mesquita Teles de Carvalho</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><img src="/images/institucional/composicao/Raphael/juiz_federal_raphael.jpg" alt="juiz federal raphael" class="" /></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Substituto&nbsp;</span></span>Raphael Kissula Loyola</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">20&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak506c996ecccf4f5a0c9beaccfcfbda6a">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak506c996ecccf4f5a0c9beaccfcfbda6a').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy506c996ecccf4f5a0c9beaccfcfbda6a = 'd&#105;rv&#97;r&#97;20' + '&#64;';
+				addy506c996ecccf4f5a0c9beaccfcfbda6a = addy506c996ecccf4f5a0c9beaccfcfbda6a + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text506c996ecccf4f5a0c9beaccfcfbda6a = 'd&#105;rv&#97;r&#97;20' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak506c996ecccf4f5a0c9beaccfcfbda6a').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy506c996ecccf4f5a0c9beaccfcfbda6a + '\'>'+addy_text506c996ecccf4f5a0c9beaccfcfbda6a+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/augustinoLimaChaves.jpg" alt="augustinoLimaChaves" width="75" height="100" class="" /></span></p>
+<p><span style="font-size: 10pt; font-family: arial, helvetica, sans-serif;">Juiz Federal Titular&nbsp;Augustino Lima Chaves</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/danielleMacedoPeixoto.jpg" alt="danielleMacedoPeixoto" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Substituta Danielle Mac&ecirc;do Peixoto de Carvalho</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong style="font-size: 9pt;">21&ordf; Vara - Juizado Virtual Unifor<br /></strong></span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak19304e79cabbde4120261667a7701369">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak19304e79cabbde4120261667a7701369').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy19304e79cabbde4120261667a7701369 = 'd&#105;rv&#97;r&#97;21' + '&#64;';
+				addy19304e79cabbde4120261667a7701369 = addy19304e79cabbde4120261667a7701369 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text19304e79cabbde4120261667a7701369 = 'd&#105;rv&#97;r&#97;21' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak19304e79cabbde4120261667a7701369').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy19304e79cabbde4120261667a7701369 + '\'>'+addy_text19304e79cabbde4120261667a7701369+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Agapito_Machado.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Agapito Machado</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/marcusViniciusParente.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Substituto Marcus Vin&iacute;cius Parente Rebou&ccedil;as</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">22&ordf; Vara - Subse&ccedil;&atilde;o de Crate&uacute;s</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloakb38185ca3ec27d3d1289b99b294e8626">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakb38185ca3ec27d3d1289b99b294e8626').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addyb38185ca3ec27d3d1289b99b294e8626 = 'd&#105;rv&#97;r&#97;22' + '&#64;';
+				addyb38185ca3ec27d3d1289b99b294e8626 = addyb38185ca3ec27d3d1289b99b294e8626 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_textb38185ca3ec27d3d1289b99b294e8626 = 'd&#105;rv&#97;r&#97;22' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloakb38185ca3ec27d3d1289b99b294e8626').innerHTML += '<a ' + path + '\'' + prefix + ':' + addyb38185ca3ec27d3d1289b99b294e8626 + '\'>'+addy_textb38185ca3ec27d3d1289b99b294e8626+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Daniel_Guerra_Alves1_2.jpg" alt="Daniel Guerra Alves" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Daniel Guerra Alves</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Diretor da Subse&ccedil;&atilde;o de Crate&uacute;s</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">23&ordf; Vara - Subse&ccedil;&atilde;o de Quixad&aacute;</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloakcf6a5c57e70e47af55371a01305a4ad5">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakcf6a5c57e70e47af55371a01305a4ad5').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addycf6a5c57e70e47af55371a01305a4ad5 = 'd&#105;rv&#97;r&#97;23' + '&#64;';
+				addycf6a5c57e70e47af55371a01305a4ad5 = addycf6a5c57e70e47af55371a01305a4ad5 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_textcf6a5c57e70e47af55371a01305a4ad5 = 'd&#105;rv&#97;r&#97;23' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloakcf6a5c57e70e47af55371a01305a4ad5').innerHTML += '<a ' + path + '\'' + prefix + ':' + addycf6a5c57e70e47af55371a01305a4ad5 + '\'>'+addy_textcf6a5c57e70e47af55371a01305a4ad5+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><img src="/images/esmafe/diretoria-juizes/imagens/juizSemFoto.jpg" alt="juizSemFoto" width="75" height="100" class="" /></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Kepler Gomes Ribeiro</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Diretor da Subse&ccedil;&atilde;o de Quixad&aacute;</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/institucional/composicao/Emanuel/Foto_Site_Emanuel_Jos&eacute;_Matias_Guerra.jpg" alt="Foto Site Emanuel Jos&eacute; Matias Guerra" width="75" height="95" class="" /></span></p>
+<p>Juiz Federal Substituto Emanuel Jos&eacute; Matias Guerra</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">24&ordf; Vara - Subse&ccedil;&atilde;o de Tau&aacute;</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloakbdb59f3678a722de9f76f4ac445f384b">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloakbdb59f3678a722de9f76f4ac445f384b').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addybdb59f3678a722de9f76f4ac445f384b = 'd&#105;rv&#97;r&#97;24' + '&#64;';
+				addybdb59f3678a722de9f76f4ac445f384b = addybdb59f3678a722de9f76f4ac445f384b + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_textbdb59f3678a722de9f76f4ac445f384b = 'd&#105;rv&#97;r&#97;24' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloakbdb59f3678a722de9f76f4ac445f384b').innerHTML += '<a ' + path + '\'' + prefix + ':' + addybdb59f3678a722de9f76f4ac445f384b + '\'>'+addy_textbdb59f3678a722de9f76f4ac445f384b+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Jo&atilde;o_Batista_Prata_Braga2.jpg" alt="Jo&atilde;o Batista Prata Braga2" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Jo&atilde;o Batista Martins Prata Braga</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Diretor da Subse&ccedil;&atilde;o de Tau&aacute;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">25&ordf; Vara - Subse&ccedil;&atilde;o de Iguatu</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><a><span id="cloak9233d83094896fe2421d1ea7bdc08ee5">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak9233d83094896fe2421d1ea7bdc08ee5').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy9233d83094896fe2421d1ea7bdc08ee5 = 'd&#105;rv&#97;r&#97;25' + '&#64;';
+				addy9233d83094896fe2421d1ea7bdc08ee5 = addy9233d83094896fe2421d1ea7bdc08ee5 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text9233d83094896fe2421d1ea7bdc08ee5 = 'd&#105;rv&#97;r&#97;25' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak9233d83094896fe2421d1ea7bdc08ee5').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy9233d83094896fe2421d1ea7bdc08ee5 + '\'>'+addy_text9233d83094896fe2421d1ea7bdc08ee5+'<\/a>';
+		</script></a></span></p>
+<table border="0" style="width: 406px; height: 151px;">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Ciro_Benigno_Porto_1.jpg" alt="Ciro Benigno Porto 1" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Ciro Benigno Porto</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Diretor da Subse&ccedil;&atilde;o de Iguatu</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><img src="/images/esmafe/diretoria-juizes/imagens/juizSemFoto.jpg" alt="" width="75" height="100" style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;" class="" /></p>
+<p>Juiz Federal Substituto Fabr&iacute;cio Ponte de Ara&uacute;jo</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">26&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak669d1bcc86e712b03767c75b8ba234a3">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak669d1bcc86e712b03767c75b8ba234a3').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy669d1bcc86e712b03767c75b8ba234a3 = 'd&#105;rv&#97;r&#97;26' + '&#64;';
+				addy669d1bcc86e712b03767c75b8ba234a3 = addy669d1bcc86e712b03767c75b8ba234a3 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text669d1bcc86e712b03767c75b8ba234a3 = 'd&#105;rv&#97;r&#97;26' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak669d1bcc86e712b03767c75b8ba234a3').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy669d1bcc86e712b03767c75b8ba234a3 + '\'>'+addy_text669d1bcc86e712b03767c75b8ba234a3+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/sergioFiuzaTahim.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular S&eacute;rgio Fi&uacute;za Tahim de Sousa Brasil</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">27&ordf; Vara - Subse&ccedil;&atilde;o de Itapipoca</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><a><span id="cloak8820d4cdd0de4ffeea3599b6eda1fce0">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak8820d4cdd0de4ffeea3599b6eda1fce0').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy8820d4cdd0de4ffeea3599b6eda1fce0 = 'd&#105;rv&#97;r&#97;27' + '&#64;';
+				addy8820d4cdd0de4ffeea3599b6eda1fce0 = addy8820d4cdd0de4ffeea3599b6eda1fce0 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text8820d4cdd0de4ffeea3599b6eda1fce0 = 'd&#105;rv&#97;r&#97;27' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak8820d4cdd0de4ffeea3599b6eda1fce0').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy8820d4cdd0de4ffeea3599b6eda1fce0 + '\'>'+addy_text8820d4cdd0de4ffeea3599b6eda1fce0+'<\/a>';
+		</script></a></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Marcelo_Sampaio_Pimentel_Rocha.jpg" alt="Marcelo Sampaio Pimentel Rocha" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Marcelo Sampaio Pimentel Rocha</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Diretor da Subse&ccedil;&atilde;o de Itapipoca</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><img src="/images/esmafe/diretoria-juizes/imagens/juizSemFoto.jpg" alt="juizSemFoto" width="75" height="100" class="" /></p>
+<p>Juiz Federal Substituto Rodrigo Parente Paiva Bentemuller</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">28&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak5c580ab80d48b433a0199848e8a72e98">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak5c580ab80d48b433a0199848e8a72e98').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy5c580ab80d48b433a0199848e8a72e98 = 'd&#105;rv&#97;r&#97;28' + '&#64;';
+				addy5c580ab80d48b433a0199848e8a72e98 = addy5c580ab80d48b433a0199848e8a72e98 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text5c580ab80d48b433a0199848e8a72e98 = 'd&#105;rv&#97;r&#97;28' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak5c580ab80d48b433a0199848e8a72e98').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy5c580ab80d48b433a0199848e8a72e98 + '\'>'+addy_text5c580ab80d48b433a0199848e8a72e98+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Jos&eacute;_Maximiliano_Machado_Cavalcanti.jpg" alt="Jos&eacute; Maximiliano Machado Cavalcanti" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Jos&eacute; Maximiliano Machado Cavalcanti</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">&nbsp;<img src="/images/esmafe/diretoria-juizes/imagens/Gustavo_Henrique_Teixeira_de_Oliveira.jpg" alt="Gustavo Henrique Teixeira de Oliveira" width="75" height="100" class="" /></span></p>
+<p class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Substituto Gustavo Henrique Teixeira de Oliveira</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">29&ordf; Vara - Subse&ccedil;&atilde;o de Limoeiro do Norte</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak7f1f01bb924399dfe2f6ceb77f53ff50">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak7f1f01bb924399dfe2f6ceb77f53ff50').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy7f1f01bb924399dfe2f6ceb77f53ff50 = 'd&#105;rv&#97;r&#97;29' + '&#64;';
+				addy7f1f01bb924399dfe2f6ceb77f53ff50 = addy7f1f01bb924399dfe2f6ceb77f53ff50 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text7f1f01bb924399dfe2f6ceb77f53ff50 = 'd&#105;rv&#97;r&#97;29' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak7f1f01bb924399dfe2f6ceb77f53ff50').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy7f1f01bb924399dfe2f6ceb77f53ff50 + '\'>'+addy_text7f1f01bb924399dfe2f6ceb77f53ff50+'<\/a>';
+		</script></span></p>
+<table border="0" style="height: 193px; width: 342px;">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><a href="/images/institucional/composicao/Elise_Avesque/Elise_Avesque_Frota.jpg" class="thumbnail zoomin" style="" rel="lightbox-com_content_article_83" title="Elise Avesque Frota"><img src="/images/thumbnails/images/institucional/composicao/Elise_Avesque/Elise_Avesque_Frota-fill-75x100.jpg" alt="Elise Avesque Frota" width="75" height="100" class="" style="" /></a><br /><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Titular Elise Avesque Frota</span></span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><img src="/images/institucional/composicao/Danielle/juiza_federal_danielle.jpg" alt="juiza federal danielle" class="" /><br /><br />Ju&iacute;za Federal Substituta Danielle Cabral de Lucena</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">30&ordf; Vara - Subse&ccedil;&atilde;o de Juazeiro do Norte</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><a><span id="cloak119dc0a376d0c488a420585055c51cb2">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak119dc0a376d0c488a420585055c51cb2').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy119dc0a376d0c488a420585055c51cb2 = 'd&#105;rv&#97;r&#97;30' + '&#64;';
+				addy119dc0a376d0c488a420585055c51cb2 = addy119dc0a376d0c488a420585055c51cb2 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text119dc0a376d0c488a420585055c51cb2 = 'd&#105;rv&#97;r&#97;30' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak119dc0a376d0c488a420585055c51cb2').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy119dc0a376d0c488a420585055c51cb2 + '\'>'+addy_text119dc0a376d0c488a420585055c51cb2+'<\/a>';
+		</script></a></span></p>
+<table border="0" style="width: 339px; height: 148px;">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/juizSemFoto.jpg" alt="" width="75" height="100" style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Juiz Federal Titular Claudio Gir&atilde;o Barreto</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">31&ordf; Vara - Subse&ccedil;&atilde;o de Sobral</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloaka58643bbcda9a22c9d21b66f05a36fc9">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloaka58643bbcda9a22c9d21b66f05a36fc9').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addya58643bbcda9a22c9d21b66f05a36fc9 = 'd&#105;rv&#97;r&#97;31' + '&#64;';
+				addya58643bbcda9a22c9d21b66f05a36fc9 = addya58643bbcda9a22c9d21b66f05a36fc9 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_texta58643bbcda9a22c9d21b66f05a36fc9 = 'd&#105;rv&#97;r&#97;31' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloaka58643bbcda9a22c9d21b66f05a36fc9').innerHTML += '<a ' + path + '\'' + prefix + ':' + addya58643bbcda9a22c9d21b66f05a36fc9 + '\'>'+addy_texta58643bbcda9a22c9d21b66f05a36fc9+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Iaci_Rolim_de_Sousa.jpg" alt="Iaci Rolim de Sousa" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Titular Iaci Rolim de Sousa</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Diretora da Subse&ccedil;&atilde;o de Sobral</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">32&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak56511888d68078aad16bf3ddf853a9ec">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak56511888d68078aad16bf3ddf853a9ec').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy56511888d68078aad16bf3ddf853a9ec = 'd&#105;rv&#97;r&#97;32' + '&#64;';
+				addy56511888d68078aad16bf3ddf853a9ec = addy56511888d68078aad16bf3ddf853a9ec + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text56511888d68078aad16bf3ddf853a9ec = 'd&#105;rv&#97;r&#97;32' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak56511888d68078aad16bf3ddf853a9ec').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy56511888d68078aad16bf3ddf853a9ec + '\'>'+addy_text56511888d68078aad16bf3ddf853a9ec+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/franciscoLuisRios.jpg" alt="franciscoLuisRios" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Francisco Lu&iacute;s Rios Alves</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">33&ordf; Vara</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak141f6723d63779ceecba2ebd50476a4c">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak141f6723d63779ceecba2ebd50476a4c').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy141f6723d63779ceecba2ebd50476a4c = 'd&#105;rv&#97;r&#97;33' + '&#64;';
+				addy141f6723d63779ceecba2ebd50476a4c = addy141f6723d63779ceecba2ebd50476a4c + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text141f6723d63779ceecba2ebd50476a4c = 'd&#105;rv&#97;r&#97;33' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak141f6723d63779ceecba2ebd50476a4c').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy141f6723d63779ceecba2ebd50476a4c + '\'>'+addy_text141f6723d63779ceecba2ebd50476a4c+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/gledisonMarquesFernandes.jpg" alt="gledisonMarquesFernandes" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Gl&ecirc;dison Marques Fernandes</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">34&ordf; Vara - Subse&ccedil;&atilde;o de Maracana&uacute;</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak3068be4788ef4c5d4357de2d72aa2e24">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak3068be4788ef4c5d4357de2d72aa2e24').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy3068be4788ef4c5d4357de2d72aa2e24 = 'd&#105;rv&#97;r&#97;34' + '&#64;';
+				addy3068be4788ef4c5d4357de2d72aa2e24 = addy3068be4788ef4c5d4357de2d72aa2e24 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text3068be4788ef4c5d4357de2d72aa2e24 = 'd&#105;rv&#97;r&#97;34' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak3068be4788ef4c5d4357de2d72aa2e24').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3068be4788ef4c5d4357de2d72aa2e24 + '\'>'+addy_text3068be4788ef4c5d4357de2d72aa2e24+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/ricardoRibeiroCampos.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Titular Ricardo Ribeiro Campos</span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Diretor da Subse&ccedil;&atilde;o de Maracana&uacute;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">35&ordf; Vara - Subse&ccedil;&atilde;o de Maracana&uacute;</span></h4>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><span id="cloak53c7ace78157407c7c1d9b6909f61390">Este endereço de email está sendo protegido de spambots. Você precisa do JavaScript ativado para vê-lo.</span><script type='text/javascript'>
+				document.getElementById('cloak53c7ace78157407c7c1d9b6909f61390').innerHTML = '';
+				var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+				var path = 'hr' + 'ef' + '=';
+				var addy53c7ace78157407c7c1d9b6909f61390 = 'd&#105;rv&#97;r&#97;35' + '&#64;';
+				addy53c7ace78157407c7c1d9b6909f61390 = addy53c7ace78157407c7c1d9b6909f61390 + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';
+				var addy_text53c7ace78157407c7c1d9b6909f61390 = 'd&#105;rv&#97;r&#97;35' + '&#64;' + 'jfc&#101;' + '&#46;' + 'j&#117;s' + '&#46;' + 'br';document.getElementById('cloak53c7ace78157407c7c1d9b6909f61390').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy53c7ace78157407c7c1d9b6909f61390 + '\'>'+addy_text53c7ace78157407c7c1d9b6909f61390+'<\/a>';
+		</script></span></p>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Cintia.JPG" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Titular C&iacute;ntia Menezes Brunetta</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1&ordf; Turma Recursal - 1&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Jos&eacute;_Eduardo_de_Melo_Vilar_Filho.jpg" alt="Jos&eacute; Eduardo de Melo Vilar Filho" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Jos&eacute; Eduardo de Melo Vilar Filho&nbsp;<span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">- Presidente</span>&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1&ordf; Turma Recursal - 2&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><img src="/images/esmafe/diretoria-juizes/imagens/Ricardo_Jos&eacute;_Brito_Bastos_Arruda.jpg" alt="Ricardo Jos&eacute; Brito Bastos Arruda" width="75" height="100" style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;" class="" /></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">Juiz Federal Titular Ricardo Jos&eacute; Brito Bastos Aguiar de Arruda</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4 class="email"><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1&ordf; Turma Recursal - 3&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/leopoldoFonteneleTeixeira.jpg" alt="leopoldoFonteneleTeixeira" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Leopoldo Fontenele Teixeira&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">1&ordf; Turma Recursal - Suplente</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/marcusViniciusParente.jpg" alt="marcusViniciusParente" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Marcus Vin&iacute;cius Parente Rebou&ccedil;as</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">2&ordf; Turma Recursal -&nbsp;1&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Gustavo_Melo_Barbosa.jpg" alt="Gustavo Melo Barbosa" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Gustavo Melo Barbosa&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">2&ordf; Turma Recursal -&nbsp;2&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Paula_Emilia_Moura_Arag&atilde;o_de_Sousa_Brasil.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Paula Em&iacute;lia Moura Arag&atilde;o de Sousa Brasil&nbsp;<span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">- Presidente</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>2&ordf; Turma Recursal - 3&ordf; Relatoria</strong></span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Gisele_Chaves_Alcantara_2.JPG" alt="Gisele Chaves Alcantara 2" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Ju&iacute;za Federal Gisele Chaves Sampaio Alc&acirc;ntara&nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><strong>2&ordf; Turma Recursal - Suplente</strong></span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/Jo&atilde;o_Lu&iacute;s_Nogueira_Matias.jpg" alt="Jo&atilde;o Lu&iacute;s Nogueira Matias" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Jo&atilde;o Lu&iacute;s Nogueira Matias</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">3&ordf; Turma Recursal - 1&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/nagibeMeloJorge.jpg" alt="" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Nagibe de Melo Jorge Neto &nbsp;</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">3&ordf; Turma Recursal - 2&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/julioRodriguesCoelho.jpg" alt="julioRodriguesCoelho" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal J&uacute;lio Rodrigues Coelho Neto&nbsp;<span style="font-family: arial, helvetica, sans-serif; font-size: 13.3333px;">- Presidente</span></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">3&ordf; Turma Recursal - 3&ordf; Relatoria</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/andreDiasFernandes.jpg" alt="andreDiasFernandes" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Andr&eacute; Dias Fernandes</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<h4><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">3&ordf; Turma Recursal - Suplente</span></h4>
+<table border="0">
+<tbody>
+<tr>
+<td>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;"><img src="/images/esmafe/diretoria-juizes/imagens/dartanhanVercingetorixAraujo.jpg" alt="dartanhanVercingetorixAraujo" width="75" height="100" class="" /></span></p>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Juiz Federal Dartanhan Vercinget&oacute;rix de Ara&uacute;jo e Rocha</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span style="font-family: arial, helvetica, sans-serif; font-size: 10pt;">Atualizado em: 04/02/2020.</span></p>        </div>
+
+        
+                                                            </div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery('.compartilhar-por-email').removeAttr('onclick');
+        jQuery('.compartilhar-por-email').on('click', function (e) {
+            e.preventDefault();
+            var link = jQuery(this).attr('href');
+            jQuery.get(link, function (data) {
+                bootbox.dialog({
+                    title: 'Envie este link a um amigo.',
+                    message: data
+                });
+            });
+        });
+        jQuery(document).on('click', '.bootbox-close-button', function () {
+            window.location.reload();
+        });
+    });
+</script>
+
+            </div>
+            </div>
+
+    <footer>
+        <div id="Div_FooterUp">
+            <div id="Div_FooterUpFirst">
+                <figure>
+                    <img src="/templates/portalresponsivotrf5/imagens/logo-jfce-rodape.png"
+                         title="Logo do TRF da 5ª Região - Rodapé" alt="Logo do TRF da 5ª Região - Rodapé"/>
+                </figure>
+            </div>
+            <nav id="Div_ServicosFooter">
+                <ul class="nav menu mod-list">
+<li class="item-864"><a href="https://mail.jfce.jus.br/owa" class="rodape webmail">Webmail</a></li><li class="item-865"><a href="/mapa-do-site" class="rodape">Mapa do Site</a></li><li class="item-866"><a href="/links-uteis" class="rodape">Links úteis</a></li><li class="item-867"><a href="https://intranet.jfce.jus.br/intranet/" class="rodape" target="_blank" rel="noopener noreferrer">Intranet</a></li><li class="item-868"><a href="/contato" class="rodape">Contato</a></li></ul>
+
+            </nav>
+        </div>
+        <div id="Div_FooterMedium">
+            <div id="Div_FooterMediumFirst">
+                <div id="Div_Texto01">
+                    <address>
+                        <p><strong>CNPJ:</strong> 05.424.487/0001-53<br> <strong>Praça Murilo Borges, </strong><br>
+                            Centro - Fortaleza - CE<br> CEP 60035-210
+                        </p>
+                    </address>
+                </div>
+            </div>
+            <div id="Div_FooterMediumSecond">
+                <div id="Div_Texto02">
+                    <address>
+                        <p><span>PABX :</span> <i class="fa fa-phone" aria-hidden="true"></i> <strong> +55 85
+                                3521.2500</strong>
+                        </p>
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="div-selos">
+            <figure>
+                <a href="http://css-validator.org/check/referer" target="_blank">
+                    <img src="/templates/portalresponsivotrf5/imagens/vcss-blue.png"
+                         alt="Selo de validação do CSS" title="Selo de validação do CSS"/>
+                </a>
+                <a>
+                    <img src="/templates/portalresponsivotrf5/imagens/selo_acessobr.png"
+                         alt="Selo de Validade do Acesso Brasil - Acessibilidade Web"
+                         title="Selo de Validade do Acesso Brasil - Acessibilidade Web"/>
+                </a>
+                <a href="http://validator.w3.org/check?uri=https://www.jfce.jus.br/" target="_blank">
+                    <img src="/templates/portalresponsivotrf5/imagens/html51-icon.png"
+                         alt="Selo de validação do HTML5" title="Selo de validação do HTML5"/>
+                </a>
+            </figure>
+        </div>
+    </footer>
+</div>
+<a href="#0" class="cd-top" title="Voltar ao topo">Top</a>
+           
+<div class="box-cookies hide">
+  <div class="lgpd-info">
+    <div class="msg-cookies">
+      <p>Utilizamos cookies essenciais e tecnologias semelhantes e, ao continuar navegando, você concorda com estas condições.</p>
+    </div>
+    <div class="btn-cookies">
+      <button class="btnAccept">Ciente</button>
+  	</div>
+  </div>
+</div>
+
+<script src="/templates/portalresponsivotrf5/js/consulta_processual.js"></script>
+<script src="/tmp/contador/odometer.min.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function() {
+		if (!localStorage.pureJavaScriptCookies) {
+			document.querySelector(".box-cookies").classList.remove('hide');
+    	}
+      
+  		function acceptCookies() {
+    		document.querySelector(".box-cookies").classList.add('hide');
+    		localStorage.setItem("pureJavaScriptCookies", "accept");
+  		};
+  
+  		const btnCookies = document.querySelector(".btn-cookies");
+
+    	btnCookies.addEventListener('click', acceptCookies);
+  	});
+</script>
+<script type="text/javascript">
+    var tot_decisoes = document.getElementById("total_decisoes");
+    var tot_despachos = document.getElementById("total_despachos");
+    var tot_sentencas = document.getElementById("total_sentencas");
+    var tot_acordaos = document.getElementById("total_acordaos");
+    
+    var num_tot_decisoes = parseInt(tot_decisoes.innerHTML);
+    var num_tot_despachos = parseInt(tot_despachos.innerHTML);
+    var num_tot_sentencas = parseInt(tot_sentencas.innerHTML);
+    var num_tot_acordaos = parseInt(tot_acordaos.innerHTML);
+
+    od_tot_decisoes = new Odometer({
+        el: tot_decisoes,
+        value: 0000,
+
+        // Any option (other than auto and selector) can be passed in here
+        format: '',
+        theme: 'plaza'
+    });
+
+    od_tot_despachos = new Odometer({
+        el: tot_despachos,
+        value: 0000,
+
+        // Any option (other than auto and selector) can be passed in here
+        format: '',
+        theme: 'plaza'
+    });
+            
+    od_tot_sentencas = new Odometer({
+        el: tot_sentencas,
+        value: 0000,
+
+        // Any option (other than auto and selector) can be passed in here
+        format: '',
+        theme: 'plaza'
+    });
+    
+    od_tot_acordaos = new Odometer({
+        el: tot_acordaos,
+        value: 0000,
+
+        // Any option (other than auto and selector) can be passed in here
+        format: '',
+        theme: 'plaza'
+    });
+
+    od_tot_decisoes.update(num_tot_decisoes)
+    od_tot_despachos.update(num_tot_despachos)
+    od_tot_sentencas.update(num_tot_sentencas)
+    od_tot_acordaos.update(num_tot_acordaos)
+
+</script>
+
+    <script type="text/javascript">
+        var loadFromCache = true; // whether or not load the RSS news from cache
+    </script>
+
+
+</body>
+</html>

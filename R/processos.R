@@ -55,24 +55,29 @@ download_processo <- function(id, path = "data-raw/processos") {
     "hdnFlagPesquisa" = "1")
 
   # POST
-
+  file <- fs::path(path, id, ext = "html")
   httr::POST(u_sei, ssl, body = body,
-             httr::write_disk(glue::glue("{path}/{id}.html"),overwrite = TRUE))
+             httr::write_disk(file,overwrite = TRUE))
+
+  invisible(file)
 
 }
 
 # parse processos ----------------------------------------
-parse_processo <- function(id, path = "data-raw/processos") {
+parse_processo <- function(file) {
   # o arquivo html é o resultado do download processos
 
-  html_resultado <- xml2::read_html(glue::glue("{path}/{id}.html"))
+  html_resultado <- xml2::read_html(file)
 
   endpoint_resultado <- html_resultado |>
-    xml2::xml_find_first("//table/tr/td/a") |>
+    xml2::xml_find_first("//table//a") |>
     xml2::xml_attr("href")
 
-  u_id <- glue::glue("https://sei.economia.gov.br/sei/modulos/pesquisa/{endpoint_resultado}")
-  return(u_id)
+  url <- glue::glue("https://sei.economia.gov.br/sei/modulos/pesquisa/{endpoint_resultado}")
+  # tem que retornar uma tibble cuja coluna é url
+  tibble::tibble(
+    url = url
+  )
 }
 
 

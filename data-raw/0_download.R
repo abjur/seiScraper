@@ -45,7 +45,6 @@ captcha_classify_sei <- function(x, y) {
   paste(c(l1, l2, l3, l4), collapse = "")
 }
 
-
 r0 <- html_sei
 u_captcha_endpoint <- r0 |>
   xml2::xml_find_all("//img[contains(@src,'captcha')]") |>
@@ -61,13 +60,6 @@ ans <- captcha_classify_sei(xy[1], xy[2])
 # id ----------------------------------------------------------------------
 
 id <- "10372100225201917"
-id |>
-  download_processo() |>
-  parse_processo()
-
-da <- id |>
-  download_mov() |>
-  parse_mov()
 
 # body --------------------------------------------------------------------
 
@@ -104,32 +96,46 @@ body <- list(
 
 # POST --------------------------------------------------------------------
 
-httr::POST(u_sei, ssl, body = body,
-                   httr::write_disk(glue::glue("{path}/{id}.html"),overwrite = TRUE))
+path <- "data-raw/processos"
+f <- fs::path(path, id, ext = "html")
 
-html_resultado <- xml2::read_html(glue::glue("{path}/{id}.html"))
+httr::POST(u_sei, ssl, body = body,
+                   httr::write_disk(f,overwrite = TRUE))
+
+html_resultado <- xml2::read_html(f)
 
 endpoint_resultado <- html_resultado |>
-  xml2::xml_find_first("//table/tr/td/a") |>
+  xml2::xml_find_first("//table") |>
+  xml2::xml_find_first(".//a") |>
   xml2::xml_attr("href")
 
 u_id <- glue::glue("https://sei.economia.gov.br/sei/modulos/pesquisa/{endpoint_resultado}")
 
-
 # id ----------------------------------------------------------------------
 
-r_id <- httr::GET(u_id, ssl, httr::write_disk(glue::glue("output/processos/{id}.html"), overwrite = TRUE))
-html_id <- xml2::read_html(glue::glue("output/processos/{id}.html"))
+r_id <- httr::GET(u_id, ssl, httr::write_disk(glue::glue("data-raw/processos/{id}.html"), overwrite = TRUE))
+html_id <- xml2::read_html(glue::glue("data-raw/processos/{id}.html"))
+
+pegar_id <- function(url) {
+
+  url |>
+    httr::GET(ssl) |>
+    xml2::read_html() |>
+    xml2::xml_find_first("//table/tr[2]") |>
+    xml2::xml_text() |>
+    stringr::str_remove_all("[a-zA-Z\\.\\:\\/\\-]")
+
+}
 
 tables_id <- html_id |>
   xml2::xml_find_all("//table")
 
-table_id2 <- tables_id[2] |>
+tables_id[2] |>
   rvest::html_table() |>
-  as.data.frame()
+  as.data.frame() |>
+  tibble::as.tibble()
 
 readr::write_rds(table_id2, glue::glue("data-raw/movs/movs_{id}.rds"))
-
 
 # proximos passos ---------------------------------------------------------
 # não precisa fazer uma função para baixar a página r0
@@ -149,3 +155,53 @@ readr::write_rds(table_id2, glue::glue("data-raw/movs/movs_{id}.rds"))
 #
 # Depois disso, eu faço a iteração
 # A iteração eu faço direto no data-raw. Pra ter controle de erros.
+
+
+# testando individualmente ------------------------------------------------
+
+id <- "10372100225201917"
+
+file <- download_processo(id)
+url <- parse_processo(file)
+download_mov(id)
+# iteração ----------------------------------------------------------------
+
+processos <- c("10372100225201917", "10372100141201894")
+path_processos <- "data-raw/processos"
+path_movs <- "data-raw/movs"
+# passo 1: download_processo() --------------------------------------------
+
+purrr::walk(processos, download_processo, path_processos)
+# files <- purrr::map_chr(processos, download_processo)
+
+# passo 2: parse_processo() -----------------------------------------------
+
+dados_processos <- path_processos |>
+  fs::dir_ls() |>
+  purrr::map_dfr(parse_processo, .id = "files")
+
+# é melhor não usar este jeito abaixo, em que eu parto do "files"
+# porque pode ser que nem todas as files deem certo
+
+# dados_processos <- files |>
+#   purrr::set_names() |>
+#   fs::path_common() |>
+#   fs::dir_ls() |> # não entendi porque só o "files" não funciona
+#   purrr::map_dfr(parse_processo, .id = "files")
+
+# passo 3: download_mov() -------------------------------------------------
+dados_processos$url |>
+  purrr::walk(download_mov, path_movs)
+
+# passo 4: parse_mov()
+da_movs <- path_movs |>
+  fs::dir_ls() |>
+  purrr::map_dfr(parse_mov, .id = "files") |>
+  janitor::clean_names() |>
+  dplyr::transmute(
+    id = stringr::str_extract(files, "[0-9]+"),
+    data = lubridate::dmy_hms(data_hora),
+    data = lubridate::date(data),
+    unidade,
+    descricao)
+
