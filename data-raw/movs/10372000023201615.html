@@ -1,0 +1,1556 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" >
+<head >
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="noindex" />
+<title>:: SEI - Pesquisa Processual ::</title>
+<link href="/infra_css/infra-global-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-global-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-tooltip.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-barra-progresso.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="css/infra-esquema-local.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-impressao-global.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="print" />
+<link href="/infra_css/infra-ajax.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/calendario/infra-calendario.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/arvore/infra-arvore.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/mapa/infra-mapa.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.structure.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.theme.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/multiple-select/multiple-select.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/modal/jquery.modalLink-1.0.0.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" >
+<!--/*--><![CDATA[/*><!--*/
+.colunaAcoes {display:none;}
+
+div.infraBarraSistemaE {width:90%}
+div.infraBarraSistemaD {width:5%}
+div.infraBarraComandos {width:99%}
+
+table caption {
+  text-align:left !important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.andamentoAberto {
+  background-color:white;
+}
+
+.andamentoConcluido {
+  background-color:white;
+}
+
+
+#tblCabecalho{margin-top:1;}
+#tblDocumentos {margin-top:1.5em;}
+#tblHistorico {margin-top:1.5em;}
+#divInfraAreaPaginacaoSuperior {display: none;}
+#divinfraAndamentoAreaPaginacaoSuperior {display: none;}
+
+#lblCaptcha {position: absolute; top:30%; left: 20%; width: 80%}
+#txtCaptcha{position: absolute; top:56%; left: 20%; height:15%; width:56%;font-size: 3em;}
+#btnEnviarCaptcha {position: absolute; top:80%; left: 20%; width:56%}
+
+#divInfraModal{
+	
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 50%; 
+    overflow: auto;
+   
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-image: url("imagens/bg_barra_sistema.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+span.retiraAncoraPadraoAzul{font-size: 1.2em;}
+
+/*]]>*/-->
+</style>
+<script type="text/javascript">var INFRA_PATH_IMAGENS='/infra_css/imagens',INFRA_PATH_JS='/infra_js',INFRA_PATH_CSS='/infra_css';</script>
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-1.12.4.min.js?1.12.4"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.js?1.11.1"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/multiple-select/jquery.multiple.select.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/ddslick/jquery.ddslick.min.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/modal/jquery.modalLink-1.0.0.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/jquery.smartmenus.js"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/addons/keyboard/jquery.smartmenus.keyboard.js"></script>
+			
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUtil.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraCookie.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUpload.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraBotaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAcaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTabelaDinamica.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraLupas.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraSelectEditavel.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAjax.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTooltip.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/calendario/InfraCalendario.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/arvore/InfraArvore.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript">
+$(function() {
+	$('#main-menu').smartmenus({
+    subMenusSubOffsetX: 1,
+    subMenusSubOffsetY: -8
+  });
+
+  //MENU CTRL+ALT+F9 
+  $('#main-menu').smartmenus('keyboardSetHotkey', 120, ['ctrlKey', 'altKey']);
+});
+</script>
+
+<script type="text/javascript" charset="iso-8859-1" >
+<!--//--><![CDATA[//><!--
+
+
+function inicializar(){
+
+  
+  infraEfeitoTabelas();
+}
+
+
+
+$(document).unbind("keyup").keyup(function(e){
+	e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    	var modal = document.getElementById('divInfraModal');
+        if(modal.style.display == "block"){
+        	fecharPdfModal();
+        	gerarPdf();
+    		
+    	}
+    }
+});
+
+
+
+function gerarPdfModal(){
+
+	if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    	alert('Nenhum documento selecionado.');
+    	return;
+  	}
+	var modal = document.getElementById('divInfraModal');
+	modal.style.display = "block";
+
+}
+
+function fecharPdfModal(){
+	
+    var modal = document.getElementById('divInfraModal');
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+	var modal = document.getElementById('divInfraModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function gerarPdf() {
+
+  if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    alert('Nenhum documento selecionado.');
+    return;
+  }
+  
+    	fecharPdfModal();
+  
+  infraExibirAviso(false);
+  
+ document.getElementById('hdnFlagGerar').value = '1';
+ document.getElementById('frmProcessoAcessoExternoConsulta').submit();
+}
+
+
+//--><!]]>
+</script>
+</head>
+<body onload="infraProcessarResize();infraProcessarMouseDown();inicializar();">
+<div id="divInfraAreaGlobal" class="infraAreaGlobal">
+<div id="divInfraBarraSuperior" class="infraBarraSuperior">
+<label>MINISTÉRIO DA ECONOMIA</label>
+</div>
+<div id="divInfraBarraSistema" class="infraBarraSistema">
+<div id="divInfraBarraSistemaD" class="infraBarraSistemaD">
+</div>
+<div id="divInfraBarraSistemaE" class="infraBarraSistemaE">
+<img src="imagens/sei_logo_azul_celeste.jpg" title="Sistema Eletrônico de Informações"/><span class="infraTituloLogoSistema">3.1.7</span>
+</div>
+</div>
+<div id="divInfraAreaTela" class="infraAreaTela">
+<div id="divInfraAreaTelaD" class="infraAreaTelaD" style="width:99%">
+<div id="divInfraBarraLocalizacao" class="infraBarraLocalizacao">Pesquisa Processual</div>
+
+<form id="frmProcessoAcessoExternoConsulta" method="post">
+ 
+ 		<div id="divInfraModal" class="infraFundoTransparente" style="position: fixed; width: 100%; height: 100%; visibility: visible;">
+ 		   <div id="divCaptcha"  class="infraAreaDados" style="height: 220px; width: 230px; background-color:white">
+ 				<div class="modal-header">
+      				<span id="spnClose" class="close" onclick="fecharPdfModal();">×</span>
+      				<h2 style ="color: white;font-size: 1.2em;font-weight: bold;">Digite o Código da Imagem</h2>
+    			</div>
+ 				<div class="modal-body">
+ 		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=90-68" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
+  					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
+  		   		</div>
+    			
+  			</div>
+    	</div>
+  			<input type="hidden" id="hdnInfraTipoPagina" name="hdnInfraTipoPagina" value="3" />
+<div id="divInfraBarraComandosSuperior" class="infraBarraComandos">
+<button tabindex="451" type="button" id="btnPush" value="Push" onclick="location.href='https://sei.economia.gov.br/sei/modulos/PUSH/push_assinar_processo.php?idProcedimento=463'" class="infraButton">Incluir no PUSH</button>&nbsp;
+</div>
+<table id="tblCabecalho" width="99.3%" class="infraTable" summary="Cabeçalho de Processo" >
+<tr><th class="infraTh" colspan="2">Autuação</th></tr>
+<tr class="infraTrClara"><td width="20%">Processo:</td><td>10372.000023/2016-15<img src="/infra_css/imagens/espaco.gif"><img src="imagens/sei_chave_restrito.gif" align="absbottom"  title="Acesso Restrito.&#13Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)"></td></tr>
+<tr class="infraTrClara"><td width="20%">Tipo:</td><td>Recurso - CRSFN-CVM</td></tr>
+<tr class="infraTrClara"><td width="20%">Data de Registro:</td><td>29/07/2016</td></tr>
+<tr class="infraTrClara"><td width="20%">Interessados:</td><td> CRSFN - Comissão de Valores Mobiliários - 1ª instância<br /> Ricardo Augusto de Oliveira Sacramento<br /> </td></tr>
+</table>
+<p style="font-size: 1.2em;"> Para condições de acesso a processo ou documento, favor consultar a unidade onde o processo se encontra em andamento. Eventualmente a unidade pode solicitar o <a style="font-size: 1em;" href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/usuario-externo-1" target="_blank">cadastro de usuário externo no SEI/ME</a> para tal disponibilização.</p><div id="divInfraAreaTabela" class="infraAreaTabela" >
+
+</div>
+
+<input type="hidden" id="hdnInfraNroItens" name="hdnInfraNroItens" value="0" />
+<input type="hidden" id="hdnInfraItemId" name="hdnInfraItemId" value="" />
+<input type="hidden" id="hdnInfraItens" name="hdnInfraItens" value="" />
+<input type="hidden" id="hdnInfraItensHash" name="hdnInfraItensHash" value="" />
+<input type="hidden" id="hdnInfraItensSelecionados" name="hdnInfraItensSelecionados" value="" />
+
+<input type="hidden" id="hdnInfraSelecoes" name="hdnInfraSelecoes" value="Infra" />
+
+<input type="hidden" id="hdnInfraCampoOrd" name="hdnInfraCampoOrd" value="Registro" />
+<input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
+<div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
+<table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
+<caption class="infraCaption">Lista de Andamentos (181 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+
+
+<!-- 7147468 -->
+<tr class="andamentoConcluido">
+<td align="center">24/09/2018 15:47</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7144261 -->
+<tr class="andamentoConcluido">
+<td align="center">24/09/2018 15:08</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6582286 -->
+<tr class="andamentoConcluido">
+<td align="center">30/08/2018 14:33</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5475933 -->
+<tr class="andamentoConcluido">
+<td align="center">13/07/2018 14:56</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5475708 -->
+<tr class="andamentoConcluido">
+<td align="center">13/07/2018 14:53</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5463853 -->
+<tr class="andamentoConcluido">
+<td align="center">13/07/2018 10:57</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="CRSFN - Banco Central do Brasil - DECAP / GABIN - 1ª instância" title="CRSFN - Banco Central do Brasil - DECAP / GABIN - 1ª instância" class="ancoraSigla">BACEN</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5463790 -->
+<tr class="andamentoConcluido">
+<td align="center">13/07/2018 10:56</td>
+<td align="center"><a alt="CRSFN - Banco Central do Brasil - DECAP / GABIN - 1ª instância" title="CRSFN - Banco Central do Brasil - DECAP / GABIN - 1ª instância" class="ancoraSigla">BCB</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5462592 -->
+<tr class="andamentoConcluido">
+<td align="center">13/07/2018 10:42</td>
+<td align="center"><a alt="CRSFN - Banco Central do Brasil - DECAP / GABIN - 1ª instância" title="CRSFN - Banco Central do Brasil - DECAP / GABIN - 1ª instância" class="ancoraSigla">BCB</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5462537 -->
+<tr class="andamentoConcluido">
+<td align="center">13/07/2018 10:42</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Devolvido ao órgão de origem<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5214707 -->
+<tr class="andamentoConcluido">
+<td align="center">03/07/2018 15:34</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Envio de correspondência eletrônica 0835212 (E-mail)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5111393 -->
+<tr class="andamentoConcluido">
+<td align="center">27/06/2018 10:38</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Envio de correspondência eletrônica 0815417 (E-mail)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5058442 -->
+<tr class="andamentoConcluido">
+<td align="center">25/06/2018 15:26</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Publicação do documento 0803260 (CRSFN - Acórdão Inteiro Teor) no veículo Boletim de Serviço Eletrônico de 26/06/2018 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5025211 -->
+<tr class="andamentoConcluido">
+<td align="center">21/06/2018 20:30</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5025208 -->
+<tr class="andamentoConcluido">
+<td align="center">21/06/2018 20:30</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Ana Maria Melo Netto Oliveira" title="Conselheira Ana Maria Melo Netto Oliveira" class="ancoraSigla">CRSFN-GAB01 - PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5025180 -->
+<tr class="andamentoConcluido">
+<td align="center">21/06/2018 20:20</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4999676 -->
+<tr class="andamentoConcluido">
+<td align="center">21/06/2018 09:38</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4727485 -->
+<tr class="andamentoConcluido">
+<td align="center">08/06/2018 09:58</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4725706 -->
+<tr class="andamentoConcluido">
+<td align="center">08/06/2018 09:22</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-GAB06 - CONS. GRAZIANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3200441 -->
+<tr class="andamentoConcluido">
+<td align="center">22/03/2018 17:12</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3199459 -->
+<tr class="andamentoConcluido">
+<td align="center">22/03/2018 16:51</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-GAB08 - CONS. OTTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3195379 -->
+<tr class="andamentoConcluido">
+<td align="center">22/03/2018 15:40</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Registro de documento externo restrito <a href="javascript:void(0);" onclick="alert('Este documento foi excluído.');" class="ancoraHistoricoProcesso">0472250</a>, Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3190896 -->
+<tr class="andamentoConcluido">
+<td align="center">22/03/2018 14:35</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Registro de documento externo restrito 0471429 (Ata - 410ª Sessão de Julgamento), Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2811027 -->
+<tr class="andamentoConcluido">
+<td align="center">06/03/2018 11:46</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 0383155 (Requerimento acesso a arquivo de áudio 410ª Sessão) movido do processo 10372.100014/2018-95.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2613077 -->
+<tr class="andamentoConcluido">
+<td align="center">23/02/2018 08:24</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 0370073 (Anexo - Sust. Oral - 10372.000023/2016-15) movido do processo 10372.100298/2017-39.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2601611 -->
+<tr class="andamentoConcluido">
+<td align="center">22/02/2018 14:34</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2590131 -->
+<tr class="andamentoConcluido">
+<td align="center">22/02/2018 09:31</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2588174 -->
+<tr class="andamentoConcluido">
+<td align="center">22/02/2018 07:49</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-GAB07 - CONS. ANTONIO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2580694 -->
+<tr class="andamentoConcluido">
+<td align="center">21/02/2018 15:45</td>
+<td align="center"><a alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-CONS.OTTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2563112 -->
+<tr class="andamentoConcluido">
+<td align="center">20/02/2018 18:41</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2563109 -->
+<tr class="andamentoConcluido">
+<td align="center">20/02/2018 18:40</td>
+<td align="center"><a alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-CONS.OTTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2563048 -->
+<tr class="andamentoConcluido">
+<td align="center">20/02/2018 18:33</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Julgado na 410ª Sessão de Julgamento do CRSFN: Recurso de Ofício - Provido. Multa no valor de R$100.000,00 (cem mil reais).<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2563018 -->
+<tr class="andamentoConcluido">
+<td align="center">20/02/2018 18:31</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2562709 -->
+<tr class="andamentoConcluido">
+<td align="center">20/02/2018 18:12</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2217363 -->
+<tr class="andamentoConcluido">
+<td align="center">26/01/2018 10:24</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Incluído na pauta da 410ª Sessão de Julgamento.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2215192 -->
+<tr class="andamentoConcluido">
+<td align="center">26/01/2018 08:51</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo restrito 0306127 (Pauta de Julgamento DOU - 410ª Sessão de Julgamento), conferido com documento original, Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2215190 -->
+<tr class="andamentoConcluido">
+<td align="center">26/01/2018 08:50</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2214948 -->
+<tr class="andamentoConcluido">
+<td align="center">26/01/2018 08:26</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 2027035 -->
+<tr class="andamentoConcluido">
+<td align="center">11/01/2018 10:45</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1795063 -->
+<tr class="andamentoConcluido">
+<td align="center">19/12/2017 16:48</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-GAB07 - CONS. ANTONIO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1788248 -->
+<tr class="andamentoConcluido">
+<td align="center">19/12/2017 14:13</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1759993 -->
+<tr class="andamentoConcluido">
+<td align="center">18/12/2017 08:23</td>
+<td align="center"><a alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1712852 -->
+<tr class="andamentoConcluido">
+<td align="center">13/12/2017 16:04</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 0228440 (Procuração Ricardo Augusto de Oliveira Sacramento) movido do processo 10372.100285/2017-60.<br />
+Inclusão de documento<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1711544 -->
+<tr class="andamentoConcluido">
+<td align="center">13/12/2017 15:35</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 0228098 (Anexo - Sustentação Oral - SEI 000023/2016 - 15) movido do processo 10372.100285/2017-60.<br />
+Inclusão de documento<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1696699 -->
+<tr class="andamentoConcluido">
+<td align="center">12/12/2017 18:43</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1696697 -->
+<tr class="andamentoConcluido">
+<td align="center">12/12/2017 18:43</td>
+<td align="center"><a alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1513128 -->
+<tr class="andamentoConcluido">
+<td align="center">30/11/2017 10:24</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Incluído na pauta da 409ª Sessão de Julgamento.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1511411 -->
+<tr class="andamentoConcluido">
+<td align="center">30/11/2017 09:45</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 0197385 (Pauta DOU - 409ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1511396 -->
+<tr class="andamentoConcluido">
+<td align="center">30/11/2017 09:44</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1510696 -->
+<tr class="andamentoConcluido">
+<td align="center">30/11/2017 09:21</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1247769 -->
+<tr class="andamentoConcluido">
+<td align="center">09/11/2017 10:26</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1245230 -->
+<tr class="andamentoConcluido">
+<td align="center">08/11/2017 18:39</td>
+<td align="center"><a alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-CONS.OTTO</a></td>
+
+<td>Publicação do documento 0151926 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 08/11/2017 18:39:33 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1236429 -->
+<tr class="andamentoConcluido">
+<td align="center">08/11/2017 14:16</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-GAB08 - CONS. OTTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1231264 -->
+<tr class="andamentoConcluido">
+<td align="center">08/11/2017 10:44</td>
+<td align="center"><a alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-CONS.OTTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1227186 -->
+<tr class="andamentoConcluido">
+<td align="center">07/11/2017 17:48</td>
+<td align="center"><a alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-CONS.OTTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">PGFN-NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1227172 -->
+<tr class="andamentoConcluido">
+<td align="center">07/11/2017 17:48</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Registro de documento externo público 0156218 (Parecer- -PGFN/CAF/NUCAF/CRSFN/N° 093/2017), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1227122 -->
+<tr class="andamentoConcluido">
+<td align="center">07/11/2017 17:45</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1227024 -->
+<tr class="andamentoConcluido">
+<td align="center">07/11/2017 17:40</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">PGFN-NUCAF-CAF-ANDRÉ-RIZZO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1115972 -->
+<tr class="andamentoConcluido">
+<td align="center">27/10/2017 15:36</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0142617 (Ata 406ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 835188 -->
+<tr class="andamentoConcluido">
+<td align="center">29/09/2017 14:24</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 829270 -->
+<tr class="andamentoConcluido">
+<td align="center">28/09/2017 19:08</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">PGFN-NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 796126 -->
+<tr class="andamentoConcluido">
+<td align="center">25/09/2017 17:05</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 796069 -->
+<tr class="andamentoConcluido">
+<td align="center">25/09/2017 17:02</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-GAB08 - CONS. OTTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 787548 -->
+<tr class="andamentoConcluido">
+<td align="center">23/09/2017 18:16</td>
+<td align="center"><a alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-CONS.OTTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 782157 -->
+<tr class="andamentoConcluido">
+<td align="center">22/09/2017 13:25</td>
+<td align="center"><a alt="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" title="Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo" class="ancoraSigla">CRSFN-CONS.OTTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 782127 -->
+<tr class="andamentoConcluido">
+<td align="center">22/09/2017 13:22</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Distribuído por sorteio na 406ª Sessão de Julgamentos ao Conselheiro Otto Eduardo Fonseca de Albuquerque Lobo.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 574150 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2017 14:23</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 573533 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2017 13:07</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Ana Maria Melo Netto Oliveira" title="Conselheira Ana Maria Melo Netto Oliveira" class="ancoraSigla">CRSFN-GAB01 - PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 573516 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2017 13:01</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 539234 -->
+<tr class="andamentoConcluido">
+<td align="center">21/08/2017 15:19</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 537085 -->
+<tr class="andamentoConcluido">
+<td align="center">21/08/2017 13:12</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 536931 -->
+<tr class="andamentoConcluido">
+<td align="center">21/08/2017 12:48</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Bláir Costa D&#039;Avila" title="Conselheiro Bláir Costa D&#039;Avila" class="ancoraSigla">CRSFN-GAB16 - CONS. BLÁIR</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 249493 -->
+<tr class="andamentoConcluido">
+<td align="center">22/06/2017 14:23</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 244840 -->
+<tr class="andamentoConcluido">
+<td align="center">21/06/2017 15:42</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-AUTUAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 110279 -->
+<tr class="andamentoConcluido">
+<td align="center">22/02/2017 10:41</td>
+<td align="center"><a alt="Conselheiro Bláir Costa D'Avila" title="Conselheiro Bláir Costa D'Avila" class="ancoraSigla">CRSFN-GAB16 - CONS. BLÁIR</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105520 -->
+<tr class="andamentoConcluido">
+<td align="center">10/02/2017 16:15</td>
+<td align="center"><a alt="Conselheiro Bláir Costa D'Avila" title="Conselheiro Bláir Costa D'Avila" class="ancoraSigla">CRSFN-GAB16 - CONS. BLÁIR</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Setor de Controle de Processo Administrativo Sancionador - CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - CRSFN" class="ancoraSigla">SEPAS</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105508 -->
+<tr class="andamentoConcluido">
+<td align="center">10/02/2017 16:05</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Registro de documento externo público 0013428 (Inteiro teor - 89ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105507 -->
+<tr class="andamentoConcluido">
+<td align="center">10/02/2017 16:04</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105504 -->
+<tr class="andamentoConcluido">
+<td align="center">10/02/2017 15:52</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Bláir Costa D&#039;Avila" title="Conselheiro Bláir Costa D&#039;Avila" class="ancoraSigla">GAB 16 - BLAIR D&#039;AVILA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31743 -->
+<tr class="andamentoConcluido">
+<td align="center">02/09/2016 16:36</td>
+<td align="center"><a alt="CRSFN" title="CRSFN" class="ancoraSigla">SETEC - CLASSIFICA</a></td>
+
+<td>Registro de documento externo público 0007782 (Cadastro de Usuário Externo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31334 -->
+<tr class="andamentoConcluido">
+<td align="center">01/09/2016 16:41</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0007734 (Inteiro teor - 73º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31332 -->
+<tr class="andamentoConcluido">
+<td align="center">01/09/2016 16:40</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0007733 (Inteiro teor - 71ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31329 -->
+<tr class="andamentoConcluido">
+<td align="center">01/09/2016 16:38</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0007732 (Inteiro teor - 72ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31327 -->
+<tr class="andamentoConcluido">
+<td align="center">01/09/2016 16:37</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0007731 (Inteiro teor - 71ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31153 -->
+<tr class="andamentoConcluido">
+<td align="center">01/09/2016 13:09</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31092 -->
+<tr class="andamentoConcluido">
+<td align="center">01/09/2016 12:01</td>
+<td align="center"><a alt="CRSFN" title="CRSFN" class="ancoraSigla">SETEC - CLASSIFICA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28787 -->
+<tr class="andamentoConcluido">
+<td align="center">22/08/2016 16:32</td>
+<td align="center"><a alt="Conselheiro Bláir Costa D'Avila" title="Conselheiro Bláir Costa D'Avila" class="ancoraSigla">CRSFN-GAB16 - CONS. BLÁIR</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 15513 -->
+<tr class="andamentoConcluido">
+<td align="center">31/07/2016 11:22</td>
+<td align="center"><a alt="Conselheiro Bláir Costa D'Avila" title="Conselheiro Bláir Costa D'Avila" class="ancoraSigla">CRSFN-GAB16 - CONS. BLÁIR</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 15511 -->
+<tr class="andamentoConcluido">
+<td align="center">31/07/2016 11:22</td>
+<td align="center"><a alt="CRSFN" title="CRSFN" class="ancoraSigla">SETEC - CLASSIFICA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 15509 -->
+<tr class="andamentoConcluido">
+<td align="center">31/07/2016 11:22</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 13433 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:42</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Assessoria da Secretaria Executiva - CRSFN" title="Assessoria da Secretaria Executiva - CRSFN" class="ancoraSigla">ASSESSORIA CRSFN</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1225 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000525 (Inteiro teor - 91ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1223 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000524 (Inteiro teor - 90ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1221 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000523 (Anexo - b)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1219 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000522 (Inteiro teor - 88ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1217 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000521 (Inteiro teor - 87ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1215 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000520 (Inteiro teor - 86ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1213 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000519 (Inteiro teor - 85ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1211 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000518 (Inteiro teor - 84ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1209 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000517 (Inteiro teor - 83ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1207 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000516 (Inteiro teor - 82ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1205 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000515 (Inteiro teor - 81ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1203 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000514 (Inteiro teor - 80ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1201 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000513 (Inteiro teor - 79ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1199 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000512 (Inteiro teor - 78ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1197 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000511 (Inteiro teor - 77ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1195 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000510 (Inteiro teor - 76ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1193 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000509 (Inteiro teor - 75ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1191 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000508 (Inteiro teor - 74ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1189 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000507 (Inteiro teor - 70ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1187 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000506 (Inteiro teor - 69ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1185 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000505 (Inteiro teor - 68ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1183 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000504 (Inteiro teor - 67ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1181 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000503 (Inteiro teor - 66ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1179 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:28</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000502 (Inteiro teor - 65ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1177 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000501 (Inteiro teor - 64ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1175 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000500 (Inteiro teor - 63ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1173 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000499 (Inteiro teor - 62ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1171 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000498 (Inteiro teor - 61ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1169 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000497 (Inteiro teor - 60ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1167 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000496 (Inteiro teor -59ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1165 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000495 (Inteiro teor - 58ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1163 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000494 (Inteiro teor - 57ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1161 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000493 (Inteiro teor - 56ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1159 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000492 (Inteiro teor - 55ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1157 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000491 (Inteiro teor - 54ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1155 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000490 (Inteiro teor - 53ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1153 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000489 (Inteiro teor - 52ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1151 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000488 (Inteiro teor - 51ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1149 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000487 (Inteiro teor - 50ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1147 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000486 (Inteiro teor - 49ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1145 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000485 (Inteiro teor - 48ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1143 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000484 (Inteiro teor - 47ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1141 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000483 (Inteiro teor - 46ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1139 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000482 (Inteiro teor - 45ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1137 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000481 (Inteiro teor - 44ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1135 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000480 (Inteiro teor - 43ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1133 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000479 (Inteiro teor - 42ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1131 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000478 (Inteiro teor - 41ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1129 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000477 (Inteiro teor - 40ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1127 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000476 (Inteiro teor - 39ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1125 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000475 (Inteiro teor - 38ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1123 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000474 (Inteiro teor - 37ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1121 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000473 (Inteiro teor - 36ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1119 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000472 (Inteiro teor - 35ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1117 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000471 (Inteiro teor - 34ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1115 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000470 (Inteiro teor - 33ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1113 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000469 (Inteiro teor - 32ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1111 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000468 (Inteiro teor - 31ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1109 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000467 (Inteiro teor - 30ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1107 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000466 (Inteiro teor - 29ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1105 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000465 (Inteiro teor - 28ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1103 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000464 (Inteiro teor - 27ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1101 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000463 (Inteiro teor - 26ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1099 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000462 (Inteiro teor - 25ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1097 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000461 (Inteiro teor - 24ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1095 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000460 (Inteiro teor - 23ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1093 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000459 (Inteiro teor - 22ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1091 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000458 (Inteiro teor - 21ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1089 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000457 (Anexo - a)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1087 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000456 (Inteiro teor - 20ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1085 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000455 (Inteiro teor - 19ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1083 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000454 (Inteiro teor - 18ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1081 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000453 (Inteiro teor - 17ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1079 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000452 (Inteiro teor - 16ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1077 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000451 (Inteiro teor - 15ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1075 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000450 (Inteiro teor - 14ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1073 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000449 (Inteiro teor - 13ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1071 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000448 (Inteiro teor - 12ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1069 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:27</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000447 (Inteiro teor - 11ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1067 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000446 (Inteiro teor - 10ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1065 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000445 (Inteiro teor - 9ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1063 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000444 (Inteiro teor - 8ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1061 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000443 (Inteiro teor - 7ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1059 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000442 (Inteiro teor - 6ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1057 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000441 (Inteiro teor - 5ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1055 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000440 (Extrato ATA - DE - JULGAMENTO)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1053 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000439 (Inteiro teor - 4ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1051 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000438 (Inteiro teor - 3ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1049 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000437 (Inteiro teor - 2ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1047 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 0000436 (Inteiro teor - 1ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1046 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 16:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
+</div>
+<input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="0cedc3ae3659300acb8cd1770ade978a" />
+  	</form>
+</div></div>
+</div>
+<input type="hidden" id="hdnInfraPrefixoCookie" name="hdnInfraPrefixoCookie" value="ME_SEI_" />
+<div id="infraDivImpressao" class="infraImpressao"></div>
+</body>
+</html>

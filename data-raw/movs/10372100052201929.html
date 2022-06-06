@@ -1,0 +1,1154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" >
+<head >
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="noindex" />
+<title>:: SEI - Pesquisa Processual ::</title>
+<link href="/infra_css/infra-global-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-global-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-tooltip.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-barra-progresso.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="css/infra-esquema-local.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-impressao-global.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="print" />
+<link href="/infra_css/infra-ajax.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/calendario/infra-calendario.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/arvore/infra-arvore.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/mapa/infra-mapa.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.structure.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.theme.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/multiple-select/multiple-select.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/modal/jquery.modalLink-1.0.0.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" >
+<!--/*--><![CDATA[/*><!--*/
+.colunaAcoes {display:none;}
+
+div.infraBarraSistemaE {width:90%}
+div.infraBarraSistemaD {width:5%}
+div.infraBarraComandos {width:99%}
+
+table caption {
+  text-align:left !important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.andamentoAberto {
+  background-color:white;
+}
+
+.andamentoConcluido {
+  background-color:white;
+}
+
+
+#tblCabecalho{margin-top:1;}
+#tblDocumentos {margin-top:1.5em;}
+#tblHistorico {margin-top:1.5em;}
+#divInfraAreaPaginacaoSuperior {display: none;}
+#divinfraAndamentoAreaPaginacaoSuperior {display: none;}
+
+#lblCaptcha {position: absolute; top:30%; left: 20%; width: 80%}
+#txtCaptcha{position: absolute; top:56%; left: 20%; height:15%; width:56%;font-size: 3em;}
+#btnEnviarCaptcha {position: absolute; top:80%; left: 20%; width:56%}
+
+#divInfraModal{
+	
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 50%; 
+    overflow: auto;
+   
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-image: url("imagens/bg_barra_sistema.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+span.retiraAncoraPadraoAzul{font-size: 1.2em;}
+
+/*]]>*/-->
+</style>
+<script type="text/javascript">var INFRA_PATH_IMAGENS='/infra_css/imagens',INFRA_PATH_JS='/infra_js',INFRA_PATH_CSS='/infra_css';</script>
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-1.12.4.min.js?1.12.4"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.js?1.11.1"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/multiple-select/jquery.multiple.select.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/ddslick/jquery.ddslick.min.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/modal/jquery.modalLink-1.0.0.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/jquery.smartmenus.js"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/addons/keyboard/jquery.smartmenus.keyboard.js"></script>
+			
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUtil.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraCookie.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUpload.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraBotaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAcaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTabelaDinamica.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraLupas.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraSelectEditavel.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAjax.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTooltip.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/calendario/InfraCalendario.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/arvore/InfraArvore.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript">
+$(function() {
+	$('#main-menu').smartmenus({
+    subMenusSubOffsetX: 1,
+    subMenusSubOffsetY: -8
+  });
+
+  //MENU CTRL+ALT+F9 
+  $('#main-menu').smartmenus('keyboardSetHotkey', 120, ['ctrlKey', 'altKey']);
+});
+</script>
+
+<script type="text/javascript" charset="iso-8859-1" >
+<!--//--><![CDATA[//><!--
+
+
+function inicializar(){
+
+  
+  infraEfeitoTabelas();
+}
+
+
+
+$(document).unbind("keyup").keyup(function(e){
+	e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    	var modal = document.getElementById('divInfraModal');
+        if(modal.style.display == "block"){
+        	fecharPdfModal();
+        	gerarPdf();
+    		
+    	}
+    }
+});
+
+
+
+function gerarPdfModal(){
+
+	if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    	alert('Nenhum documento selecionado.');
+    	return;
+  	}
+	var modal = document.getElementById('divInfraModal');
+	modal.style.display = "block";
+
+}
+
+function fecharPdfModal(){
+	
+    var modal = document.getElementById('divInfraModal');
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+	var modal = document.getElementById('divInfraModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function gerarPdf() {
+
+  if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    alert('Nenhum documento selecionado.');
+    return;
+  }
+  
+    	fecharPdfModal();
+  
+  infraExibirAviso(false);
+  
+ document.getElementById('hdnFlagGerar').value = '1';
+ document.getElementById('frmProcessoAcessoExternoConsulta').submit();
+}
+
+
+//--><!]]>
+</script>
+</head>
+<body onload="infraProcessarResize();infraProcessarMouseDown();inicializar();">
+<div id="divInfraAreaGlobal" class="infraAreaGlobal">
+<div id="divInfraBarraSuperior" class="infraBarraSuperior">
+<label>MINISTÉRIO DA ECONOMIA</label>
+</div>
+<div id="divInfraBarraSistema" class="infraBarraSistema">
+<div id="divInfraBarraSistemaD" class="infraBarraSistemaD">
+</div>
+<div id="divInfraBarraSistemaE" class="infraBarraSistemaE">
+<img src="imagens/sei_logo_azul_celeste.jpg" title="Sistema Eletrônico de Informações"/><span class="infraTituloLogoSistema">3.1.7</span>
+</div>
+</div>
+<div id="divInfraAreaTela" class="infraAreaTela">
+<div id="divInfraAreaTelaD" class="infraAreaTelaD" style="width:99%">
+<div id="divInfraBarraLocalizacao" class="infraBarraLocalizacao">Pesquisa Processual</div>
+
+<form id="frmProcessoAcessoExternoConsulta" method="post">
+ 
+ 		<div id="divInfraModal" class="infraFundoTransparente" style="position: fixed; width: 100%; height: 100%; visibility: visible;">
+ 		   <div id="divCaptcha"  class="infraAreaDados" style="height: 220px; width: 230px; background-color:white">
+ 				<div class="modal-header">
+      				<span id="spnClose" class="close" onclick="fecharPdfModal();">×</span>
+      				<h2 style ="color: white;font-size: 1.2em;font-weight: bold;">Digite o Código da Imagem</h2>
+    			</div>
+ 				<div class="modal-body">
+ 		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=57-57" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
+  					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
+  		   		</div>
+    			
+  			</div>
+    	</div>
+  			<input type="hidden" id="hdnInfraTipoPagina" name="hdnInfraTipoPagina" value="3" />
+<div id="divInfraBarraComandosSuperior" class="infraBarraComandos">
+<button tabindex="451" type="button" id="btnPush" value="Push" onclick="location.href='https://sei.economia.gov.br/sei/modulos/PUSH/push_assinar_processo.php?idProcedimento=2089594'" class="infraButton">Incluir no PUSH</button>&nbsp;
+</div>
+<table id="tblCabecalho" width="99.3%" class="infraTable" summary="Cabeçalho de Processo" >
+<tr><th class="infraTh" colspan="2">Autuação</th></tr>
+<tr class="infraTrClara"><td width="20%">Processo:</td><td>10372.100052/2019-29<img src="/infra_css/imagens/espaco.gif"><img src="imagens/sei_chave_restrito.gif" align="absbottom"  title="Acesso Restrito.&#13CRSFN Inicial (CRSFN Inicial)"></td></tr>
+<tr class="infraTrClara"><td width="20%">Tipo:</td><td>Recurso - CRSFN-CVM</td></tr>
+<tr class="infraTrClara"><td width="20%">Data de Registro:</td><td>12/02/2019</td></tr>
+<tr class="infraTrClara"><td width="20%">Interessados:</td><td> Hesa 84 - Investimentos Imobiliários Ltda. (xx.343.xxx/xxxx-01)<br /> Hesa 84 Investimentos Imobiliários Ltda. (xx.343.xxx/xxxx-01)<br /> Sei Jundiaí Empreendimento Imobiliário SPE Ltda. (xx.772.xxx/xxxx-30)<br /> Sei Novo Negócio 1 Empreendimento Imobiliário SPE Ltda. (xx.350.xxx/xxxx-03)<br /> Sei Olga Empreendimento Imobiliário SPE Ltda. (xx.035.xxx/xxxx-81)<br /> Sei Osasco Empreendimento Imobiliário SPE Ltda. (xx.471.xxx/xxxx-60)<br /> Sei São Bernardo Do Campo Empreendimento Imobiliário SPE Ltda. (xx.079.xxx/xxxx-50)<br /> Sei Sorocaba Empreendimento Imobiliário SPE Ltda. (xx.674.xxx/xxxx-82)<br /> Hesa 84 Investimentos Imobiliários Ltda. (09.343.490/0001-01)<br /> Sei Jundiaí Empreendimento Imobiliário SPE Ltda. (08.772.208/0001-30)<br /> Sei Novo Negócio 1 Empreendimento Imobiliário SPE Ltda. (13.350.349/0001-03)<br /> Sei Olga Empreendimento Imobiliário SPE Ltda. (13.035.288/0001-81)<br /> Sei Osasco Empreendimento Imobiliário SPE Ltda. (15.471.367/0001-60)<br /> Sei São Bernardo Do Campo Empreendimento Imobiliário SPE Ltda. (15.079.183/0001-50)<br /> Sei Sorocaba Empreendimento Imobiliário SPE Ltda. (16.674.260/0001-82)<br /> </td></tr>
+</table>
+<p style="font-size: 1.2em;"> Para condições de acesso a processo ou documento, favor consultar a unidade onde o processo se encontra em andamento. Eventualmente a unidade pode solicitar o <a style="font-size: 1em;" href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/usuario-externo-1" target="_blank">cadastro de usuário externo no SEI/ME</a> para tal disponibilização.</p><div id="divInfraAreaTabela" class="infraAreaTabela" >
+
+</div>
+
+<input type="hidden" id="hdnInfraNroItens" name="hdnInfraNroItens" value="0" />
+<input type="hidden" id="hdnInfraItemId" name="hdnInfraItemId" value="" />
+<input type="hidden" id="hdnInfraItens" name="hdnInfraItens" value="" />
+<input type="hidden" id="hdnInfraItensHash" name="hdnInfraItensHash" value="" />
+<input type="hidden" id="hdnInfraItensSelecionados" name="hdnInfraItensSelecionados" value="" />
+
+<input type="hidden" id="hdnInfraSelecoes" name="hdnInfraSelecoes" value="Infra" />
+
+<input type="hidden" id="hdnInfraCampoOrd" name="hdnInfraCampoOrd" value="Registro" />
+<input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
+<div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
+<table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
+<caption class="infraCaption">Lista de Andamentos (124 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+
+
+<!-- 86528621 -->
+<tr class="andamentoConcluido">
+<td align="center">17/06/2021 19:51</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 86521965 -->
+<tr class="andamentoConcluido">
+<td align="center">17/06/2021 18:39</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" CRSFN - Comissão de Valores Mobiliários - 1ª instância" title=" CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 86521964 -->
+<tr class="andamentoConcluido">
+<td align="center">17/06/2021 18:39</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>O Usuário Externo Rafael Santiago Salles efetivou Peticionamento Intercorrente, tendo gerado o recibo 16571889 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 86521949 -->
+<tr class="andamentoConcluido">
+<td align="center">17/06/2021 18:39</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Registro de documento externo público 16571888 (Formulário de Identificação de Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 83525256 -->
+<tr class="andamentoConcluido">
+<td align="center">24/05/2021 18:04</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 83439247 -->
+<tr class="andamentoConcluido">
+<td align="center">24/05/2021 14:03</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 83439200 -->
+<tr class="andamentoConcluido">
+<td align="center">24/05/2021 14:03</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo devolvido para o órgão origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 83438836 -->
+<tr class="andamentoConcluido">
+<td align="center">24/05/2021 14:02</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80951254 -->
+<tr class="andamentoConcluido">
+<td align="center">05/05/2021 15:28</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Publicação do documento 15535845 (CRSFN - Acórdão Inteiro Teor) no veículo Boletim de Serviço Eletrônico de 06/05/2021 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80949225 -->
+<tr class="andamentoConcluido">
+<td align="center">05/05/2021 15:25</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80947755 -->
+<tr class="andamentoConcluido">
+<td align="center">05/05/2021 15:20</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80766284 -->
+<tr class="andamentoConcluido">
+<td align="center">04/05/2021 16:47</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 78619484 -->
+<tr class="andamentoConcluido">
+<td align="center">19/04/2021 09:40</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 78193264 -->
+<tr class="andamentoConcluido">
+<td align="center">14/04/2021 19:14</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 78193262 -->
+<tr class="andamentoConcluido">
+<td align="center">14/04/2021 19:14</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 70053333 -->
+<tr class="andamentoConcluido">
+<td align="center">06/02/2021 15:10</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 70040044 -->
+<tr class="andamentoConcluido">
+<td align="center">05/02/2021 19:24</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 65714579 -->
+<tr class="andamentoConcluido">
+<td align="center">28/12/2020 11:01</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Registro de documento externo público 12710444 (Ata da 443ª sessão de julgamento retificada)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 64868674 -->
+<tr class="andamentoConcluido">
+<td align="center">17/12/2020 12:05</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Registro de documento externo público 12541552 (Ata da 443ª sessão de julgamento.)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61980865 -->
+<tr class="andamentoConcluido">
+<td align="center">24/11/2020 16:17</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61830243 -->
+<tr class="andamentoConcluido">
+<td align="center">23/11/2020 18:16</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61829874 -->
+<tr class="andamentoConcluido">
+<td align="center">23/11/2020 18:15</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61829602 -->
+<tr class="andamentoConcluido">
+<td align="center">23/11/2020 18:14</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61818699 -->
+<tr class="andamentoConcluido">
+<td align="center">23/11/2020 17:10</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61413131 -->
+<tr class="andamentoConcluido">
+<td align="center">19/11/2020 10:30</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61396759 -->
+<tr class="andamentoConcluido">
+<td align="center">19/11/2020 09:24</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61396758 -->
+<tr class="andamentoConcluido">
+<td align="center">19/11/2020 09:24</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61283730 -->
+<tr class="andamentoConcluido">
+<td align="center">18/11/2020 12:01</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61283728 -->
+<tr class="andamentoConcluido">
+<td align="center">18/11/2020 12:01</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 61262718 -->
+<tr class="andamentoConcluido">
+<td align="center">18/11/2020 10:52</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Julgado na 443ª Sessão de Julgamento do CRSFN: Hesa 84 Investimentos Imobiliários Ltda., Sei Olga Empreendimento Imobiliário SPE Ltda. e Sei Osasco Empreendimento Imobiliário SPE Ltda.: recursos providos. Sei Jundiaí Empreendimento Imobiliário SPE Ltda., Sei Novo Negócio 1 Empreendimento Imobiliário SPE Ltda., Sei São Bernardo do Campo Empreendimento Imobiliário SPE Ltda. e Sei Sorocaba Empreendimento Imobiliário SPE Ltda.: recursos parcialmente providos, para convolar as multas em advertência.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 60394872 -->
+<tr class="andamentoConcluido">
+<td align="center">11/11/2020 09:08</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 60379470 -->
+<tr class="andamentoConcluido">
+<td align="center">10/11/2020 21:34</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title=" Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 60379468 -->
+<tr class="andamentoConcluido">
+<td align="center">10/11/2020 21:34</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>O Usuário Externo Daniella Maria Neves Reali Fragoso efetivou Peticionamento Intercorrente, tendo gerado o recibo 11696194 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 60379462 -->
+<tr class="andamentoConcluido">
+<td align="center">10/11/2020 21:34</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 11696193 (Memorial de Recurso - Complementar)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 59696663 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2020 10:17</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 11567983 (Pauta DOU - 443ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 59696503 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2020 10:17</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 59690653 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2020 09:57</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 59690266 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2020 09:56</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Incluído na pauta da 443ª Sessão de Julgamento.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 59341984 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2020 08:18</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 58625362 -->
+<tr class="andamentoConcluido">
+<td align="center">26/10/2020 07:00</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 57274053 -->
+<tr class="andamentoConcluido">
+<td align="center">13/10/2020 15:46</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 57274044 -->
+<tr class="andamentoConcluido">
+<td align="center">13/10/2020 15:46</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 57271490 -->
+<tr class="andamentoConcluido">
+<td align="center">13/10/2020 15:38</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 57271489 -->
+<tr class="andamentoConcluido">
+<td align="center">13/10/2020 15:38</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 57265773 -->
+<tr class="andamentoConcluido">
+<td align="center">13/10/2020 15:19</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 54476178 -->
+<tr class="andamentoConcluido">
+<td align="center">17/09/2020 15:30</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44686418 -->
+<tr class="andamentoConcluido">
+<td align="center">15/06/2020 17:59</td>
+<td align="center"><a alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44599755 -->
+<tr class="andamentoConcluido">
+<td align="center">15/06/2020 10:40</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44598553 -->
+<tr class="andamentoConcluido">
+<td align="center">15/06/2020 10:34</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44598551 -->
+<tr class="andamentoConcluido">
+<td align="center">15/06/2020 10:34</td>
+<td align="center"><a alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44598549 -->
+<tr class="andamentoConcluido">
+<td align="center">15/06/2020 10:34</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44591330 -->
+<tr class="andamentoConcluido">
+<td align="center">15/06/2020 09:57</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44556966 -->
+<tr class="andamentoConcluido">
+<td align="center">12/06/2020 19:16</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44556965 -->
+<tr class="andamentoConcluido">
+<td align="center">12/06/2020 19:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 44556791 -->
+<tr class="andamentoConcluido">
+<td align="center">12/06/2020 19:14</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 36395129 -->
+<tr class="andamentoConcluido">
+<td align="center">13/03/2020 18:31</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 35778581 -->
+<tr class="andamentoConcluido">
+<td align="center">09/03/2020 16:04</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 33799180 -->
+<tr class="andamentoConcluido">
+<td align="center">13/02/2020 14:51</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Registro de documento externo público 6496812 (Ata da 433ª SESSÃO DE JULGAMENTO)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 33102390 -->
+<tr class="andamentoConcluido">
+<td align="center">06/02/2020 16:30</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 32720871 -->
+<tr class="andamentoConcluido">
+<td align="center">03/02/2020 18:02</td>
+<td align="center"><a alt="Conselheira Ana Paula Zanetti de Barros Moreira" title="Conselheira Ana Paula Zanetti de Barros Moreira" class="ancoraSigla">CRSFN-CONS.ANA PAULA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 32308821 -->
+<tr class="andamentoConcluido">
+<td align="center">29/01/2020 13:26</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 32268326 -->
+<tr class="andamentoConcluido">
+<td align="center">29/01/2020 09:53</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 32130556 -->
+<tr class="andamentoConcluido">
+<td align="center">27/01/2020 17:20</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 32074151 -->
+<tr class="andamentoConcluido">
+<td align="center">27/01/2020 12:37</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 32025675 -->
+<tr class="andamentoConcluido">
+<td align="center">26/01/2020 08:26</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 32025670 -->
+<tr class="andamentoConcluido">
+<td align="center">26/01/2020 08:25</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31965642 -->
+<tr class="andamentoConcluido">
+<td align="center">24/01/2020 12:09</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31912203 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 18:26</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31862307 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:35</td>
+<td align="center"><a alt="Conselheiro Sérgio Cipriano dos Santos" title="Conselheiro Sérgio Cipriano dos Santos" class="ancoraSigla">CRSFN-CONS.SÉRGIO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852620 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:04</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852618 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:04</td>
+<td align="center"><a alt="Conselheira Ana Paula Zanetti de Barros Moreira" title="Conselheira Ana Paula Zanetti de Barros Moreira" class="ancoraSigla">CRSFN-CONS.ANA PAULA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852616 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:04</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852614 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:04</td>
+<td align="center"><a alt="Conselheiro Sérgio Cipriano dos Santos" title="Conselheiro Sérgio Cipriano dos Santos" class="ancoraSigla">CRSFN-CONS.SÉRGIO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852612 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:04</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852610 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:04</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852608 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:04</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852425 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:02</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Tramitado para os membros do Conselho para a finalidade prevista no art. 15, §1º do RICRSFN.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31852378 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 14:02</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Envio de correspondência eletrônica 6102314 (E-mail)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31815690 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 10:30</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31795065 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 08:59</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31792371 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2020 08:36</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31758772 -->
+<tr class="andamentoConcluido">
+<td align="center">22/01/2020 15:54</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31732703 -->
+<tr class="andamentoConcluido">
+<td align="center">22/01/2020 14:21</td>
+<td align="center"><a alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31731272 -->
+<tr class="andamentoConcluido">
+<td align="center">22/01/2020 14:14</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31731181 -->
+<tr class="andamentoConcluido">
+<td align="center">22/01/2020 14:14</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31731179 -->
+<tr class="andamentoConcluido">
+<td align="center">22/01/2020 14:14</td>
+<td align="center"><a alt="Conselheiro Antonio Augusto de Sá Freire Filho" title="Conselheiro Antonio Augusto de Sá Freire Filho" class="ancoraSigla">CRSFN-CONS.ANTONIO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31731177 -->
+<tr class="andamentoConcluido">
+<td align="center">22/01/2020 14:14</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31722766 -->
+<tr class="andamentoConcluido">
+<td align="center">22/01/2020 13:30</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 6072464 (Pedido de Sust. Oral - 10372.100052/2019-29) movido do processo 10372.100314/2019-55.<br />
+Movido para o processo origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31493316 -->
+<tr class="andamentoConcluido">
+<td align="center">20/01/2020 14:37</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo restrito 6028937 (Memória de Reunião), conferido com cópia simples, Informação Pessoal (Art. 31 da Lei nº 12.527/2011)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31456230 -->
+<tr class="andamentoConcluido">
+<td align="center">20/01/2020 10:34</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31454797 -->
+<tr class="andamentoConcluido">
+<td align="center">20/01/2020 10:28</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title=" Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31454796 -->
+<tr class="andamentoConcluido">
+<td align="center">20/01/2020 10:28</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>O Usuário Externo Daniella Maria Neves Reali Fragoso efetivou Peticionamento Intercorrente, tendo gerado o recibo 6020973 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31454785 -->
+<tr class="andamentoConcluido">
+<td align="center">20/01/2020 10:28</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 6020971 (Memorial Complemento do Memorial de Recurso)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31343036 -->
+<tr class="andamentoConcluido">
+<td align="center">17/01/2020 09:59</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo restrito 5999417 (Memória de Reunião), Informação Pessoal (Art. 31 da Lei nº 12.527/2011)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31342082 -->
+<tr class="andamentoConcluido">
+<td align="center">17/01/2020 09:54</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo restrito 5999216 (Memória de Reunião), Informação Pessoal (Art. 31 da Lei nº 12.527/2011)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31006023 -->
+<tr class="andamentoConcluido">
+<td align="center">14/01/2020 10:22</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Publicação do documento 5929512 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 14/01/2020 10:22:18 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 30594245 -->
+<tr class="andamentoConcluido">
+<td align="center">08/01/2020 08:42</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 5850148 (Pauta DOU - 433ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 30592023 -->
+<tr class="andamentoConcluido">
+<td align="center">08/01/2020 08:28</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Incluído na pauta da 433ª sessão de julgamento.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 30592022 -->
+<tr class="andamentoConcluido">
+<td align="center">08/01/2020 08:28</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 30591547 -->
+<tr class="andamentoConcluido">
+<td align="center">08/01/2020 08:24</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 30514024 -->
+<tr class="andamentoConcluido">
+<td align="center">07/01/2020 10:07</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 29807787 -->
+<tr class="andamentoConcluido">
+<td align="center">23/12/2019 09:55</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 29793022 -->
+<tr class="andamentoConcluido">
+<td align="center">22/12/2019 23:43</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 29792742 -->
+<tr class="andamentoConcluido">
+<td align="center">22/12/2019 19:15</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 19762735 -->
+<tr class="andamentoConcluido">
+<td align="center">24/08/2019 16:36</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 19164279 -->
+<tr class="andamentoConcluido">
+<td align="center">16/08/2019 13:23</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 19162987 -->
+<tr class="andamentoConcluido">
+<td align="center">16/08/2019 13:05</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 19152905 -->
+<tr class="andamentoConcluido">
+<td align="center">16/08/2019 11:45</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Ana Maria Melo Netto Oliveira" title="Conselheira Ana Maria Melo Netto Oliveira" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 19150306 -->
+<tr class="andamentoConcluido">
+<td align="center">16/08/2019 11:31</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 19142724 -->
+<tr class="andamentoConcluido">
+<td align="center">16/08/2019 10:55</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria Executiva do CRSFN" title="Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 18205762 -->
+<tr class="andamentoConcluido">
+<td align="center">05/08/2019 13:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 18202084 -->
+<tr class="andamentoConcluido">
+<td align="center">05/08/2019 12:25</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 14160191 -->
+<tr class="andamentoConcluido">
+<td align="center">29/05/2019 14:42</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 2464808 (Ata da 424ª sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 13349635 -->
+<tr class="andamentoConcluido">
+<td align="center">09/05/2019 17:45</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 2309941 (Cadastro Usuário Externo), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 13144827 -->
+<tr class="andamentoConcluido">
+<td align="center">06/05/2019 11:59</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 12983397 -->
+<tr class="andamentoConcluido">
+<td align="center">30/04/2019 13:32</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 12983166 -->
+<tr class="andamentoConcluido">
+<td align="center">30/04/2019 13:24</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Distribuído por Sorteio na 424ª Sessão de Julgamento a Conselheira Maria Rita de Carvalho Drummond.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11944992 -->
+<tr class="andamentoConcluido">
+<td align="center">01/04/2019 16:44</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo restrito 2036905 (Extrato de Sessão de Julgamento), Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10579607 -->
+<tr class="andamentoConcluido">
+<td align="center">12/02/2019 14:16</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Autuado no CRSFN<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10578641 -->
+<tr class="andamentoConcluido">
+<td align="center">12/02/2019 14:01</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 1776668 (Inteiro teor - 2ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10578516 -->
+<tr class="andamentoConcluido">
+<td align="center">12/02/2019 14:00</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 1776660 (Inteiro teor - 1ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10578331 -->
+<tr class="andamentoConcluido">
+<td align="center">12/02/2019 13:59</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 1776653 (Inteiro teor - 4ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10578295 -->
+<tr class="andamentoConcluido">
+<td align="center">12/02/2019 13:58</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 1776637 (Inteiro teor - 3ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10578247 -->
+<tr class="andamentoConcluido">
+<td align="center">12/02/2019 13:57</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
+</div>
+<input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="fa246d0262c3925617b0c72bb20eeb1d" />
+  	</form>
+</div></div>
+</div>
+<input type="hidden" id="hdnInfraPrefixoCookie" name="hdnInfraPrefixoCookie" value="ME_SEI_" />
+<div id="infraDivImpressao" class="infraImpressao"></div>
+</body>
+</html>

@@ -1,0 +1,847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" >
+<head >
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="noindex" />
+<title>:: SEI - Pesquisa Processual ::</title>
+<link href="/infra_css/infra-global-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-global-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-tooltip.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-barra-progresso.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="css/infra-esquema-local.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-impressao-global.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="print" />
+<link href="/infra_css/infra-ajax.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/calendario/infra-calendario.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/arvore/infra-arvore.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/mapa/infra-mapa.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.structure.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.theme.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/multiple-select/multiple-select.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/modal/jquery.modalLink-1.0.0.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" >
+<!--/*--><![CDATA[/*><!--*/
+.colunaAcoes {display:none;}
+
+div.infraBarraSistemaE {width:90%}
+div.infraBarraSistemaD {width:5%}
+div.infraBarraComandos {width:99%}
+
+table caption {
+  text-align:left !important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.andamentoAberto {
+  background-color:white;
+}
+
+.andamentoConcluido {
+  background-color:white;
+}
+
+
+#tblCabecalho{margin-top:1;}
+#tblDocumentos {margin-top:1.5em;}
+#tblHistorico {margin-top:1.5em;}
+#divInfraAreaPaginacaoSuperior {display: none;}
+#divinfraAndamentoAreaPaginacaoSuperior {display: none;}
+
+#lblCaptcha {position: absolute; top:30%; left: 20%; width: 80%}
+#txtCaptcha{position: absolute; top:56%; left: 20%; height:15%; width:56%;font-size: 3em;}
+#btnEnviarCaptcha {position: absolute; top:80%; left: 20%; width:56%}
+
+#divInfraModal{
+	
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 50%; 
+    overflow: auto;
+   
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-image: url("imagens/bg_barra_sistema.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+span.retiraAncoraPadraoAzul{font-size: 1.2em;}
+
+/*]]>*/-->
+</style>
+<script type="text/javascript">var INFRA_PATH_IMAGENS='/infra_css/imagens',INFRA_PATH_JS='/infra_js',INFRA_PATH_CSS='/infra_css';</script>
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-1.12.4.min.js?1.12.4"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.js?1.11.1"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/multiple-select/jquery.multiple.select.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/ddslick/jquery.ddslick.min.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/modal/jquery.modalLink-1.0.0.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/jquery.smartmenus.js"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/addons/keyboard/jquery.smartmenus.keyboard.js"></script>
+			
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUtil.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraCookie.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUpload.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraBotaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAcaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTabelaDinamica.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraLupas.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraSelectEditavel.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAjax.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTooltip.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/calendario/InfraCalendario.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/arvore/InfraArvore.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript">
+$(function() {
+	$('#main-menu').smartmenus({
+    subMenusSubOffsetX: 1,
+    subMenusSubOffsetY: -8
+  });
+
+  //MENU CTRL+ALT+F9 
+  $('#main-menu').smartmenus('keyboardSetHotkey', 120, ['ctrlKey', 'altKey']);
+});
+</script>
+
+<script type="text/javascript" charset="iso-8859-1" >
+<!--//--><![CDATA[//><!--
+
+
+function inicializar(){
+
+  
+  infraEfeitoTabelas();
+}
+
+
+
+$(document).unbind("keyup").keyup(function(e){
+	e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    	var modal = document.getElementById('divInfraModal');
+        if(modal.style.display == "block"){
+        	fecharPdfModal();
+        	gerarPdf();
+    		
+    	}
+    }
+});
+
+
+
+function gerarPdfModal(){
+
+	if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    	alert('Nenhum documento selecionado.');
+    	return;
+  	}
+	var modal = document.getElementById('divInfraModal');
+	modal.style.display = "block";
+
+}
+
+function fecharPdfModal(){
+	
+    var modal = document.getElementById('divInfraModal');
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+	var modal = document.getElementById('divInfraModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function gerarPdf() {
+
+  if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    alert('Nenhum documento selecionado.');
+    return;
+  }
+  
+    	fecharPdfModal();
+  
+  infraExibirAviso(false);
+  
+ document.getElementById('hdnFlagGerar').value = '1';
+ document.getElementById('frmProcessoAcessoExternoConsulta').submit();
+}
+
+
+//--><!]]>
+</script>
+</head>
+<body onload="infraProcessarResize();infraProcessarMouseDown();inicializar();">
+<div id="divInfraAreaGlobal" class="infraAreaGlobal">
+<div id="divInfraBarraSuperior" class="infraBarraSuperior">
+<label>MINISTÉRIO DA ECONOMIA</label>
+</div>
+<div id="divInfraBarraSistema" class="infraBarraSistema">
+<div id="divInfraBarraSistemaD" class="infraBarraSistemaD">
+</div>
+<div id="divInfraBarraSistemaE" class="infraBarraSistemaE">
+<img src="imagens/sei_logo_azul_celeste.jpg" title="Sistema Eletrônico de Informações"/><span class="infraTituloLogoSistema">3.1.7</span>
+</div>
+</div>
+<div id="divInfraAreaTela" class="infraAreaTela">
+<div id="divInfraAreaTelaD" class="infraAreaTelaD" style="width:99%">
+<div id="divInfraBarraLocalizacao" class="infraBarraLocalizacao">Pesquisa Processual</div>
+
+<form id="frmProcessoAcessoExternoConsulta" method="post">
+ 
+ 		<div id="divInfraModal" class="infraFundoTransparente" style="position: fixed; width: 100%; height: 100%; visibility: visible;">
+ 		   <div id="divCaptcha"  class="infraAreaDados" style="height: 220px; width: 230px; background-color:white">
+ 				<div class="modal-header">
+      				<span id="spnClose" class="close" onclick="fecharPdfModal();">×</span>
+      				<h2 style ="color: white;font-size: 1.2em;font-weight: bold;">Digite o Código da Imagem</h2>
+    			</div>
+ 				<div class="modal-body">
+ 		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=52-109" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
+  					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
+  		   		</div>
+    			
+  			</div>
+    	</div>
+  			<input type="hidden" id="hdnInfraTipoPagina" name="hdnInfraTipoPagina" value="3" />
+<div id="divInfraBarraComandosSuperior" class="infraBarraComandos">
+<button tabindex="451" type="button" id="btnPush" value="Push" onclick="location.href='https://sei.economia.gov.br/sei/modulos/PUSH/push_assinar_processo.php?idProcedimento=6018'" class="infraButton">Incluir no PUSH</button>&nbsp;
+</div>
+<table id="tblCabecalho" width="99.3%" class="infraTable" summary="Cabeçalho de Processo" >
+<tr><th class="infraTh" colspan="2">Autuação</th></tr>
+<tr class="infraTrClara"><td width="20%">Processo:</td><td>10372.000415/2016-84<img src="/infra_css/imagens/espaco.gif"><img src="imagens/sei_chave_restrito.gif" align="absbottom"  title="Acesso Restrito.&#13Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)"></td></tr>
+<tr class="infraTrClara"><td width="20%">Tipo:</td><td>Recurso - CRSFN-CVM</td></tr>
+<tr class="infraTrClara"><td width="20%">Data de Registro:</td><td>29/07/2016</td></tr>
+<tr class="infraTrClara"><td width="20%">Interessados:</td><td> BANCO BRADESCO S A<br /> CRSFN - Comissão de Valores Mobiliários - 1ª instância<br /> MAURO SERGIO DE OLIVEIRA<br /> OLIVEIRA TRUST DTVM S.A.<br /> </td></tr>
+</table>
+<p style="font-size: 1.2em;"> Para condições de acesso a processo ou documento, favor consultar a unidade onde o processo se encontra em andamento. Eventualmente a unidade pode solicitar o <a style="font-size: 1em;" href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/usuario-externo-1" target="_blank">cadastro de usuário externo no SEI/ME</a> para tal disponibilização.</p><div id="divInfraAreaTabela" class="infraAreaTabela" >
+
+</div>
+
+<input type="hidden" id="hdnInfraNroItens" name="hdnInfraNroItens" value="0" />
+<input type="hidden" id="hdnInfraItemId" name="hdnInfraItemId" value="" />
+<input type="hidden" id="hdnInfraItens" name="hdnInfraItens" value="" />
+<input type="hidden" id="hdnInfraItensHash" name="hdnInfraItensHash" value="" />
+<input type="hidden" id="hdnInfraItensSelecionados" name="hdnInfraItensSelecionados" value="" />
+
+<input type="hidden" id="hdnInfraSelecoes" name="hdnInfraSelecoes" value="Infra" />
+
+<input type="hidden" id="hdnInfraCampoOrd" name="hdnInfraCampoOrd" value="Registro" />
+<input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
+<div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
+<table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
+<caption class="infraCaption">Lista de Andamentos (80 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+
+
+<!-- 6585563 -->
+<tr class="andamentoConcluido">
+<td align="center">30/08/2018 15:16</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6020173 -->
+<tr class="andamentoConcluido">
+<td align="center">07/08/2018 15:43</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6020000 -->
+<tr class="andamentoConcluido">
+<td align="center">07/08/2018 15:41</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Devolvido ao órgão de origem<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5427125 -->
+<tr class="andamentoConcluido">
+<td align="center">12/07/2018 12:50</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Publicação do documento 0869057 (CRSFN - Acórdão Inteiro Teor) no veículo Boletim de Serviço Eletrônico de 13/07/2018 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5380440 -->
+<tr class="andamentoConcluido">
+<td align="center">10/07/2018 20:34</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5380353 -->
+<tr class="andamentoConcluido">
+<td align="center">10/07/2018 20:12</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Ana Maria Melo Netto Oliveira" title="Conselheira Ana Maria Melo Netto Oliveira" class="ancoraSigla">CRSFN-GAB01 - PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5380298 -->
+<tr class="andamentoConcluido">
+<td align="center">10/07/2018 19:52</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5358725 -->
+<tr class="andamentoConcluido">
+<td align="center">10/07/2018 12:18</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5305744 -->
+<tr class="andamentoConcluido">
+<td align="center">06/07/2018 11:22</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5300648 -->
+<tr class="andamentoConcluido">
+<td align="center">06/07/2018 10:15</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-GAB06 - CONS. GRAZIANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4545663 -->
+<tr class="andamentoConcluido">
+<td align="center">29/05/2018 16:45</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 0713493 (Ata da 412ª sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4517283 -->
+<tr class="andamentoConcluido">
+<td align="center">28/05/2018 17:11</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4491151 -->
+<tr class="andamentoConcluido">
+<td align="center">27/05/2018 23:19</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Adriana Cristina Dullius" title="Conselheira Adriana Cristina Dullius" class="ancoraSigla">CRSFN-GAB03 - CONS. ADRIANA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4482003 -->
+<tr class="andamentoConcluido">
+<td align="center">25/05/2018 15:14</td>
+<td align="center"><a alt="Conselheira Adriana Cristina Dullius" title="Conselheira Adriana Cristina Dullius" class="ancoraSigla">CRSFN-CONS.ADRIANA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4119026 -->
+<tr class="andamentoConcluido">
+<td align="center">09/05/2018 11:14</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4110709 -->
+<tr class="andamentoConcluido">
+<td align="center">09/05/2018 08:49</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-GAB02 - CONS. CARLOS</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 4023703 -->
+<tr class="andamentoConcluido">
+<td align="center">04/05/2018 12:01</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3879266 -->
+<tr class="andamentoConcluido">
+<td align="center">26/04/2018 11:47</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 0592301 (Anexo - Sust. Oral - 10372.000415/2016-84) movido do processo 10372.100058/2018-15.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3879259 -->
+<tr class="andamentoConcluido">
+<td align="center">26/04/2018 11:47</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 0592285 (Anexo - Sust. Oral - 10372.000415/2016-84) movido do processo 10372.100058/2018-15.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3866218 -->
+<tr class="andamentoConcluido">
+<td align="center">25/04/2018 17:39</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3866217 -->
+<tr class="andamentoConcluido">
+<td align="center">25/04/2018 17:39</td>
+<td align="center"><a alt="Conselheira Adriana Cristina Dullius" title="Conselheira Adriana Cristina Dullius" class="ancoraSigla">CRSFN-CONS.ADRIANA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3866146 -->
+<tr class="andamentoConcluido">
+<td align="center">25/04/2018 17:37</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Julgado na 412ª Sessão de Julgamento do CRSFN: I - Recursos Voluntários: Banco Bradesco S.A.: recurso parcialmente provido: reduzir o valor da multa de R$1.500.000,00 (um milhão e quinhentos mil reais) para R$500.000,00 (quinhentos mil reais). Oliveira Trust DTVM S.A. e Mauro Sergio de Oliveira: recursos desprovidos. II - Recurso de Ofício - recurso desprovido.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3851552 -->
+<tr class="andamentoConcluido">
+<td align="center">25/04/2018 12:50</td>
+<td align="center"><a alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-CONS.CARLOS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3839082 -->
+<tr class="andamentoConcluido">
+<td align="center">24/04/2018 22:25</td>
+<td align="center"><a alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-CONS.CARLOS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3839081 -->
+<tr class="andamentoConcluido">
+<td align="center">24/04/2018 22:11</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3839079 -->
+<tr class="andamentoConcluido">
+<td align="center">24/04/2018 22:11</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3731720 -->
+<tr class="andamentoConcluido">
+<td align="center">19/04/2018 10:09</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 0566514 (Memória de reunião), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3715364 -->
+<tr class="andamentoConcluido">
+<td align="center">18/04/2018 14:30</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 0563465 (Memória de reunião), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3352664 -->
+<tr class="andamentoConcluido">
+<td align="center">02/04/2018 11:13</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Incluído na pauta da 412ª Sessão de Julgamento.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3350104 -->
+<tr class="andamentoConcluido">
+<td align="center">02/04/2018 10:23</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo restrito 0498956 (Pauta DOU - 412ª Sessão de Julgamento), conferido com documento original, Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3350087 -->
+<tr class="andamentoConcluido">
+<td align="center">02/04/2018 10:22</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 3348701 -->
+<tr class="andamentoConcluido">
+<td align="center">02/04/2018 09:50</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1446299 -->
+<tr class="andamentoConcluido">
+<td align="center">27/11/2017 08:52</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1445525 -->
+<tr class="andamentoConcluido">
+<td align="center">26/11/2017 23:17</td>
+<td align="center"><a alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-CONS.CARLOS</a></td>
+
+<td>Publicação do documento 0114450 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 27/11/2017 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1445517 -->
+<tr class="andamentoConcluido">
+<td align="center">26/11/2017 22:35</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-GAB02 - CONS. CARLOS</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 919327 -->
+<tr class="andamentoConcluido">
+<td align="center">09/10/2017 12:07</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 912891 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2017 23:17</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-GAB02 - CONS. CARLOS</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133136 -->
+<tr class="andamentoConcluido">
+<td align="center">04/04/2017 16:30</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Registro de documento externo público 0015096 (Parecer- -PGFN/CAF/NUCAF/CRSFN/N° 029/2017), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133134 -->
+<tr class="andamentoConcluido">
+<td align="center">04/04/2017 16:26</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133131 -->
+<tr class="andamentoConcluido">
+<td align="center">04/04/2017 16:25</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procuradoria da Fazenda Nacional - NUCAF / CAF / PGFN / CRSFN" title="Procuradoria da Fazenda Nacional - NUCAF / CAF / PGFN / CRSFN" class="ancoraSigla">CRSFN-PGFN-CAF-NUCAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133127 -->
+<tr class="andamentoConcluido">
+<td align="center">04/04/2017 16:22</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133079 -->
+<tr class="andamentoConcluido">
+<td align="center">04/04/2017 15:50</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-GAB02 - CONS. CARLOS</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 132167 -->
+<tr class="andamentoConcluido">
+<td align="center">03/04/2017 19:21</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 132165 -->
+<tr class="andamentoConcluido">
+<td align="center">03/04/2017 19:21</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal - NUCAF / CAF / PGFN / CRSFN" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal - NUCAF / CAF / PGFN / CRSFN" class="ancoraSigla">CRSFN-PGFN-CAF-ANDRÉ-ORTEGAL</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 132163 -->
+<tr class="andamentoConcluido">
+<td align="center">03/04/2017 19:18</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Registro de documento externo público 0014994 (Parecer- -PGFN/CAF/NUCAF/CRSFN/N° 029/2017), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 125929 -->
+<tr class="andamentoConcluido">
+<td align="center">17/03/2017 16:21</td>
+<td align="center"><a alt="Setor Técnica - SE / CRSFN" title="Setor Técnica - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SETEC</a></td>
+
+<td>Registro de documento externo público 0014534 (Petição)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 125900 -->
+<tr class="andamentoConcluido">
+<td align="center">17/03/2017 15:50</td>
+<td align="center"><a alt="Setor Técnica - SE / CRSFN" title="Setor Técnica - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SETEC</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 125843 -->
+<tr class="andamentoConcluido">
+<td align="center">17/03/2017 14:45</td>
+<td align="center"><a alt="Setor Técnica - SE / CRSFN" title="Setor Técnica - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SETEC</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal - NUCAF / CAF / PGFN / CRSFN" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal - NUCAF / CAF / PGFN / CRSFN" class="ancoraSigla">CRSFN-PGFN-CAF-ANDRÉ-ORTEGAL</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 125842 -->
+<tr class="andamentoConcluido">
+<td align="center">17/03/2017 14:45</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Processo encaminhado à SETEC para juntada de documentos, conforme e-mail enviado pelo Fábio Carvalho.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106387 -->
+<tr class="andamentoConcluido">
+<td align="center">15/02/2017 19:12</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Registro de documento externo público 0013478 (Parecer- - PGFN/CAF/NUCAF/CRSFN/Nº 016/2017), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98964 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2017 08:05</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97704 -->
+<tr class="andamentoConcluido">
+<td align="center">20/01/2017 18:05</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">GAB 02 - CARLOS GOUVÊA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 96612 -->
+<tr class="andamentoConcluido">
+<td align="center">18/01/2017 15:44</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Registro de documento externo público 0012749 (Cadastro de Usuário Externo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 96611 -->
+<tr class="andamentoConcluido">
+<td align="center">18/01/2017 15:43</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 96503 -->
+<tr class="andamentoConcluido">
+<td align="center">18/01/2017 14:30</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador André Luiz Carneiro Ortegal" title="Procurador André Luiz Carneiro Ortegal" class="ancoraSigla">PGFN / CAF - ANDRÉ ORTEGAL</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 94100 -->
+<tr class="andamentoConcluido">
+<td align="center">12/01/2017 09:33</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Registro de documento externo público 0012501 (Cadastro de Usuário Externo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 86568 -->
+<tr class="andamentoConcluido">
+<td align="center">20/12/2016 15:04</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Registro de documento externo público 0012174 (Cadastro de Usuário Externo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 48445 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2016 14:30</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 47318 -->
+<tr class="andamentoConcluido">
+<td align="center">03/10/2016 17:52</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" title="Procurador da Fazenda Nacional André Luiz Carneiro Ortegal" class="ancoraSigla">NUCAF-CAF-ANDRÉ-ORTEGAL</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procuradoria da Fazenda Nacional  - CRSFN" title="Procuradoria da Fazenda Nacional  - CRSFN" class="ancoraSigla">PGFN / CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 47315 -->
+<tr class="andamentoConcluido">
+<td align="center">03/10/2016 17:22</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 47313 -->
+<tr class="andamentoConcluido">
+<td align="center">03/10/2016 17:19</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">GAB 02 - CARLOS PAGANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 47309 -->
+<tr class="andamentoConcluido">
+<td align="center">03/10/2016 17:15</td>
+<td align="center"><a alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-CONS.CARLOS</a></td>
+
+<td>Registro de documento externo público 0010198 (Anexo Pedido de Parecer PGFN)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 47307 -->
+<tr class="andamentoConcluido">
+<td align="center">03/10/2016 17:14</td>
+<td align="center"><a alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-CONS.CARLOS</a></td>
+
+<td>Registro de documento externo público 0010197 (Despacho Pedido de Parecer PGFN)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 36413 -->
+<tr class="andamentoConcluido">
+<td align="center">14/09/2016 10:39</td>
+<td align="center"><a alt="CRSFN" title="CRSFN" class="ancoraSigla">SETEC - CLASSIFICA</a></td>
+
+<td>Registro de documento externo restrito 0008185 (Memorial), CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28938 -->
+<tr class="andamentoConcluido">
+<td align="center">22/08/2016 17:48</td>
+<td align="center"><a alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-CONS.CARLOS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 16600 -->
+<tr class="andamentoConcluido">
+<td align="center">02/08/2016 17:25</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 15837 -->
+<tr class="andamentoConcluido">
+<td align="center">31/07/2016 11:34</td>
+<td align="center"><a alt="Conselheiro Carlos Pagano Botana Portugal Gouvêa" title="Conselheiro Carlos Pagano Botana Portugal Gouvêa" class="ancoraSigla">CRSFN-CONS.CARLOS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 15835 -->
+<tr class="andamentoConcluido">
+<td align="center">31/07/2016 11:34</td>
+<td align="center"><a alt="CRSFN" title="CRSFN" class="ancoraSigla">SETEC - CLASSIFICA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 15833 -->
+<tr class="andamentoConcluido">
+<td align="center">31/07/2016 11:34</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11641 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005538 (Inteiro teor - 10ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11639 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005537 (Inteiro teor - 9ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11637 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005536 (Inteiro teor - 8ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11635 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005535 (Inteiro teor - 7ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11633 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005534 (Inteiro teor - 6ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11631 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005533 (Inteiro teor - 5ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11629 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005532 (Inteiro teor - 4ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11627 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005531 (Inteiro teor - 3ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11625 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005530 (Inteiro teor - 2ª PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11623 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0005529 (Inteiro teor - 1ª  PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 11622 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 19:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
+</div>
+<input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="11ccbc01cc09f329b8bc3aa86507c482" />
+  	</form>
+</div></div>
+</div>
+<input type="hidden" id="hdnInfraPrefixoCookie" name="hdnInfraPrefixoCookie" value="ME_SEI_" />
+<div id="infraDivImpressao" class="infraImpressao"></div>
+</body>
+</html>

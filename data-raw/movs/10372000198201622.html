@@ -1,0 +1,1971 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" >
+<head >
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="noindex" />
+<title>:: SEI - Pesquisa Processual ::</title>
+<link href="/infra_css/infra-global-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-global-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-tooltip.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-barra-progresso.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="css/infra-esquema-local.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-impressao-global.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="print" />
+<link href="/infra_css/infra-ajax.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/calendario/infra-calendario.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/arvore/infra-arvore.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/mapa/infra-mapa.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.structure.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.theme.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/multiple-select/multiple-select.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/modal/jquery.modalLink-1.0.0.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" >
+<!--/*--><![CDATA[/*><!--*/
+.colunaAcoes {display:none;}
+
+div.infraBarraSistemaE {width:90%}
+div.infraBarraSistemaD {width:5%}
+div.infraBarraComandos {width:99%}
+
+table caption {
+  text-align:left !important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.andamentoAberto {
+  background-color:white;
+}
+
+.andamentoConcluido {
+  background-color:white;
+}
+
+
+#tblCabecalho{margin-top:1;}
+#tblDocumentos {margin-top:1.5em;}
+#tblHistorico {margin-top:1.5em;}
+#divInfraAreaPaginacaoSuperior {display: none;}
+#divinfraAndamentoAreaPaginacaoSuperior {display: none;}
+
+#lblCaptcha {position: absolute; top:30%; left: 20%; width: 80%}
+#txtCaptcha{position: absolute; top:56%; left: 20%; height:15%; width:56%;font-size: 3em;}
+#btnEnviarCaptcha {position: absolute; top:80%; left: 20%; width:56%}
+
+#divInfraModal{
+	
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 50%; 
+    overflow: auto;
+   
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-image: url("imagens/bg_barra_sistema.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+span.retiraAncoraPadraoAzul{font-size: 1.2em;}
+
+/*]]>*/-->
+</style>
+<script type="text/javascript">var INFRA_PATH_IMAGENS='/infra_css/imagens',INFRA_PATH_JS='/infra_js',INFRA_PATH_CSS='/infra_css';</script>
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-1.12.4.min.js?1.12.4"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.js?1.11.1"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/multiple-select/jquery.multiple.select.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/ddslick/jquery.ddslick.min.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/modal/jquery.modalLink-1.0.0.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/jquery.smartmenus.js"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/addons/keyboard/jquery.smartmenus.keyboard.js"></script>
+			
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUtil.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraCookie.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUpload.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraBotaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAcaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTabelaDinamica.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraLupas.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraSelectEditavel.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAjax.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTooltip.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/calendario/InfraCalendario.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/arvore/InfraArvore.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript">
+$(function() {
+	$('#main-menu').smartmenus({
+    subMenusSubOffsetX: 1,
+    subMenusSubOffsetY: -8
+  });
+
+  //MENU CTRL+ALT+F9 
+  $('#main-menu').smartmenus('keyboardSetHotkey', 120, ['ctrlKey', 'altKey']);
+});
+</script>
+
+<script type="text/javascript" charset="iso-8859-1" >
+<!--//--><![CDATA[//><!--
+
+
+function inicializar(){
+
+  
+  infraEfeitoTabelas();
+}
+
+
+
+$(document).unbind("keyup").keyup(function(e){
+	e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    	var modal = document.getElementById('divInfraModal');
+        if(modal.style.display == "block"){
+        	fecharPdfModal();
+        	gerarPdf();
+    		
+    	}
+    }
+});
+
+
+
+function gerarPdfModal(){
+
+	if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    	alert('Nenhum documento selecionado.');
+    	return;
+  	}
+	var modal = document.getElementById('divInfraModal');
+	modal.style.display = "block";
+
+}
+
+function fecharPdfModal(){
+	
+    var modal = document.getElementById('divInfraModal');
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+	var modal = document.getElementById('divInfraModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function gerarPdf() {
+
+  if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    alert('Nenhum documento selecionado.');
+    return;
+  }
+  
+    	fecharPdfModal();
+  
+  infraExibirAviso(false);
+  
+ document.getElementById('hdnFlagGerar').value = '1';
+ document.getElementById('frmProcessoAcessoExternoConsulta').submit();
+}
+
+
+//--><!]]>
+</script>
+</head>
+<body onload="infraProcessarResize();infraProcessarMouseDown();inicializar();">
+<div id="divInfraAreaGlobal" class="infraAreaGlobal">
+<div id="divInfraBarraSuperior" class="infraBarraSuperior">
+<label>MINISTÉRIO DA ECONOMIA</label>
+</div>
+<div id="divInfraBarraSistema" class="infraBarraSistema">
+<div id="divInfraBarraSistemaD" class="infraBarraSistemaD">
+</div>
+<div id="divInfraBarraSistemaE" class="infraBarraSistemaE">
+<img src="imagens/sei_logo_azul_celeste.jpg" title="Sistema Eletrônico de Informações"/><span class="infraTituloLogoSistema">3.1.7</span>
+</div>
+</div>
+<div id="divInfraAreaTela" class="infraAreaTela">
+<div id="divInfraAreaTelaD" class="infraAreaTelaD" style="width:99%">
+<div id="divInfraBarraLocalizacao" class="infraBarraLocalizacao">Pesquisa Processual</div>
+
+<form id="frmProcessoAcessoExternoConsulta" method="post">
+ 
+ 		<div id="divInfraModal" class="infraFundoTransparente" style="position: fixed; width: 100%; height: 100%; visibility: visible;">
+ 		   <div id="divCaptcha"  class="infraAreaDados" style="height: 220px; width: 230px; background-color:white">
+ 				<div class="modal-header">
+      				<span id="spnClose" class="close" onclick="fecharPdfModal();">×</span>
+      				<h2 style ="color: white;font-size: 1.2em;font-weight: bold;">Digite o Código da Imagem</h2>
+    			</div>
+ 				<div class="modal-body">
+ 		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=88-117" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
+  					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
+  		   		</div>
+    			
+  			</div>
+    	</div>
+  			<input type="hidden" id="hdnInfraTipoPagina" name="hdnInfraTipoPagina" value="3" />
+<div id="divInfraBarraComandosSuperior" class="infraBarraComandos">
+<button tabindex="451" type="button" id="btnPush" value="Push" onclick="location.href='https://sei.economia.gov.br/sei/modulos/PUSH/push_assinar_processo.php?idProcedimento=3026'" class="infraButton">Incluir no PUSH</button>&nbsp;
+</div>
+<table id="tblCabecalho" width="99.3%" class="infraTable" summary="Cabeçalho de Processo" >
+<tr><th class="infraTh" colspan="2">Autuação</th></tr>
+<tr class="infraTrClara"><td width="20%">Processo:</td><td>10372.000198/2016-22<img src="/infra_css/imagens/espaco.gif"><img src="imagens/sei_chave_restrito.gif" align="absbottom"  title="Acesso Restrito.&#13Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)"></td></tr>
+<tr class="infraTrClara"><td width="20%">Tipo:</td><td>Recurso - CRSFN-CVM</td></tr>
+<tr class="infraTrClara"><td width="20%">Data de Registro:</td><td>29/07/2016</td></tr>
+<tr class="infraTrClara"><td width="20%">Interessados:</td><td> CAIXA DE PREVIDÊNCIA DOS FUNCIONÁRIOS DO BANCO DO BRASIL - PREVI<br /> CRSFN - Comissão de Valores Mobiliários - 1ª instância<br /> FUNDAÇÃO DOS ECONOMIÁRIOS FEDERAIS - FUNCEF<br /> FUNDAÇÃO PETROBRAS DE SEGURIDADE SOCIAL - PETROS<br /> </td></tr>
+</table>
+<p style="font-size: 1.2em;"> Para condições de acesso a processo ou documento, favor consultar a unidade onde o processo se encontra em andamento. Eventualmente a unidade pode solicitar o <a style="font-size: 1em;" href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/usuario-externo-1" target="_blank">cadastro de usuário externo no SEI/ME</a> para tal disponibilização.</p><div id="divInfraAreaTabela" class="infraAreaTabela" >
+
+</div>
+
+<input type="hidden" id="hdnInfraNroItens" name="hdnInfraNroItens" value="0" />
+<input type="hidden" id="hdnInfraItemId" name="hdnInfraItemId" value="" />
+<input type="hidden" id="hdnInfraItens" name="hdnInfraItens" value="" />
+<input type="hidden" id="hdnInfraItensHash" name="hdnInfraItensHash" value="" />
+<input type="hidden" id="hdnInfraItensSelecionados" name="hdnInfraItensSelecionados" value="" />
+
+<input type="hidden" id="hdnInfraSelecoes" name="hdnInfraSelecoes" value="Infra" />
+
+<input type="hidden" id="hdnInfraCampoOrd" name="hdnInfraCampoOrd" value="Registro" />
+<input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
+<div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
+<table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
+<caption class="infraCaption">Lista de Andamentos (240 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+
+
+<!-- 10189825 -->
+<tr class="andamentoConcluido">
+<td align="center">25/01/2019 14:57</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10120278 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2019 10:50</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10120051 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2019 10:46</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Devolvido ao órgão de origem<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10119867 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2019 10:43</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 10119825 -->
+<tr class="andamentoConcluido">
+<td align="center">23/01/2019 10:42</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 9906337 -->
+<tr class="andamentoConcluido">
+<td align="center">11/01/2019 14:45</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Registro de documento externo público 1647587 (Memória de Reunião), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 9859789 -->
+<tr class="andamentoConcluido">
+<td align="center">09/01/2019 20:25</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Publicação do documento 1635297 (CRSFN - Acórdão Inteiro Teor) no veículo Boletim de Serviço Eletrônico de 10/01/2019 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 9841230 -->
+<tr class="andamentoConcluido">
+<td align="center">09/01/2019 11:51</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 9841067 -->
+<tr class="andamentoConcluido">
+<td align="center">09/01/2019 11:48</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Ana Maria Melo Netto Oliveira" title="Conselheira Ana Maria Melo Netto Oliveira" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 9840929 -->
+<tr class="andamentoConcluido">
+<td align="center">09/01/2019 11:45</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 9804445 -->
+<tr class="andamentoConcluido">
+<td align="center">07/01/2019 18:31</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 8284089 -->
+<tr class="andamentoConcluido">
+<td align="center">12/11/2018 16:05</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Registro de documento externo público 1394698 (Ata da 418ª sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7792273 -->
+<tr class="andamentoConcluido">
+<td align="center">22/10/2018 14:14</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 1301291 (Pedido Sust. Oral - 10372.000198/2016-22 - PREVI) movido do processo 10372.100333/2018-09.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7792240 -->
+<tr class="andamentoConcluido">
+<td align="center">22/10/2018 14:14</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 1301269 (Pedido Sust. Oral - 10372.000198/2016-22 - FUNCEF) movido do processo 10372.100333/2018-09.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7792227 -->
+<tr class="andamentoConcluido">
+<td align="center">22/10/2018 14:13</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 1301244 (Pedido Sust. Oral - 10372.000198/2016-22 - PETROS) movido do processo 10372.100333/2018-09.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7792074 -->
+<tr class="andamentoConcluido">
+<td align="center">22/10/2018 14:11</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 1301174 (Substabelecimento - PETROS) movido do processo 10372.100333/2018-09.<br />
+Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7775298 -->
+<tr class="andamentoConcluido">
+<td align="center">21/10/2018 20:24</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7752550 -->
+<tr class="andamentoConcluido">
+<td align="center">19/10/2018 11:21</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7752205 -->
+<tr class="andamentoConcluido">
+<td align="center">19/10/2018 11:15</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Julgado na 418ª Sessão de Julgamento do CRSFN: Recursos Voluntários - Desprovidos.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7751109 -->
+<tr class="andamentoConcluido">
+<td align="center">19/10/2018 11:00</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7750982 -->
+<tr class="andamentoConcluido">
+<td align="center">19/10/2018 10:58</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7685418 -->
+<tr class="andamentoConcluido">
+<td align="center">17/10/2018 11:09</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Documento 1282237 (Memória de Reunião 10372.000198/2016-22) movido do processo 10372.100333/2018-09.<br />
+mover.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7671025 -->
+<tr class="andamentoConcluido">
+<td align="center">16/10/2018 16:45</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo restrito 1279981 (Substabelecimento - FUNCEF), conferido com documento original, Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7662969 -->
+<tr class="andamentoConcluido">
+<td align="center">16/10/2018 14:53</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 1278499 (Substabelecimento), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7559489 -->
+<tr class="andamentoConcluido">
+<td align="center">10/10/2018 15:49</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo restrito 1259053 (Memória de Reunião), conferido com documento original, Sigilo de Operações Financeiras (Art 2º da Lei Complementar 105/2001)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7550942 -->
+<tr class="andamentoConcluido">
+<td align="center">10/10/2018 14:07</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 1257222 (Substabelecimento), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7531583 -->
+<tr class="andamentoConcluido">
+<td align="center">09/10/2018 17:38</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7530518 -->
+<tr class="andamentoConcluido">
+<td align="center">09/10/2018 17:16</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Adriana Cristina Dullius" title="Conselheira Adriana Cristina Dullius" class="ancoraSigla">CRSFN-CONS.ADRIANA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7530414 -->
+<tr class="andamentoConcluido">
+<td align="center">09/10/2018 17:14</td>
+<td align="center"><a alt="Conselheira Adriana Cristina Dullius" title="Conselheira Adriana Cristina Dullius" class="ancoraSigla">CRSFN-CONS.ADRIANA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7529763 -->
+<tr class="andamentoConcluido">
+<td align="center">09/10/2018 17:02</td>
+<td align="center"><a alt="Conselheira Adriana Cristina Dullius" title="Conselheira Adriana Cristina Dullius" class="ancoraSigla">CRSFN-CONS.ADRIANA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7510523 -->
+<tr class="andamentoConcluido">
+<td align="center">09/10/2018 13:36</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 1250104 (Cadastro de Usuário Externo - SEI 10372.000198/2016-22), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7389003 -->
+<tr class="andamentoConcluido">
+<td align="center">04/10/2018 09:29</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 1229127 (Pauta DOU - 418ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7388140 -->
+<tr class="andamentoConcluido">
+<td align="center">04/10/2018 09:09</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Incluído na pauta da 418ª Sessão de Julgamento.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7388139 -->
+<tr class="andamentoConcluido">
+<td align="center">04/10/2018 09:09</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 7387868 -->
+<tr class="andamentoConcluido">
+<td align="center">04/10/2018 09:05</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6575852 -->
+<tr class="andamentoConcluido">
+<td align="center">30/08/2018 11:36</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 1067912 (Cadastro de Usuário Externo 10372.000198/2016-22) movido do processo 10372.100008/2018-38.<br />
+Liberação de acesso.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5598230 -->
+<tr class="andamentoConcluido">
+<td align="center">19/07/2018 13:15</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5291119 -->
+<tr class="andamentoConcluido">
+<td align="center">06/07/2018 08:27</td>
+<td align="center"><a alt="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" title="Envio de processos para inclusão em pauta de julgamento - SE / CRSFN" class="ancoraSigla">CRSFN-SE-AGUARDANDO-PAUTA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-GAB06 - CONS. GRAZIANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5291067 -->
+<tr class="andamentoConcluido">
+<td align="center">06/07/2018 08:23</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Publicação do documento 0194101 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 06/07/2018 08:23:45 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1094710 -->
+<tr class="andamentoConcluido">
+<td align="center">26/10/2017 11:59</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 0139930 (Substabelecimento), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1094665 -->
+<tr class="andamentoConcluido">
+<td align="center">26/10/2017 11:57</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 1092441 -->
+<tr class="andamentoConcluido">
+<td align="center">26/10/2017 11:01</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-GAB06 - CONS. GRAZIANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 224407 -->
+<tr class="andamentoConcluido">
+<td align="center">19/06/2017 10:56</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 224328 -->
+<tr class="andamentoConcluido">
+<td align="center">19/06/2017 10:49</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Setor Técnica - SE / CRSFN" title="Setor Técnica - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SETEC</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 223906 -->
+<tr class="andamentoConcluido">
+<td align="center">19/06/2017 09:51</td>
+<td align="center"><a alt="Setor Técnica - SE / CRSFN" title="Setor Técnica - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SETEC</a></td>
+
+<td>Registro de documento externo público 0023527 (Formulário Identificação de partes e procuradores), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 223868 -->
+<tr class="andamentoConcluido">
+<td align="center">19/06/2017 09:43</td>
+<td align="center"><a alt="Setor Técnica - SE / CRSFN" title="Setor Técnica - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SETEC</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 223588 -->
+<tr class="andamentoConcluido">
+<td align="center">17/06/2017 23:08</td>
+<td align="center"><a alt="Setor Técnica - SE / CRSFN" title="Setor Técnica - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SETEC</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-GAB06 - CONS. GRAZIANO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 172433 -->
+<tr class="andamentoConcluido">
+<td align="center">26/05/2017 14:48</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 169204 -->
+<tr class="andamentoConcluido">
+<td align="center">22/05/2017 15:59</td>
+<td align="center"><a alt="Alexandre Henrique Graziano" title="Alexandre Henrique Graziano" class="ancoraSigla">CRSFN-CONS.GRAZIANO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procuradoria da Fazenda Nacional - NUCAF / CAF / PGFN / CRSFN" title="Procuradoria da Fazenda Nacional - NUCAF / CAF / PGFN / CRSFN" class="ancoraSigla">PGFN-NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 169200 -->
+<tr class="andamentoConcluido">
+<td align="center">22/05/2017 15:44</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 169198 -->
+<tr class="andamentoConcluido">
+<td align="center">22/05/2017 15:44</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira - NUCAF / CAF / PGFN / CRSFN" title="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira - NUCAF / CAF / PGFN / CRSFN" class="ancoraSigla">PGFN-NUCAF-CAF-VIRGÍLIO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 169196 -->
+<tr class="andamentoConcluido">
+<td align="center">22/05/2017 15:41</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" title="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" class="ancoraSigla">NUCAF-CAF-VIRGÍLIO</a></td>
+
+<td>Registro de documento externo público 0016414 (Parecer- - PGFN/CAF/NUCAF/CRSFN/Nº 043/2017), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 93779 -->
+<tr class="andamentoConcluido">
+<td align="center">11/01/2017 14:17</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" title="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" class="ancoraSigla">NUCAF-CAF-VIRGÍLIO</a></td>
+
+<td>Registro de documento externo público 0012492 (Cadastro de Usuário Externo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 31052 -->
+<tr class="andamentoConcluido">
+<td align="center">31/08/2016 18:40</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 29695 -->
+<tr class="andamentoConcluido">
+<td align="center">26/08/2016 10:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0007485 (Inteiro teor - 16º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24870 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:22</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006877 (Inteiro teor - 15º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24868 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:21</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006876 (Inteiro teor - 14º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24866 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:17</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006875 (Inteiro teor - 13º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24864 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:16</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006874 (Inteiro teor - 12º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24862 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:16</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006873 (Inteiro teor - 11º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24860 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:15</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006872 (Inteiro teor - 10º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24858 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:14</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006871 (Inteiro teor - 9º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24856 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006870 (Inteiro teor - 8º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24854 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:11</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006869 (Inteiro teor - 7º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24852 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:10</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006868 (Inteiro teor - 6º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24850 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:09</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006867 (Inteiro teor - 5º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24811 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 15:01</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006866 (Inteiro teor - 4º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24791 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 14:59</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006865 (Inteiro teor - 3º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24775 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 14:58</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006864 (Inteiro teor - 2º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 24750 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2016 14:57</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0006863 (Inteiro teor - 1º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 22514 -->
+<tr class="andamentoConcluido">
+<td align="center">11/08/2016 09:52</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" title="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" class="ancoraSigla">NUCAF-CAF-VIRGÍLIO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 17913 -->
+<tr class="andamentoConcluido">
+<td align="center">04/08/2016 16:46</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" title="Procurador da Fazenda Nacional Virgilio Porto Linhares Teixeira" class="ancoraSigla">NUCAF-CAF-VIRGÍLIO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procuradoria da Fazenda Nacional  - CRSFN" title="Procuradoria da Fazenda Nacional  - CRSFN" class="ancoraSigla">PGFN / CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 17912 -->
+<tr class="andamentoConcluido">
+<td align="center">04/08/2016 16:46</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 17332 -->
+<tr class="andamentoConcluido">
+<td align="center">03/08/2016 14:42</td>
+<td align="center"><a alt="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" title="Setor de Controle de Processo Administrativo Sancionador - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SEPAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 17330 -->
+<tr class="andamentoConcluido">
+<td align="center">03/08/2016 14:42</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Processos em autuação - CRSFN" title="Processos em autuação - CRSFN" class="ancoraSigla">SEDOC - AUTAÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6232 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002944 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6230 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002943 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6228 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002942 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6226 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002941 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6224 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002940 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6222 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002939 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6220 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002938 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6218 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002937 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6216 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002936 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6214 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002935 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6212 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:56</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002934 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6210 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002933 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6208 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002932 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6206 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002931 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6204 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002930 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6202 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002929 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6200 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002928 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6198 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002927 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6196 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002926 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6194 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002925 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6192 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002924 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6190 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002923 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6188 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002922 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6186 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002921 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6184 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002920 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6182 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002919 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6180 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002918 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6178 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002917 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6176 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002916 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6174 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002915 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6172 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002914 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6170 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002913 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6168 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002912 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6166 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002911 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6164 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002910 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6162 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002909 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6160 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002908 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6158 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002907 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6156 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002906 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6154 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002905 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6152 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002904 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6150 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002903 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6148 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002902 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6146 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002901 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6144 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002900 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6142 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002899 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6140 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002898 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6138 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002897 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6136 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002896 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6134 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002895 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6132 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002894 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6130 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002893 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6128 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002892 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6126 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002891 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6124 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002890 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6122 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002889 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6120 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002888 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6118 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002887 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6116 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002886 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6114 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002885 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6112 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002884 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6110 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002883 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6108 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002882 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6106 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002881 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6104 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002880 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6102 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002879 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6100 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002878 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6098 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002877 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6096 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002876 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6094 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002875 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6092 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002874 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6090 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002873 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6088 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002872 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6086 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002871 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6084 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002870 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6082 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002869 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6080 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002868 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6078 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002867 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6076 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002866 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6074 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002865 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6072 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002864 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6070 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002863 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6068 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002862 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6066 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002861 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6064 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002860 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6062 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002859 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6060 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002858 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6058 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002857 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6056 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002856 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6054 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002855 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6052 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002854 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6050 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002853 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6048 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002852 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6046 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002851 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6044 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002850 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6042 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002849 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6040 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002848 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6038 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002847 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6036 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002846 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6034 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002845 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6032 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002844 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6030 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002843 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6028 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002842 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6026 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002841 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6024 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002840 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6022 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002839 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6020 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002838 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6018 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002837 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6016 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002836 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6014 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002835 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6012 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002834 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6010 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002833 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6008 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002832 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6006 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002831 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6004 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002830 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6002 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002829 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 6000 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002828 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5998 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002827 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5996 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002826 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5994 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002825 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5992 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002824 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5990 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002823 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5988 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002822 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5986 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002821 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5984 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002820 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5982 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:55</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002819 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5980 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002818 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5978 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002817 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5976 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002816 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5974 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002815 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5972 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002814 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5970 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002813 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5968 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002812 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5966 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002811 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5964 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002810 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5962 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002809 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5960 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002808 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5958 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002807 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5956 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002806 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5954 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002805 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5952 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002804 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5950 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002803 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5948 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002802 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5946 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002801 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5944 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002800 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5942 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002799 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5940 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002798 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5938 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002797 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5936 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002796 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5934 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002795 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5932 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002794 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5930 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002793 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5928 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002792 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5926 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002791 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5924 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002790 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5922 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002789 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5920 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002788 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5918 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002787 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5916 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002786 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5914 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002785 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5912 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002784 (Inteiro teor - 1º PARTE)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5910 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002783 (Anexo C)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5908 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002782 (Anexo B)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5906 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 0002781 (Anexo A)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 5905 -->
+<tr class="andamentoConcluido">
+<td align="center">29/07/2016 17:54</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
+</div>
+<input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="60ab227e51c485e3fffdf40dbf23ebfd" />
+  	</form>
+</div></div>
+</div>
+<input type="hidden" id="hdnInfraPrefixoCookie" name="hdnInfraPrefixoCookie" value="ME_SEI_" />
+<div id="infraDivImpressao" class="infraImpressao"></div>
+</body>
+</html>

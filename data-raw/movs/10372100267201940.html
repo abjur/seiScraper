@@ -1,0 +1,1007 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" >
+<head >
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="noindex" />
+<title>:: SEI - Pesquisa Processual ::</title>
+<link href="/infra_css/infra-global-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-global-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-tooltip.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-barra-progresso.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="css/infra-esquema-local.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-impressao-global.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="print" />
+<link href="/infra_css/infra-ajax.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/calendario/infra-calendario.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/arvore/infra-arvore.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/mapa/infra-mapa.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.structure.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.theme.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/multiple-select/multiple-select.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/modal/jquery.modalLink-1.0.0.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" >
+<!--/*--><![CDATA[/*><!--*/
+.colunaAcoes {display:none;}
+
+div.infraBarraSistemaE {width:90%}
+div.infraBarraSistemaD {width:5%}
+div.infraBarraComandos {width:99%}
+
+table caption {
+  text-align:left !important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.andamentoAberto {
+  background-color:white;
+}
+
+.andamentoConcluido {
+  background-color:white;
+}
+
+
+#tblCabecalho{margin-top:1;}
+#tblDocumentos {margin-top:1.5em;}
+#tblHistorico {margin-top:1.5em;}
+#divInfraAreaPaginacaoSuperior {display: none;}
+#divinfraAndamentoAreaPaginacaoSuperior {display: none;}
+
+#lblCaptcha {position: absolute; top:30%; left: 20%; width: 80%}
+#txtCaptcha{position: absolute; top:56%; left: 20%; height:15%; width:56%;font-size: 3em;}
+#btnEnviarCaptcha {position: absolute; top:80%; left: 20%; width:56%}
+
+#divInfraModal{
+	
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 50%; 
+    overflow: auto;
+   
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-image: url("imagens/bg_barra_sistema.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+span.retiraAncoraPadraoAzul{font-size: 1.2em;}
+
+/*]]>*/-->
+</style>
+<script type="text/javascript">var INFRA_PATH_IMAGENS='/infra_css/imagens',INFRA_PATH_JS='/infra_js',INFRA_PATH_CSS='/infra_css';</script>
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-1.12.4.min.js?1.12.4"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.js?1.11.1"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/multiple-select/jquery.multiple.select.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/ddslick/jquery.ddslick.min.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/modal/jquery.modalLink-1.0.0.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/jquery.smartmenus.js"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/addons/keyboard/jquery.smartmenus.keyboard.js"></script>
+			
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUtil.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraCookie.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUpload.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraBotaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAcaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTabelaDinamica.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraLupas.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraSelectEditavel.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAjax.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTooltip.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/calendario/InfraCalendario.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/arvore/InfraArvore.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript">
+$(function() {
+	$('#main-menu').smartmenus({
+    subMenusSubOffsetX: 1,
+    subMenusSubOffsetY: -8
+  });
+
+  //MENU CTRL+ALT+F9 
+  $('#main-menu').smartmenus('keyboardSetHotkey', 120, ['ctrlKey', 'altKey']);
+});
+</script>
+
+<script type="text/javascript" charset="iso-8859-1" >
+<!--//--><![CDATA[//><!--
+
+
+function inicializar(){
+
+  
+  infraEfeitoTabelas();
+}
+
+
+
+$(document).unbind("keyup").keyup(function(e){
+	e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    	var modal = document.getElementById('divInfraModal');
+        if(modal.style.display == "block"){
+        	fecharPdfModal();
+        	gerarPdf();
+    		
+    	}
+    }
+});
+
+
+
+function gerarPdfModal(){
+
+	if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    	alert('Nenhum documento selecionado.');
+    	return;
+  	}
+	var modal = document.getElementById('divInfraModal');
+	modal.style.display = "block";
+
+}
+
+function fecharPdfModal(){
+	
+    var modal = document.getElementById('divInfraModal');
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+	var modal = document.getElementById('divInfraModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function gerarPdf() {
+
+  if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    alert('Nenhum documento selecionado.');
+    return;
+  }
+  
+    	fecharPdfModal();
+  
+  infraExibirAviso(false);
+  
+ document.getElementById('hdnFlagGerar').value = '1';
+ document.getElementById('frmProcessoAcessoExternoConsulta').submit();
+}
+
+
+//--><!]]>
+</script>
+</head>
+<body onload="infraProcessarResize();infraProcessarMouseDown();inicializar();">
+<div id="divInfraAreaGlobal" class="infraAreaGlobal">
+<div id="divInfraBarraSuperior" class="infraBarraSuperior">
+<label>MINISTÉRIO DA ECONOMIA</label>
+</div>
+<div id="divInfraBarraSistema" class="infraBarraSistema">
+<div id="divInfraBarraSistemaD" class="infraBarraSistemaD">
+</div>
+<div id="divInfraBarraSistemaE" class="infraBarraSistemaE">
+<img src="imagens/sei_logo_azul_celeste.jpg" title="Sistema Eletrônico de Informações"/><span class="infraTituloLogoSistema">3.1.7</span>
+</div>
+</div>
+<div id="divInfraAreaTela" class="infraAreaTela">
+<div id="divInfraAreaTelaD" class="infraAreaTelaD" style="width:99%">
+<div id="divInfraBarraLocalizacao" class="infraBarraLocalizacao">Pesquisa Processual</div>
+
+<form id="frmProcessoAcessoExternoConsulta" method="post">
+ 
+ 		<div id="divInfraModal" class="infraFundoTransparente" style="position: fixed; width: 100%; height: 100%; visibility: visible;">
+ 		   <div id="divCaptcha"  class="infraAreaDados" style="height: 220px; width: 230px; background-color:white">
+ 				<div class="modal-header">
+      				<span id="spnClose" class="close" onclick="fecharPdfModal();">×</span>
+      				<h2 style ="color: white;font-size: 1.2em;font-weight: bold;">Digite o Código da Imagem</h2>
+    			</div>
+ 				<div class="modal-body">
+ 		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=85-53" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
+  					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
+  		   		</div>
+    			
+  			</div>
+    	</div>
+  			<input type="hidden" id="hdnInfraTipoPagina" name="hdnInfraTipoPagina" value="3" />
+<div id="divInfraBarraComandosSuperior" class="infraBarraComandos">
+<button tabindex="451" type="button" id="btnPush" value="Push" onclick="location.href='https://sei.economia.gov.br/sei/modulos/PUSH/push_assinar_processo.php?idProcedimento=5109790'" class="infraButton">Incluir no PUSH</button>&nbsp;
+</div>
+<table id="tblCabecalho" width="99.3%" class="infraTable" summary="Cabeçalho de Processo" >
+<tr><th class="infraTh" colspan="2">Autuação</th></tr>
+<tr class="infraTrClara"><td width="20%">Processo:</td><td>10372.100267/2019-40<img src="/infra_css/imagens/espaco.gif"><img src="imagens/sei_chave_restrito.gif" align="absbottom"  title="Acesso Restrito.&#13CRSFN Inicial (CRSFN Inicial)"></td></tr>
+<tr class="infraTrClara"><td width="20%">Tipo:</td><td>Recurso - CRSFN-CVM</td></tr>
+<tr class="infraTrClara"><td width="20%">Data de Registro:</td><td>08/10/2019</td></tr>
+<tr class="infraTrClara"><td width="20%">Interessados:</td><td> Gilberto Barreto da Costa Pereira (022.xxx.xxx-04)<br /> José Manoel Joaquim (018.xxx.xxx-72)<br /> Gilberto Barreto da Costa Pereira<br /> José Manoel Joaquim<br /> </td></tr>
+</table>
+<p style="font-size: 1.2em;"> Para condições de acesso a processo ou documento, favor consultar a unidade onde o processo se encontra em andamento. Eventualmente a unidade pode solicitar o <a style="font-size: 1em;" href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/usuario-externo-1" target="_blank">cadastro de usuário externo no SEI/ME</a> para tal disponibilização.</p><div id="divInfraAreaTabela" class="infraAreaTabela" >
+
+</div>
+
+<input type="hidden" id="hdnInfraNroItens" name="hdnInfraNroItens" value="0" />
+<input type="hidden" id="hdnInfraItemId" name="hdnInfraItemId" value="" />
+<input type="hidden" id="hdnInfraItens" name="hdnInfraItens" value="" />
+<input type="hidden" id="hdnInfraItensHash" name="hdnInfraItensHash" value="" />
+<input type="hidden" id="hdnInfraItensSelecionados" name="hdnInfraItensSelecionados" value="" />
+
+<input type="hidden" id="hdnInfraSelecoes" name="hdnInfraSelecoes" value="Infra" />
+
+<input type="hidden" id="hdnInfraCampoOrd" name="hdnInfraCampoOrd" value="Registro" />
+<input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
+<div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
+<table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
+<caption class="infraCaption">Lista de Andamentos (103 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+
+
+<!-- 116781440 -->
+<tr class="andamentoAberto">
+<td align="center">27/01/2022 17:55</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 116098771 -->
+<tr class="andamentoConcluido">
+<td align="center">21/01/2022 16:08</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 116089203 -->
+<tr class="andamentoConcluido">
+<td align="center">21/01/2022 15:37</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Devolvido ao órgão de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 116014898 -->
+<tr class="andamentoConcluido">
+<td align="center">21/01/2022 10:27</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 21827770 (Ata da 454ª sessão de julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 109752610 -->
+<tr class="andamentoConcluido">
+<td align="center">03/12/2021 16:42</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Publicação do documento 20761886 (CRSFN - Acórdão Inteiro Teor) no veículo Boletim de Serviço Eletrônico de 06/12/2021 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 108931083 -->
+<tr class="andamentoConcluido">
+<td align="center">29/11/2021 20:30</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 108926183 -->
+<tr class="andamentoConcluido">
+<td align="center">29/11/2021 19:17</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 108925549 -->
+<tr class="andamentoConcluido">
+<td align="center">29/11/2021 19:13</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 108376919 -->
+<tr class="andamentoConcluido">
+<td align="center">25/11/2021 12:45</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 108291500 -->
+<tr class="andamentoConcluido">
+<td align="center">25/11/2021 07:40</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107491779 -->
+<tr class="andamentoConcluido">
+<td align="center">19/11/2021 15:30</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106708871 -->
+<tr class="andamentoConcluido">
+<td align="center">16/11/2021 10:04</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106706627 -->
+<tr class="andamentoConcluido">
+<td align="center">16/11/2021 09:57</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106442086 -->
+<tr class="andamentoConcluido">
+<td align="center">12/11/2021 10:06</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo julgado (Conselho de Recursos do Sistema Financeiro Nacional)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105324659 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2021 11:32</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105321995 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2021 11:26</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Conselheiro Pedro Frade de Andrade" title=" Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105321994 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2021 11:26</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>O Usuário Externo SARITA PACHECO JOAQUIM efetivou Peticionamento Intercorrente, tendo gerado o recibo 19985932 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105321966 -->
+<tr class="andamentoConcluido">
+<td align="center">05/11/2021 11:26</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Registro de documento externo público 19985927 (Memorial memoriais - julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105090944 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 10:44</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 19942779 (Ata da 452ª sessão de julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105072496 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 09:58</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104354003 -->
+<tr class="andamentoConcluido">
+<td align="center">28/10/2021 08:46</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104120871 -->
+<tr class="andamentoConcluido">
+<td align="center">27/10/2021 08:08</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 19763995 (Pauta DOU - 454ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104120188 -->
+<tr class="andamentoConcluido">
+<td align="center">27/10/2021 08:08</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104118790 -->
+<tr class="andamentoConcluido">
+<td align="center">27/10/2021 07:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 103676647 -->
+<tr class="andamentoConcluido">
+<td align="center">24/10/2021 22:57</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Publicação do documento 19605921 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 25/10/2021 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 103671812 -->
+<tr class="andamentoConcluido">
+<td align="center">24/10/2021 10:25</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo incluído em pauta (Conselho de Recursos do Sistema Financeiro Nacional, 09/11/2021 08:00)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101308842 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 17:08</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101306133 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 16:59</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Serviço de controle de diligências - SEPAS / SE / CRSFN" title=" Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101306132 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 16:59</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>O Usuário Externo SARITA PACHECO JOAQUIM efetivou Peticionamento Intercorrente, tendo gerado o recibo 19249255 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101306117 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 16:59</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Registro de documento externo público 19249252 (Recurso REGULARIZAÇÃO - RATIFICAÇÃO)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101256628 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 15:06</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101251678 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 14:52</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Serviço de controle de diligências - SEPAS / SE / CRSFN" title=" Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101251676 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 14:52</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>O Usuário Externo SARITA PACHECO JOAQUIM efetivou Peticionamento Intercorrente, tendo gerado o recibo 19241006 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101251665 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 14:52</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Registro de documento externo público 19241004 (Formulário procuradora), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 101251652 -->
+<tr class="andamentoConcluido">
+<td align="center">06/10/2021 14:52</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Registro de documento externo público 19241000 (Carteira OAB), conferido com cópia simples<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 100970782 -->
+<tr class="andamentoConcluido">
+<td align="center">05/10/2021 10:40</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Publicação do documento 18817924 (CRSFN - Intimação) no veículo Boletim de Serviço Eletrônico de 06/10/2021 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98825826 -->
+<tr class="andamentoConcluido">
+<td align="center">20/09/2021 21:25</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98752387 -->
+<tr class="andamentoConcluido">
+<td align="center">20/09/2021 14:15</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98741324 -->
+<tr class="andamentoConcluido">
+<td align="center">20/09/2021 13:19</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98724787 -->
+<tr class="andamentoConcluido">
+<td align="center">20/09/2021 11:54</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98326559 -->
+<tr class="andamentoConcluido">
+<td align="center">16/09/2021 10:39</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo retirado da pauta (Conselho de Recursos do Sistema Financeiro Nacional).<br />
+Retirado de ofício pela Presidente Adriana Teixeira de Toledo.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97137085 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 17:38</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97126371 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 16:46</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria do Colegiado" title=" Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97126370 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 16:46</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>O Usuário Externo Cleverton Elias Vieira efetivou Peticionamento Intercorrente, tendo gerado o recibo 18512512 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97126363 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 16:46</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18512511 (Substabelecimento substabelecimento sem reserva)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95557092 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2021 13:35</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18227498 (Pauta DOU - 452ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95557031 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2021 13:34</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95539821 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2021 12:00</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95139845 -->
+<tr class="andamentoConcluido">
+<td align="center">23/08/2021 09:45</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Publicação do documento 18149612 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 23/08/2021 09:45:05 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95113752 -->
+<tr class="andamentoConcluido">
+<td align="center">22/08/2021 19:30</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo incluído em pauta (Conselho de Recursos do Sistema Financeiro Nacional, 14/09/2021 08:00)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95113742 -->
+<tr class="andamentoConcluido">
+<td align="center">22/08/2021 19:23</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Publicação do documento 18145080 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 23/08/2021 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 90068798 -->
+<tr class="andamentoConcluido">
+<td align="center">14/07/2021 18:43</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 90068237 -->
+<tr class="andamentoConcluido">
+<td align="center">14/07/2021 18:38</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 90068236 -->
+<tr class="andamentoConcluido">
+<td align="center">14/07/2021 18:38</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo redistribuído (Conselho de Recursos do Sistema Financeiro Nacional, Pedro Frade de Andrade)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 85780437 -->
+<tr class="andamentoConcluido">
+<td align="center">14/06/2021 10:52</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 85763156 -->
+<tr class="andamentoConcluido">
+<td align="center">14/06/2021 10:02</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 85649316 -->
+<tr class="andamentoConcluido">
+<td align="center">11/06/2021 16:27</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 85499928 -->
+<tr class="andamentoConcluido">
+<td align="center">10/06/2021 20:32</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 85499775 -->
+<tr class="andamentoConcluido">
+<td align="center">10/06/2021 20:30</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 81140158 -->
+<tr class="andamentoConcluido">
+<td align="center">06/05/2021 14:48</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80746690 -->
+<tr class="andamentoConcluido">
+<td align="center">04/05/2021 15:45</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80170217 -->
+<tr class="andamentoConcluido">
+<td align="center">29/04/2021 17:19</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80144295 -->
+<tr class="andamentoConcluido">
+<td align="center">29/04/2021 15:51</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80094301 -->
+<tr class="andamentoConcluido">
+<td align="center">29/04/2021 12:36</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 80049913 -->
+<tr class="andamentoConcluido">
+<td align="center">29/04/2021 10:22</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 74445797 -->
+<tr class="andamentoConcluido">
+<td align="center">15/03/2021 17:18</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 74445796 -->
+<tr class="andamentoConcluido">
+<td align="center">15/03/2021 17:18</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo distribuído (Conselho de Recursos do Sistema Financeiro Nacional, Maria Rita de Carvalho Drummond)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28747387 -->
+<tr class="andamentoConcluido">
+<td align="center">10/12/2019 18:23</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28272421 -->
+<tr class="andamentoConcluido">
+<td align="center">05/12/2019 12:31</td>
+<td align="center"><a alt="Conselheira Maria Rita de Carvalho Drummond" title="Conselheira Maria Rita de Carvalho Drummond" class="ancoraSigla">CRSFN-CONS.MARIA RITA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28271667 -->
+<tr class="andamentoConcluido">
+<td align="center">05/12/2019 12:24</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Distribuído, por prevenção, à conselheira Maria Rita de Carvalho Drummond.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28269373 -->
+<tr class="andamentoConcluido">
+<td align="center">05/12/2019 12:08</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28268205 -->
+<tr class="andamentoConcluido">
+<td align="center">05/12/2019 12:01</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Ana Maria Melo Netto Oliveira" title="Conselheira Ana Maria Melo Netto Oliveira" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28265606 -->
+<tr class="andamentoConcluido">
+<td align="center">05/12/2019 11:51</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 28260836 -->
+<tr class="andamentoConcluido">
+<td align="center">05/12/2019 11:32</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23229128 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:13</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Autuado no CRSFN.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228946 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384785 (Recurso - José Manoel Joaquim)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228944 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384784 (Recurso - Gilberto Barreto da Costa Pereira)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228934 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384782 (Inteiro teor - 23ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228915 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384779 (Inteiro teor - 22ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228911 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384777 (Inteiro teor - 21ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228908 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384776 (Inteiro teor - 20ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228905 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384775 (Inteiro teor - 19ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228903 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384774 (Inteiro teor - 18ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228901 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384773 (Inteiro teor - 17ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228897 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384772 (Inteiro teor - 16ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228895 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384771 (Inteiro teor - 15ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228887 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384768 (Inteiro teor - 14ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228874 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384767 (Inteiro teor - 13ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228869 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384765 (Inteiro teor - 12ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228863 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384763 (Inteiro teor - 11ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228858 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384762 (Inteiro teor - 10ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228856 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384761 (Inteiro teor - 9ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228854 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384760 (Inteiro teor - 8ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228847 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384756 (Inteiro teor - 7ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228843 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384755 (Inteiro teor - 6ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228839 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384753 (Inteiro teor - 5ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228825 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384749 (Inteiro teor - 4ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228820 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384747 (Inteiro teor - 3ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228818 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384746 (Inteiro teor - 2ª  Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228811 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384744 (Inteiro teor -1ª Parte)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228809 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384743 (Decisão - Relatório, Voto, Manifestação do Voto, Extrato)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228807 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 4384742 (Extrato - de Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 23228804 -->
+<tr class="andamentoConcluido">
+<td align="center">08/10/2019 11:12</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
+</div>
+<input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="df0d7f3a2cdd64cc1d361e66525bb6cf" />
+  	</form>
+</div></div>
+</div>
+<input type="hidden" id="hdnInfraPrefixoCookie" name="hdnInfraPrefixoCookie" value="ME_SEI_" />
+<div id="infraDivImpressao" class="infraImpressao"></div>
+</body>
+</html>
