@@ -1,6 +1,4 @@
-
 # download_sei ------------------------------------------------------------
-
 
 download_sei <- function(ano, path = "data-raw/sei") {
 
@@ -121,6 +119,25 @@ parse_sei <- function(file) {
 
   tibble::tibble(
     id = ids
+  )
+
+}
+
+
+# paginas_sei -------------------------------------------------------------
+
+paginas_sei <- function(file) {
+
+  n_casos <- xml2::read_html(file) |>
+    xml2::xml_find_first("//div[@class='barra']") |>
+    xml2::xml_text() |>
+    stringr::str_extract("[0-9]+$") |>
+    as.integer()
+
+  total_pag <- ifelse(is.na(n_casos), 1, ceiling(n_casos/10))
+
+  tibble::tibble(
+    total_pag
   )
 
 }
