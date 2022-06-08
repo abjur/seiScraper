@@ -4,11 +4,18 @@ processos <- c("10372100225201917", "10372100141201894")
 
 rx_sei <- "(19957|10372|00783)\\.?[0-9]{6}[/-]?20[0-9]{2}-?[0-9]{2}"
 
-processos <- obsMC::da_conselho_cvm |>
+processos_cvm <- obsMC::da_conselho_cvm |>
   dplyr::mutate(sei = stringr::str_extract(resumo, rx_sei)) |>
   dplyr::pull(sei) |>
-  abjutils::clean_cnj()
+  abjutils::clean_cnj() |>
   unique()
+
+path_pag <- "data-raw/paginas"
+processos_sei <- path_pag |>
+  fs::dir_ls() |>
+  purrr::map_dfr(parse_sei, .id = "files") |>
+  dplyr::pull(id)
+
 
 path_processos <- "data-raw/processos"
 path_movs <- "data-raw/movs"

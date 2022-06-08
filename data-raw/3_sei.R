@@ -128,7 +128,7 @@ tibble::tibble(
 
 # testando ----------------------------------------------------------------
 
-path_sei |>
+processos <- path_sei |>
   fs::dir_ls() |>
   purrr::map_dfr(parse_sei, .id = "files")
 
@@ -164,7 +164,6 @@ query <- list(
   "id_orgao_acesso_externo" = "0",
   "hash" = "")
 
-
 # hash --------------------------------------------------------------------
 
 pegar_hash <- function(arq) {
@@ -175,17 +174,18 @@ pegar_hash <- function(arq) {
     stringr::str_extract("(?<=hash=)[a-z0-9]+")
 }
 
-
-pegar_pagina_inicial <- function() {
-  u <- "https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php"
-  q <- list(
+pegar_pagina_inicial <- function(ano) {
+  # preparação
+  url <- "https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php"
+  query <- list(
     "acao_externa"="protocolo_pesquisar",
     "acao_origem_externa"="protocolo_pesquisar_paginado",
     "id_orgao_acesso_externo"="0"
   )
   ssl <- httr::config(ssl_verifypeer = FALSE)
 
-  r0 <- httr::GET(u, ssl, query = q)
+  # captcha
+  r0 <- httr::GET(url, ssl, query = query)
   u_captcha_endpoint <- r0 |>
     xml2::read_html() |>
     xml2::xml_find_all("//img[contains(@src,'captcha')]") |>
@@ -197,30 +197,58 @@ pegar_pagina_inicial <- function() {
     as.numeric()
   ans <- captcha_classify_sei(xy[1], xy[2])
 
-  b <- list(
-    txtProtocoloPesquisa = "", txtCaptcha = "", sbmPesquisar = "Pesquisar",
-    q = "", chkSinProcessos = "P", txtParticipante = "", hdnIdParticipante = "",
-    txtUnidade = "", hdnIdUnidade = "", selTipoProcedimentoPesquisa = "100000502",
-    selSeriePesquisa = "", txtDataInicio = "", txtDataFim = "",
-    txtNumeroDocumentoPesquisa = "", txtAssinante = "", hdnIdAssinante = "",
-    txtDescricaoPesquisa = "", txtAssunto = "", hdnIdAssunto = "",
-    txtSiglaUsuario1 = "", txtSiglaUsuario2 = "", txtSiglaUsuario3 = "",
-    txtSiglaUsuario4 = "", hdnSiglasUsuarios = "",hdnSiglasUsuarios = "",
-    partialfields = "id_tipo_proc:100000502 AND sta_prot:P",
-    requiredfields = "", as_q = "", hdnFlagPesquisa = "1"
-  )
+  # body
 
-  b$txtCaptcha <- ans
+  dt_inicio <- glue::glue("01/01/{ano}")
+  dt_fim <- glue::glue("31/12/{ano}")
+  dt_inicio_pf <- lubridate::dmy(dt_inicio)
+  dt_fim_pf <- lubridate::dmy(dt_fim)
+  partialfields <- glue::glue("id_tipo_proc:100000502 AND sta_prot:P AND dta_ger:[{dt_inicio_pf}T00:00:00Z TO {dt_fim_pf}T00:00:00Z]")
 
+  body <- list(
+    "txtProtocoloPesquisa" = "",
+    "txtCaptcha" = ans,
+    "sbmPesquisar" = "Pesquisar",
+    "q" = "",
+    "chkSinProcessos" = "",
+    "txtParticipante" = "",
+    "hdnIdParticipante" = "",
+    "txtUnidade" = "",
+    "hdnIdUnidade" = "",
+    "selTipoProcedimentoPesquisa" = "100000502",
+    "selSeriePesquisa" = "",
+    "txtDataInicio" = dt_inicio,
+    "txtDataFim" = dt_fim,
+    "txtNumeroDocumentoPesquisa" = "",
+    "txtAssinante" = "",
+    "hdnIdAssinante" = "",
+    "txtDescricaoPesquisa" = "",
+    "txtAssunto" = "",
+    "hdnIdAssunto" = "",
+    "txtSiglaUsuario1" = "",
+    "txtSiglaUsuario2" = "",
+    "txtSiglaUsuario3" = "",
+    "txtSiglaUsuario4" = "",
+    "hdnSiglasUsuarios" = "",
+    "hdnSiglasUsuarios" = "",
+    "partialfields" = partialfields,
+    "requiredfields" = "",
+    "as_q" = "",
+    "hdnFlagPesquisa" = "1")
+
+  # POST
   r_busca <- httr::POST(
-    u,
+    url,
     ssl,
-    body = b,
-    query = q,
+    body = body,
+    query = query,
     encode = "form"
   )
 
-  pegar_hash(r_busca)
+  hash <- pegar_hash(r_busca)
+  n_pag <- paginas_sei(r_busca)
+
+  list(hash = hash, n_pag = n_pag)
 }
 
 pegar_pagina <- function(pag, hash, ano, path) {
@@ -265,7 +293,6 @@ pegar_pagina <- function(pag, hash, ano, path) {
   f
 }
 
-
 # testando ----------------------------------------------------------------
 
 path <- "data-raw/paginas"
@@ -273,23 +300,43 @@ fs::dir_create(path)
 
 hash <- pegar_pagina_inicial()
 
-ano <- 2016
+anos <- c(2016, 2017, 2018, 2020, 2021, 2022)
 
-for(ii in 1:10) {
-  arquivo_pagina <- pegar_pagina(ii, hash, ano, path)
-  hash <- pegar_hash(arquivo_pagina)
+for(ano in anos) {
+  resultado <- pegar_pagina_inicial(ano)
+  paginas <- seq_len(resultado$n_pag)
+  hash <- resultado$hash
+  if(length(paginas) > 1) {
+    for(pag in paginas) {
+      arquivo_pagina <- download_varias_paginas(pag, hash, ano, path)
+      hash <- pegar_hash(arquivo_pagina)
+    }
+  } else {
+    download_uma_pagina(ano, path)
+  }
 }
-# GET ---------------------------------------------------------------------
 
-pasta <- "data-raw/paginas"
-arquivo <- sprintf("%s/%03d.html", pasta, pag)
-u_pagina0 <- "https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar&id_orgao_acesso_externo=0"
-u_paginas <- "https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?"
+path <- "data-raw/paginas"
+ano <- 2019
+resultado <- pegar_pagina_inicial(ano)
+paginas <- seq_len(resultado$n_pag)
+hash <- resultado$hash
+if(length(paginas) > 1) {
+  for(pag in paginas) {
+    arquivo_pagina <- download_varias_paginas(pag, hash, ano, path)
+    hash <- pegar_hash(arquivo_pagina)
+  }
+} else {
+  download_uma_pagina(ano, path)
+}
 
-r_pagina <- httr::GET(u_paginas, ssl, query = query, httr::write_disk(arquivo, TRUE))
 
-xml2::read_html(r_pagina)
+# parse
 
-# https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar&id_orgao_acesso_externo=0
-# https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=10&id_orgao_acesso_externo=0&hash=e7ec1ead59daa9f18469245de0f2f7b8bbc98301
-# https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=20&id_orgao_acesso_externo=0&hash=8aed1322e5450badb078e1fb60a817a1df25a2ca
+processos <- path |>
+  fs::dir_ls() |>
+  purrr::map_dfr(parse_sei, .id = "files") |>
+  dplyr::pull(id)
+
+ids |>
+  dplyr::count(id)

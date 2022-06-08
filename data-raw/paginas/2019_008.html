@@ -232,12 +232,12 @@ function tratarPeriodo(valor){
     document.getElementById('txtDataFim').value='';
   }else if (valor =='30'){
     document.getElementById('divPeriodoExplicito').style.display='none';
-    document.getElementById('txtDataInicio').value='08/05/2022';
-    document.getElementById('txtDataFim').value='07/06/2022';
+    document.getElementById('txtDataInicio').value='09/05/2022';
+    document.getElementById('txtDataFim').value='08/06/2022';
   }else if (valor =='60'){
     document.getElementById('divPeriodoExplicito').style.display='none';
-    document.getElementById('txtDataInicio').value='08/04/2022';
-    document.getElementById('txtDataFim').value='07/06/2022';
+    document.getElementById('txtDataInicio').value='09/04/2022';
+    document.getElementById('txtDataFim').value='08/06/2022';
   }
 }
 
@@ -352,7 +352,7 @@ function exibirAvancado(){
     	 <input type="text" id="txtProtocoloPesquisa" name="txtProtocoloPesquisa" class="infraText" value="" tabindex="501" />
 		
 					<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
-			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=100-102" alt="Não foi possível carregar imagem de confirmação" /> </label> 
+			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=49-55" alt="Não foi possível carregar imagem de confirmação" /> </label> 
 				
 		
 	</div>
@@ -372,7 +372,7 @@ function exibirAvancado(){
 		<label id="lblPesquisarEm" accesskey="" class="infraLabelObrigatorio">Pesquisar em:</label>
 		
 		<div id="divSinProcessos" class="infraDivCheckbox">
-			<input type="checkbox" id="chkSinProcessos" name="chkSinProcessos" value="P" class="infraCheckbox" checked="checked" tabindex="504" />
+			<input type="checkbox" id="chkSinProcessos" name="chkSinProcessos" value="P" class="infraCheckbox"  tabindex="504" />
 			<label id="lblSinProcessos" for="chkSinProcessos" accesskey="" class="infraLabelCheckbox">Processos</label>
 		</div>
 		
@@ -3596,10 +3596,10 @@ function exibirAvancado(){
   </div>
 
   <div id="divPeriodoExplicito" class="infraAreaDados" style="height:2.5em;width:99%;top:50%;margin-top:-20px">
-    <input type="text" id="txtDataInicio" name="txtDataInicio" onkeypress="return infraMascaraData(this, event)" class="infraText" value="" tabindex="514" />
+    <input type="text" id="txtDataInicio" name="txtDataInicio" onkeypress="return infraMascaraData(this, event)" class="infraText" value="01/01/2019" tabindex="514" />
     <img id="imgDataInicio" src="/infra_css/imagens/calendario.gif" onclick="infraCalendario('txtDataInicio',this);" alt="Selecionar Data Inicial" title="Selecionar Data Inicial" class="infraImg" tabindex="515" />	
     <label id="lblDataE" for="txtDataE" accesskey="" class="infraLabelOpcional">&nbsp;e&nbsp;</label>
-    <input type="text" id="txtDataFim" name="txtDataFim" onkeypress="return infraMascaraData(this, event)" class="infraText" value="" tabindex="516" />
+    <input type="text" id="txtDataFim" name="txtDataFim" onkeypress="return infraMascaraData(this, event)" class="infraText" value="31/12/2019" tabindex="516" />
     <img id="imgDataFim" src="/infra_css/imagens/calendario.gif" onclick="infraCalendario('txtDataFim',this);" alt="Selecionar Data Final" title="Selecionar Data Final" class="infraImg" tabindex="517" />	      	 
   </div>
  
@@ -3622,10 +3622,10 @@ function exibirAvancado(){
  	<input id="as_q" name="as_q" type="hidden" value="" />
 
   	<input type="hidden" id="hdnFlagPesquisa" name="hdnFlagPesquisa" value="1" />
-<div id="conteudo" style="width:99%;" class="infraAreaTabela"><div class="barra">Exibindo 71 - 80 de 438</div><table border="0" class="resultado">
+<div id="conteudo" style="width:99%;" class="infraAreaTabela"><div class="barra">71 resultados</div><table border="0" class="resultado">
 <tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCiHlgRuDkJaTZuJGOEmDieZC7b7wX_YDuGudcZaGkPlD" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCiHlgRuDkJaTZuJGOEmDieZC7b7wX_YDuGudcZaGkPlD" target="_blank" class="protocoloNormal">10372.100174/2020-59</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCiHlgRuDkJaTZuJGOEmDieZC7b7wX_YDuGudcZaGkPlD" target="_blank" class="protocoloNormal">10372.100174/2020-59</a></td>
+<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?1aaAMl9DnFlYx7qkJXZ6uhUdJrQUFjWYqlZYECQ58W5YK3CiZdzBZCciMqk1XkfObu-UA1dFxjaP6qD5yJTFpSKM9xvf7Cyov6Jf27MAhJmqzb338kRJDvxTKECGPupM" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?1aaAMl9DnFlYx7qkJXZ6uhUdJrQUFjWYqlZYECQ58W5YK3CiZdzBZCciMqk1XkfObu-UA1dFxjaP6qD5yJTFpSKM9xvf7Cyov6Jf27MAhJmqzb338kRJDvxTKECGPupM" target="_blank" class="protocoloNormal">10372.100001/2019-05</a></td>
+<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?1aaAMl9DnFlYx7qkJXZ6uhUdJrQUFjWYqlZYECQ58W5YK3CiZdzBZCciMqk1XkfObu-UA1dFxjaP6qD5yJTFpSKM9xvf7Cyov6Jf27MAhJmqzb338kRJDvxTKECGPupM" target="_blank" class="protocoloNormal">10372.100001/2019-05</a></td>
 </tr>
 <tr>
 <td colspan="2" class="metatag">
@@ -3633,189 +3633,22 @@ function exibirAvancado(){
 <tbody>
 <tr>
 <td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 28/10/2020</td>
+<td><b>Data:</b> 02/01/2019</td>
 </tr>
 </tbody>
 </table>
 </td>
 </tr>
 </table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCktFtRY9ayVBjU1UAtvofuQVaP5DHOcqq4U6SJL3p6fe" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCktFtRY9ayVBjU1UAtvofuQVaP5DHOcqq4U6SJL3p6fe" target="_blank" class="protocoloNormal">10372.100175/2020-01</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCktFtRY9ayVBjU1UAtvofuQVaP5DHOcqq4U6SJL3p6fe" target="_blank" class="protocoloNormal">10372.100175/2020-01</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 28/10/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsChpmIlWXEjQPy63g-wsNy1BSGawf1Cfbel2b8la88LU1" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsChpmIlWXEjQPy63g-wsNy1BSGawf1Cfbel2b8la88LU1" target="_blank" class="protocoloNormal">10372.100172/2020-60</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsChpmIlWXEjQPy63g-wsNy1BSGawf1Cfbel2b8la88LU1" target="_blank" class="protocoloNormal">10372.100172/2020-60</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 27/10/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsBrdZ-lOjkS7rYRqwDjhbZWObPlHFCheO8XcK1jwS5B" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsBrdZ-lOjkS7rYRqwDjhbZWObPlHFCheO8XcK1jwS5B" target="_blank" class="protocoloNormal">10372.100173/2020-12</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsBrdZ-lOjkS7rYRqwDjhbZWObPlHFCheO8XcK1jwS5B" target="_blank" class="protocoloNormal">10372.100173/2020-12</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 27/10/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCrNP2QpNbmwv_7GvdfqM-E8Zi3DNx3gX0qehPp5DVH6g" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCrNP2QpNbmwv_7GvdfqM-E8Zi3DNx3gX0qehPp5DVH6g" target="_blank" class="protocoloNormal">10372.100171/2020-15</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCrNP2QpNbmwv_7GvdfqM-E8Zi3DNx3gX0qehPp5DVH6g" target="_blank" class="protocoloNormal">10372.100171/2020-15</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 27/10/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsuhuk5GhJY3hqjxsaCocOarob3Q0qtSp0MQS35UMb3O" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsuhuk5GhJY3hqjxsaCocOarob3Q0qtSp0MQS35UMb3O" target="_blank" class="protocoloNormal">14021.167253/2020-81</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsuhuk5GhJY3hqjxsaCocOarob3Q0qtSp0MQS35UMb3O" target="_blank" class="protocoloNormal">14021.167253/2020-81</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Processos Recebidos via Protocolo Digital, Peticionamento e Barramento" title="Processos Recebidos via Protocolo Digital, Peticionamento e Barramento" class="ancoraSigla">DAL-CGTIP-PROT DIG</a></td>
-<td><b>Data:</b> 16/10/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsChG-Aoj1bNnw8JQQTLMPdUFsdoqZc6XV8IxpoksjhiGc" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsChG-Aoj1bNnw8JQQTLMPdUFsdoqZc6XV8IxpoksjhiGc" target="_blank" class="protocoloNormal">14021.162259/2020-61</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsChG-Aoj1bNnw8JQQTLMPdUFsdoqZc6XV8IxpoksjhiGc" target="_blank" class="protocoloNormal">14021.162259/2020-61</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Processos Recebidos via Protocolo Digital, Peticionamento e Barramento" title="Processos Recebidos via Protocolo Digital, Peticionamento e Barramento" class="ancoraSigla">DAL-CGTIP-PROT DIG</a></td>
-<td><b>Data:</b> 02/10/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsAWxtpkp99-xsoMdv5B6bt4sZyZrxat9Sy_V8pv7pHt" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsAWxtpkp99-xsoMdv5B6bt4sZyZrxat9Sy_V8pv7pHt" target="_blank" class="protocoloNormal">10372.100115/2020-81</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCsAWxtpkp99-xsoMdv5B6bt4sZyZrxat9Sy_V8pv7pHt" target="_blank" class="protocoloNormal">10372.100115/2020-81</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 04/09/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCoyVXD4uekZxFNWYUItQ1XRb598ray2N-9Xwf5hQNEWq" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCoyVXD4uekZxFNWYUItQ1XRb598ray2N-9Xwf5hQNEWq" target="_blank" class="protocoloNormal">10372.100111/2020-01</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCoyVXD4uekZxFNWYUItQ1XRb598ray2N-9Xwf5hQNEWq" target="_blank" class="protocoloNormal">10372.100111/2020-01</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 03/09/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<table border="0" class="resultado">
-<tr class="resTituloRegistro">
-<td class="resTituloEsquerda"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCoLxATXkLkymzmNGeEy8qJhp2kRDxFZ3t8Tf3FcfO6Cy" target="_blank" class="arvore"><img border="0" src="solr/img/arvore.png" alt="" title="Visualizar árvore" width="14" height="16" class="arvore" /></a>Recurso - CRSFN-CVM N&deg; <a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCoLxATXkLkymzmNGeEy8qJhp2kRDxFZ3t8Tf3FcfO6Cy" target="_blank" class="protocoloNormal">10372.100112/2020-47</a></td>
-<td class="resTituloDireita"><a href="md_pesq_processo_exibir.php?eFQCVVdtsOap90ZhY3vyEbvoQXrwIjBTmm-AkpaukldZ4EaeM5wJJ9hV8wfkpgYw1OI2BPtocpOni3zm-gBsCoLxATXkLkymzmNGeEy8qJhp2kRDxFZ3t8Tf3FcfO6Cy" target="_blank" class="protocoloNormal">10372.100112/2020-47</a></td>
-</tr>
-<tr>
-<td colspan="2" class="metatag">
-<table>
-<tbody>
-<tr>
-<td><b>Unidade Geradora:</b> <a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
-<td><b>Data:</b> 03/09/2020</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</table>
-<div class="paginas"><span class="pequeno"><a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=60&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69&id_orgao_acesso_externo=0')">Anterior</a></span>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=20&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">3</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=30&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">4</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=40&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">5</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=50&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">6</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=60&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">7</a>
- <b>8</b>  <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=80&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">9</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=90&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">10</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=100&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">11</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=110&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">12</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=120&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">13</a>
- <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=130&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">14</a>
-<span class="pequeno"><a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=80&id_orgao_acesso_externo=0&hash=301ef58ba8545230bc0cd9cf7ecbe531ec996b69')">Próxima</a></span>
-</div> 
+<div class="paginas"><span class="pequeno"><a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=60&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc&id_orgao_acesso_externo=0')">Anterior</a></span>
+ <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=0&id_orgao_acesso_externo=0&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc')">1</a>
+ <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=10&id_orgao_acesso_externo=0&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc')">2</a>
+ <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=20&id_orgao_acesso_externo=0&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc')">3</a>
+ <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=30&id_orgao_acesso_externo=0&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc')">4</a>
+ <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=40&id_orgao_acesso_externo=0&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc')">5</a>
+ <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=50&id_orgao_acesso_externo=0&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc')">6</a>
+ <a href="javascript:pagina.ir('md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&inicio=60&id_orgao_acesso_externo=0&hash=16b5eb5172fe24f3ec4dafdd4593f04f50c205cc')">7</a>
+ <b>8</b> </div> 
   </form>
 </div></div>
 </div>
