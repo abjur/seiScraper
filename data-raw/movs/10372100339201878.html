@@ -237,7 +237,7 @@ function gerarPdf() {
     			</div>
  				<div class="modal-body">
  		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
-		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=119-53" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=108-86" alt="Não foi possível carregar imagem de confirmação" /> </label>
 		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
   					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
   		   		</div>
@@ -271,8 +271,22 @@ function gerarPdf() {
 <input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
 <div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
 <table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
-<caption class="infraCaption">Lista de Andamentos (121 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+<caption class="infraCaption">Lista de Andamentos (123 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
 
+
+<!-- 135365737 -->
+<tr class="andamentoAberto">
+<td align="center">10/06/2022 12:22</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 135365599 -->
+<tr class="andamentoConcluido">
+<td align="center">10/06/2022 12:22</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Devolvido ao processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
 
 <!-- 133876032 -->
 <tr class="andamentoConcluido">
@@ -282,7 +296,7 @@ function gerarPdf() {
 <td>Registro de documento externo público 25291794 (Ata da 459ª sessão de julgamento)<span style="line-height:.5em"><br /></span></td></tr>
 
 <!-- 132410209 -->
-<tr class="andamentoAberto">
+<tr class="andamentoConcluido">
 <td align="center">23/05/2022 10:20</td>
 <td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
 
@@ -1123,7 +1137,7 @@ Tramitado para o processo de origem.<span style="line-height:.5em"><br /></span>
 <td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
 </div>
 <input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
-     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="1db139bd11ac3130edd584af0c7ce743" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="d8dc167e5ae83f701d1db68d67043118" />
   	</form>
 </div></div>
 </div>

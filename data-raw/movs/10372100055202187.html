@@ -1,0 +1,1202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" >
+<head >
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="noindex" />
+<title>:: SEI - Pesquisa Processual ::</title>
+<link href="/infra_css/infra-global-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-global-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-tooltip.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-barra-progresso.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="css/infra-esquema-local.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-impressao-global.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="print" />
+<link href="/infra_css/infra-ajax.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/calendario/infra-calendario.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/arvore/infra-arvore.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/mapa/infra-mapa.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.structure.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.theme.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/multiple-select/multiple-select.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/modal/jquery.modalLink-1.0.0.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" >
+<!--/*--><![CDATA[/*><!--*/
+.colunaAcoes {display:none;}
+
+div.infraBarraSistemaE {width:90%}
+div.infraBarraSistemaD {width:5%}
+div.infraBarraComandos {width:99%}
+
+table caption {
+  text-align:left !important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.andamentoAberto {
+  background-color:white;
+}
+
+.andamentoConcluido {
+  background-color:white;
+}
+
+
+#tblCabecalho{margin-top:1;}
+#tblDocumentos {margin-top:1.5em;}
+#tblHistorico {margin-top:1.5em;}
+#divInfraAreaPaginacaoSuperior {display: none;}
+#divinfraAndamentoAreaPaginacaoSuperior {display: none;}
+
+#lblCaptcha {position: absolute; top:30%; left: 20%; width: 80%}
+#txtCaptcha{position: absolute; top:56%; left: 20%; height:15%; width:56%;font-size: 3em;}
+#btnEnviarCaptcha {position: absolute; top:80%; left: 20%; width:56%}
+
+#divInfraModal{
+	
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 50%; 
+    overflow: auto;
+   
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-image: url("imagens/bg_barra_sistema.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+span.retiraAncoraPadraoAzul{font-size: 1.2em;}
+
+/*]]>*/-->
+</style>
+<script type="text/javascript">var INFRA_PATH_IMAGENS='/infra_css/imagens',INFRA_PATH_JS='/infra_js',INFRA_PATH_CSS='/infra_css';</script>
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-1.12.4.min.js?1.12.4"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.js?1.11.1"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/multiple-select/jquery.multiple.select.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/ddslick/jquery.ddslick.min.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/modal/jquery.modalLink-1.0.0.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/jquery.smartmenus.js"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/addons/keyboard/jquery.smartmenus.keyboard.js"></script>
+			
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUtil.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraCookie.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUpload.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraBotaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAcaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTabelaDinamica.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraLupas.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraSelectEditavel.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAjax.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTooltip.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/calendario/InfraCalendario.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/arvore/InfraArvore.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript">
+$(function() {
+	$('#main-menu').smartmenus({
+    subMenusSubOffsetX: 1,
+    subMenusSubOffsetY: -8
+  });
+
+  //MENU CTRL+ALT+F9 
+  $('#main-menu').smartmenus('keyboardSetHotkey', 120, ['ctrlKey', 'altKey']);
+});
+</script>
+
+<script type="text/javascript" charset="iso-8859-1" >
+<!--//--><![CDATA[//><!--
+
+
+function inicializar(){
+
+  
+  infraEfeitoTabelas();
+}
+
+
+
+$(document).unbind("keyup").keyup(function(e){
+	e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    	var modal = document.getElementById('divInfraModal');
+        if(modal.style.display == "block"){
+        	fecharPdfModal();
+        	gerarPdf();
+    		
+    	}
+    }
+});
+
+
+
+function gerarPdfModal(){
+
+	if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    	alert('Nenhum documento selecionado.');
+    	return;
+  	}
+	var modal = document.getElementById('divInfraModal');
+	modal.style.display = "block";
+
+}
+
+function fecharPdfModal(){
+	
+    var modal = document.getElementById('divInfraModal');
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+	var modal = document.getElementById('divInfraModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function gerarPdf() {
+
+  if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    alert('Nenhum documento selecionado.');
+    return;
+  }
+  
+    	fecharPdfModal();
+  
+  infraExibirAviso(false);
+  
+ document.getElementById('hdnFlagGerar').value = '1';
+ document.getElementById('frmProcessoAcessoExternoConsulta').submit();
+}
+
+
+//--><!]]>
+</script>
+</head>
+<body onload="infraProcessarResize();infraProcessarMouseDown();inicializar();">
+<div id="divInfraAreaGlobal" class="infraAreaGlobal">
+<div id="divInfraBarraSuperior" class="infraBarraSuperior">
+<label>MINISTÉRIO DA ECONOMIA</label>
+</div>
+<div id="divInfraBarraSistema" class="infraBarraSistema">
+<div id="divInfraBarraSistemaD" class="infraBarraSistemaD">
+</div>
+<div id="divInfraBarraSistemaE" class="infraBarraSistemaE">
+<img src="imagens/sei_logo_azul_celeste.jpg" title="Sistema Eletrônico de Informações"/><span class="infraTituloLogoSistema">3.1.7</span>
+</div>
+</div>
+<div id="divInfraAreaTela" class="infraAreaTela">
+<div id="divInfraAreaTelaD" class="infraAreaTelaD" style="width:99%">
+<div id="divInfraBarraLocalizacao" class="infraBarraLocalizacao">Pesquisa Processual</div>
+
+<form id="frmProcessoAcessoExternoConsulta" method="post">
+ 
+ 		<div id="divInfraModal" class="infraFundoTransparente" style="position: fixed; width: 100%; height: 100%; visibility: visible;">
+ 		   <div id="divCaptcha"  class="infraAreaDados" style="height: 220px; width: 230px; background-color:white">
+ 				<div class="modal-header">
+      				<span id="spnClose" class="close" onclick="fecharPdfModal();">×</span>
+      				<h2 style ="color: white;font-size: 1.2em;font-weight: bold;">Digite o Código da Imagem</h2>
+    			</div>
+ 				<div class="modal-body">
+ 		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=83-100" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
+  					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
+  		   		</div>
+    			
+  			</div>
+    	</div>
+  			<input type="hidden" id="hdnInfraTipoPagina" name="hdnInfraTipoPagina" value="3" />
+<div id="divInfraBarraComandosSuperior" class="infraBarraComandos">
+<button tabindex="451" type="button" id="btnPush" value="Push" onclick="location.href='https://sei.economia.gov.br/sei/modulos/PUSH/push_assinar_processo.php?idProcedimento=16461230'" class="infraButton">Incluir no PUSH</button>&nbsp;
+</div>
+<table id="tblCabecalho" width="99.3%" class="infraTable" summary="Cabeçalho de Processo" >
+<tr><th class="infraTh" colspan="2">Autuação</th></tr>
+<tr class="infraTrClara"><td width="20%">Processo:</td><td>10372.100055/2021-87<img src="/infra_css/imagens/espaco.gif"><img src="imagens/sei_chave_restrito.gif" align="absbottom"  title="Acesso Restrito.&#13CRSFN Inicial (CRSFN Inicial)"></td></tr>
+<tr class="infraTrClara"><td width="20%">Tipo:</td><td>Recurso - CRSFN-CVM</td></tr>
+<tr class="infraTrClara"><td width="20%">Data de Registro:</td><td>23/03/2021</td></tr>
+<tr class="infraTrClara"><td width="20%">Interessados:</td><td> Joesley Mendonça Batista (376.xxx.xxx-91)<br /> Wesley Mendonça Batista (364.xxx.xxx-20)<br /> Joesley Mendonça Batista<br /> Wesley Mendonça Batista<br /> </td></tr>
+</table>
+<p style="font-size: 1.2em;"> Para condições de acesso a processo ou documento, favor consultar a unidade onde o processo se encontra em andamento. Eventualmente a unidade pode solicitar o <a style="font-size: 1em;" href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/usuario-externo-1" target="_blank">cadastro de usuário externo no SEI/ME</a> para tal disponibilização.</p><div id="divInfraAreaTabela" class="infraAreaTabela" >
+
+</div>
+
+<input type="hidden" id="hdnInfraNroItens" name="hdnInfraNroItens" value="0" />
+<input type="hidden" id="hdnInfraItemId" name="hdnInfraItemId" value="" />
+<input type="hidden" id="hdnInfraItens" name="hdnInfraItens" value="" />
+<input type="hidden" id="hdnInfraItensHash" name="hdnInfraItensHash" value="" />
+<input type="hidden" id="hdnInfraItensSelecionados" name="hdnInfraItensSelecionados" value="" />
+
+<input type="hidden" id="hdnInfraSelecoes" name="hdnInfraSelecoes" value="Infra" />
+
+<input type="hidden" id="hdnInfraCampoOrd" name="hdnInfraCampoOrd" value="Registro" />
+<input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
+<div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
+<table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
+<caption class="infraCaption">Lista de Andamentos (130 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+
+
+<!-- 133875094 -->
+<tr class="andamentoConcluido">
+<td align="center">01/06/2022 10:53</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 25291627 (Ata da 459ª sessão de julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128679819 -->
+<tr class="andamentoAberto">
+<td align="center">27/04/2022 11:12</td>
+<td align="center"><a alt="Conselheira Márcia Gomes Lencastre" title="Conselheira Márcia Gomes Lencastre" class="ancoraSigla">CRSFN-CONS.MARCIA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128397389 -->
+<tr class="andamentoAberto">
+<td align="center">25/04/2022 17:44</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128280421 -->
+<tr class="andamentoConcluido">
+<td align="center">25/04/2022 11:17</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128144140 -->
+<tr class="andamentoConcluido">
+<td align="center">20/04/2022 22:44</td>
+<td align="center"><a alt="Conselheira Márcia Gomes Lencastre" title="Conselheira Márcia Gomes Lencastre" class="ancoraSigla">CRSFN-CONS.MARCIA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128139195 -->
+<tr class="andamentoConcluido">
+<td align="center">20/04/2022 20:14</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Envio de correspondência eletrônica 24203398 (E-mail)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128134153 -->
+<tr class="andamentoConcluido">
+<td align="center">20/04/2022 19:02</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 24202232 (Áudio - item 22 - Sessão 459ª)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128046897 -->
+<tr class="andamentoConcluido">
+<td align="center">20/04/2022 14:20</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127980807 -->
+<tr class="andamentoConcluido">
+<td align="center">20/04/2022 10:37</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127450632 -->
+<tr class="andamentoConcluido">
+<td align="center">14/04/2022 18:13</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo julgado (Conselho de Recursos do Sistema Financeiro Nacional)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127304407 -->
+<tr class="andamentoConcluido">
+<td align="center">14/04/2022 09:25</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127301979 -->
+<tr class="andamentoConcluido">
+<td align="center">14/04/2022 09:16</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127280891 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2022 21:10</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127279851 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2022 20:41</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria do Colegiado" title=" Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127279850 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2022 20:41</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>O Usuário Externo FABIANO JANTALIA BARBOSA efetivou Peticionamento Intercorrente, tendo gerado o recibo 24025573 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 127279844 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2022 20:41</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 24025572 (Petição Requerimentos sobre Questão de Ordem)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 126123065 -->
+<tr class="andamentoConcluido">
+<td align="center">05/04/2022 19:44</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 126084469 -->
+<tr class="andamentoConcluido">
+<td align="center">05/04/2022 16:29</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria do Colegiado" title=" Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 126084465 -->
+<tr class="andamentoConcluido">
+<td align="center">05/04/2022 16:29</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>O Usuário Externo Luiz Henrique de Carvalho Vieira Gonçalves efetivou Peticionamento Intercorrente, tendo gerado o recibo 23802360 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 126084449 -->
+<tr class="andamentoConcluido">
+<td align="center">05/04/2022 16:29</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 23802357 (Petição de Juntada de Declarações), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 124949829 -->
+<tr class="andamentoConcluido">
+<td align="center">28/03/2022 17:47</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 124921452 -->
+<tr class="andamentoConcluido">
+<td align="center">28/03/2022 16:23</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 124610727 -->
+<tr class="andamentoConcluido">
+<td align="center">25/03/2022 10:24</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Registro de documento externo público 23534348 (Pauta DOU - 459ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 124185815 -->
+<tr class="andamentoConcluido">
+<td align="center">22/03/2022 17:36</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo incluído em mesa (Conselho de Recursos do Sistema Financeiro Nacional, 12/04/2022 08:00)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 116013262 -->
+<tr class="andamentoConcluido">
+<td align="center">21/01/2022 10:20</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 21827421 (Ata)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107699862 -->
+<tr class="andamentoConcluido">
+<td align="center">22/11/2021 14:11</td>
+<td align="center"><a alt="Conselheiro Sérgio Varella" title="Conselheiro Sérgio Varella" class="ancoraSigla">CRSFN-CONS.SERGIO VARELLA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107375310 -->
+<tr class="andamentoConcluido">
+<td align="center">19/11/2021 09:53</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107366847 -->
+<tr class="andamentoConcluido">
+<td align="center">19/11/2021 09:30</td>
+<td align="center"><a alt="Conselheira Márcia Gomes Lencastre" title="Conselheira Márcia Gomes Lencastre" class="ancoraSigla">CRSFN-CONS.MARCIA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107362567 -->
+<tr class="andamentoConcluido">
+<td align="center">19/11/2021 09:18</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107336700 -->
+<tr class="andamentoConcluido">
+<td align="center">18/11/2021 22:08</td>
+<td align="center"><a alt="Conselheiro Sérgio Varella" title="Conselheiro Sérgio Varella" class="ancoraSigla">CRSFN-CONS.SERGIO VARELLA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107336699 -->
+<tr class="andamentoConcluido">
+<td align="center">18/11/2021 22:08</td>
+<td align="center"><a alt="Conselheira Márcia Gomes Lencastre" title="Conselheira Márcia Gomes Lencastre" class="ancoraSigla">CRSFN-CONS.MARCIA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 107336688 -->
+<tr class="andamentoConcluido">
+<td align="center">18/11/2021 22:08</td>
+<td align="center"><a alt="Conselheiro Thiago Paiva Chaves" title="Conselheiro Thiago Paiva Chaves" class="ancoraSigla">CRSFN-CONS.THIAGO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106970334 -->
+<tr class="andamentoConcluido">
+<td align="center">17/11/2021 11:18</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106802446 -->
+<tr class="andamentoConcluido">
+<td align="center">16/11/2021 15:00</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106802202 -->
+<tr class="andamentoConcluido">
+<td align="center">16/11/2021 14:59</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106802146 -->
+<tr class="andamentoConcluido">
+<td align="center">16/11/2021 14:59</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106779621 -->
+<tr class="andamentoConcluido">
+<td align="center">16/11/2021 13:54</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106442868 -->
+<tr class="andamentoConcluido">
+<td align="center">12/11/2021 10:08</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106442073 -->
+<tr class="andamentoConcluido">
+<td align="center">12/11/2021 10:06</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Pedido de Vista (Conselho de Recursos do Sistema Financeiro Nacional por <a href="javascript:void(0);" alt="" title="" class="ancoraSigla">Adriana Teixeira de Toledo</a>)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106263524 -->
+<tr class="andamentoConcluido">
+<td align="center">11/11/2021 12:38</td>
+<td align="center"><a alt="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" title="Procurador da Fazenda Nacional André Alvim de Paula Rizzo" class="ancoraSigla">NUCAF-CAF-ANDRÉ-RIZZO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106257440 -->
+<tr class="andamentoConcluido">
+<td align="center">11/11/2021 12:15</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 106256759 -->
+<tr class="andamentoConcluido">
+<td align="center">11/11/2021 12:13</td>
+<td align="center"><a alt="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" title="Núcleo do Contencioso Administrativo, Fiscal e Financeiro" class="ancoraSigla">NUCAF-CAF</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105086796 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 10:33</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Registro de documento externo público 19941823 (Ata da 452ª sessão de julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104601190 -->
+<tr class="andamentoConcluido">
+<td align="center">29/10/2021 10:58</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104599099 -->
+<tr class="andamentoConcluido">
+<td align="center">29/10/2021 10:54</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria do Colegiado" title=" Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104599098 -->
+<tr class="andamentoConcluido">
+<td align="center">29/10/2021 10:54</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>O Usuário Externo FABIANO JANTALIA BARBOSA efetivou Peticionamento Intercorrente, tendo gerado o recibo 19848487 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104599087 -->
+<tr class="andamentoConcluido">
+<td align="center">29/10/2021 10:54</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 19848485 (Formulário Qualificação advogado Fabiano Jantalia)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104119759 -->
+<tr class="andamentoConcluido">
+<td align="center">27/10/2021 08:03</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 19763907 (Pauta DOU - 454ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104119733 -->
+<tr class="andamentoConcluido">
+<td align="center">27/10/2021 08:03</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104118015 -->
+<tr class="andamentoConcluido">
+<td align="center">27/10/2021 07:48</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 103192419 -->
+<tr class="andamentoConcluido">
+<td align="center">20/10/2021 16:40</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo incluído em pauta (Conselho de Recursos do Sistema Financeiro Nacional, 09/11/2021 08:00)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 99702241 -->
+<tr class="andamentoConcluido">
+<td align="center">27/09/2021 12:23</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 99694432 -->
+<tr class="andamentoConcluido">
+<td align="center">27/09/2021 11:52</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Conselheiro Haroldo Mavignier Guedes Alcoforado" title=" Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 99694430 -->
+<tr class="andamentoConcluido">
+<td align="center">27/09/2021 11:52</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>O Usuário Externo LUIZ RIBEIRO DE ANDRADE efetivou Peticionamento Intercorrente, tendo gerado o recibo 18970631 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 99694420 -->
+<tr class="andamentoConcluido">
+<td align="center">27/09/2021 11:52</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 18970629 (Petição certificação do termo inicial da vista), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98680094 -->
+<tr class="andamentoConcluido">
+<td align="center">20/09/2021 09:09</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98676823 -->
+<tr class="andamentoConcluido">
+<td align="center">20/09/2021 08:53</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98336364 -->
+<tr class="andamentoConcluido">
+<td align="center">16/09/2021 11:10</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo retirado da pauta (Conselho de Recursos do Sistema Financeiro Nacional).<br />
+Pedido de retirada de pauta feito pelo recorrente Wesley Mendonça Batista, deferido pela Presidente Adriana Teixeira de Toledo.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97528183 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 21:14</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97526357 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 20:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria Executiva do CRSFN" title=" Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97526356 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 20:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>O Usuário Externo Lucas Coracin da Silva efetivou Peticionamento Intercorrente, tendo gerado o recibo 18584994 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97526349 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 20:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 18584993 (Documento Procurador), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97526344 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 20:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 18584992 (Substabelecimento Doc. 02), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97526286 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 20:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 18584991 (Procuração Doc. 01), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97526281 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 20:16</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 18584990 (Formulário Partes e Procuradores)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97517363 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 18:32</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97515285 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 18:18</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria Executiva do CRSFN" title=" Secretaria Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97515284 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 18:18</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>O Usuário Externo Waneska Tagnin Overbeck efetivou Peticionamento Intercorrente, tendo gerado o recibo 18583164 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97515278 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 18:18</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Registro de documento externo público 18583163 (Procuração Formulário de Identificação)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97515277 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 18:18</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97464934 -->
+<tr class="andamentoConcluido">
+<td align="center">09/09/2021 15:31</td>
+<td align="center"><a alt="Secretaria-Executiva do CRSFN" title="Secretaria-Executiva do CRSFN" class="ancoraSigla">CRSFN-SECRETARIA-EXECUTIVA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97320950 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 18:13</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97297361 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 16:32</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Gabinete do Presidente do CRSFN" title=" Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97297359 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 16:32</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>O Usuário Externo Rodrigo Jesuino Bittencourt efetivou Peticionamento Intercorrente, tendo gerado o recibo 18545097 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97297344 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 16:32</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18545095 (Formulário Formulario de Identificação), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97276802 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 15:28</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97265170 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 14:52</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Serviço de autuação de recursos - SEPAS / SE / CRSFN" title=" Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97265169 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 14:52</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>O Usuário Externo Rodrigo Jesuino Bittencourt efetivou Peticionamento Intercorrente, tendo gerado o recibo 18538944 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97265153 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 14:52</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 18538940 (Documentos Anexos Formulario), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97265139 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 14:52</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 18538937 (Documentos Anexos Identificação Rodrigo Bittencourt), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97265129 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 14:52</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 18538935 (Petição Pedido Acesso)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97237151 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:36</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97234732 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:23</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Gabinete do Presidente do CRSFN" title=" Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97234731 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:23</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>O Usuário Externo Rodrigo Jesuino Bittencourt efetivou Peticionamento Intercorrente, tendo gerado o recibo 18533190 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97234720 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:23</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18533188 (Documentos Anexos Doc. 1 Procuracao), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97234714 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:23</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18533186 (Petição Regularizacao Representacao Processual)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97234702 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:22</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18533182 (Documentos Anexos Doc. 4 Substabelecimento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97234695 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:22</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18533181 (Documentos Anexos Doc. 3 Substabelecimento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97234688 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 12:22</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18533180 (Documentos Anexos Doc. 2 Substabelecimento), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97218644 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 11:26</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97208792 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 10:54</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Gabinete do Presidente do CRSFN" title=" Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97208790 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 10:54</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>O Usuário Externo LUIZ RIBEIRO DE ANDRADE efetivou Peticionamento Intercorrente, tendo gerado o recibo 18528050 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97208778 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 10:54</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18528049 (Procuração Procuração de Wesley Mendonça Batista), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97208771 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 10:54</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Registro de documento externo público 18528047 (Petição requerendo juntada de procuração), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97179702 -->
+<tr class="andamentoConcluido">
+<td align="center">08/09/2021 09:11</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97150257 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 20:00</td>
+<td align="center"><a alt="Gabinete do Presidente do CRSFN" title="Gabinete do Presidente do CRSFN" class="ancoraSigla">CRSFN-PRESIDENTE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97127096 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 16:49</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071762 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria do Colegiado" title=" Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071761 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>O Usuário Externo LUIZ RIBEIRO DE ANDRADE efetivou Peticionamento Intercorrente, tendo gerado o recibo 18502355 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071753 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18502354 (Formulário Identificação de parte e procurador), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071747 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18502352 (Formulário Identificação de parte e procurador), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071742 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18502351 (RG OAB/DF Luiz Ribeiro de Andrade), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071731 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18502347 (RG OAB/DF Francisco José de Siqueira), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071726 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18502346 (Substabelecimento Procuração), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071721 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18502345 (Pedido de Retirada de Pauta Petição), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97071720 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:53</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97070853 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:45</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Secretaria do Colegiado" title=" Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97070852 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:45</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>O Usuário Externo Waneska Tagnin Overbeck efetivou Peticionamento Intercorrente, tendo gerado o recibo 18502165 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97070841 -->
+<tr class="andamentoConcluido">
+<td align="center">06/09/2021 12:45</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18502162 (Substabelecimento Para FABIANO JANTALIA)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95541373 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2021 12:05</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 18224170 (Pauta DOU - 452ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95541202 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2021 12:04</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 95538479 -->
+<tr class="andamentoConcluido">
+<td align="center">25/08/2021 11:55</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 94419689 -->
+<tr class="andamentoConcluido">
+<td align="center">17/08/2021 13:08</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo incluído em pauta (Conselho de Recursos do Sistema Financeiro Nacional, 14/09/2021 08:00)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 94419012 -->
+<tr class="andamentoConcluido">
+<td align="center">17/08/2021 13:07</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Publicação do documento 17281441 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 17/08/2021 13:07:06 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 83217812 -->
+<tr class="andamentoConcluido">
+<td align="center">21/05/2021 11:33</td>
+<td align="center"><a alt="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" title="Sessão de Julgamento - Processos incluídos em pauta - SE / CRSFN" class="ancoraSigla">CRSFN-SE-SESSÃO</a></td>
+
+<td>Registro de documento externo público 15939301 (Ata da 447ª sessão de julgamento.)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 77991608 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2021 19:39</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 77971113 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2021 17:37</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 77971112 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2021 17:37</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo distribuído (Conselho de Recursos do Sistema Financeiro Nacional, Haroldo Mavignier Guedes Alcoforado)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 77963581 -->
+<tr class="andamentoConcluido">
+<td align="center">13/04/2021 17:10</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 77807528 -->
+<tr class="andamentoConcluido">
+<td align="center">12/04/2021 21:16</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 76296207 -->
+<tr class="andamentoConcluido">
+<td align="center">30/03/2021 09:43</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 14687566 (RG Waneska Tagnin Overbeck) movido do processo 10372.100001/2021-11.<br />
+Documento tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 76296127 -->
+<tr class="andamentoConcluido">
+<td align="center">30/03/2021 09:43</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 14687585 (Procuração Waneska Tagnin Overbeck) movido do processo 10372.100001/2021-11.<br />
+Documento tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 76296012 -->
+<tr class="andamentoConcluido">
+<td align="center">30/03/2021 09:42</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 14687537 (Formulário Waneska Tagnin Overbeck) movido do processo 10372.100001/2021-11.<br />
+Documento tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 75792657 -->
+<tr class="andamentoConcluido">
+<td align="center">25/03/2021 11:06</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 14574417 (Substabelecimento Marcus Paulo Souza de Carvalho) movido do processo 10372.100001/2021-11.<br />
+Documento tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 75792295 -->
+<tr class="andamentoConcluido">
+<td align="center">25/03/2021 11:04</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 14574327 (RG Marcus Paulo Souza de Carvalho) movido do processo 10372.100001/2021-11.<br />
+Documento tramitado para o processo de origem.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 75791781 -->
+<tr class="andamentoConcluido">
+<td align="center">25/03/2021 11:02</td>
+<td align="center"><a alt="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" title="Conselho de Recursos do Sistema Financeiro Nacional - CRSFN" class="ancoraSigla">CRSFN</a></td>
+
+<td>Documento 14574114 (Formulário Marcus Paulo Souza de Carvalho) movido do processo 10372.100001/2021-11.<br />
+Documento tramitado para o processo de origem<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 75441422 -->
+<tr class="andamentoConcluido">
+<td align="center">23/03/2021 11:39</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 14539223 (Extrato decisão cvm)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 75438908 -->
+<tr class="andamentoConcluido">
+<td align="center">23/03/2021 11:31</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Autuado no CRSFN.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 75438482 -->
+<tr class="andamentoConcluido">
+<td align="center">23/03/2021 11:29</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 14538656 (Inteiro teor 1ª)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 75438465 -->
+<tr class="andamentoConcluido">
+<td align="center">23/03/2021 11:29</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
+</div>
+<input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="89787e020c93743d0ad845050993065f" />
+  	</form>
+</div></div>
+</div>
+<input type="hidden" id="hdnInfraPrefixoCookie" name="hdnInfraPrefixoCookie" value="ME_SEI_" />
+<div id="infraDivImpressao" class="infraImpressao"></div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # preparação ----------------------------------------------------------------
 
-processos <- c("10372100225201917", "10372100141201894")
+# processos <- c("10372100225201917", "10372100141201894")
 
 rx_sei <- "(19957|10372|00783)\\.?[0-9]{6}[/-]?20[0-9]{2}-?[0-9]{2}"
 
@@ -10,18 +10,19 @@ processos_cvm <- obsMC::da_conselho_cvm |>
   abjutils::clean_cnj() |>
   unique()
 
-path_pag <- "data-raw/paginas"
-processos_sei <- path_pag |>
-  fs::dir_ls() |>
+processos_sei <- fs::dir_ls("data-raw/paginas") |>
   purrr::map_dfr(parse_sei, .id = "files") |>
   dplyr::pull(id)
 
+processos <- c(processos_cvm, processos_sei) |>
+  unique()
 
 path_processos <- "data-raw/processos"
 path_movs <- "data-raw/movs"
 
 # passo 1: download_processo() --------------------------------------------
 
+# se eu quiser só com os processos iniciais da CVM, usar o "processos_cvm", no lugar de "processos"
 purrr::walk(processos, download_processo, path_processos)
 
 # passo 2: parse_processo() -----------------------------------------------
@@ -49,5 +50,3 @@ dados_movs <- path_movs |>
 # 10372000023201615
 
 usethis::use_data(dados_movs, overwrite = TRUE)
-
-

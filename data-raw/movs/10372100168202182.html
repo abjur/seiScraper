@@ -1,0 +1,720 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br" >
+<head >
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="robots" content="noindex" />
+<title>:: SEI - Pesquisa Processual ::</title>
+<link href="/infra_css/infra-global-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-global-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/esquemas/azul_celeste/infra-esquema-2.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-tooltip.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-barra-progresso.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="css/infra-esquema-local.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_css/infra-impressao-global.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="print" />
+<link href="/infra_css/infra-ajax.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/calendario/infra-calendario.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/arvore/infra-arvore.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/mapa/infra-mapa.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.structure.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.theme.min.css?1.11.1" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/multiple-select/multiple-select.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<link href="/infra_js/modal/jquery.modalLink-1.0.0.css?0e1ad6726084379aabdaebcc2dc407fb" rel="stylesheet" type="text/css" media="all" />
+<style type="text/css" >
+<!--/*--><![CDATA[/*><!--*/
+.colunaAcoes {display:none;}
+
+div.infraBarraSistemaE {width:90%}
+div.infraBarraSistemaD {width:5%}
+div.infraBarraComandos {width:99%}
+
+table caption {
+  text-align:left !important;
+  font-size: 1.2em;
+  font-weight:bold;
+}
+
+.andamentoAberto {
+  background-color:white;
+}
+
+.andamentoConcluido {
+  background-color:white;
+}
+
+
+#tblCabecalho{margin-top:1;}
+#tblDocumentos {margin-top:1.5em;}
+#tblHistorico {margin-top:1.5em;}
+#divInfraAreaPaginacaoSuperior {display: none;}
+#divinfraAndamentoAreaPaginacaoSuperior {display: none;}
+
+#lblCaptcha {position: absolute; top:30%; left: 20%; width: 80%}
+#txtCaptcha{position: absolute; top:56%; left: 20%; height:15%; width:56%;font-size: 3em;}
+#btnEnviarCaptcha {position: absolute; top:80%; left: 20%; width:56%}
+
+#divInfraModal{
+	
+	display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 50%; 
+    height: 50%; 
+    overflow: auto;
+   
+}
+
+
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-image: url("imagens/bg_barra_sistema.jpg");
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+span.retiraAncoraPadraoAzul{font-size: 1.2em;}
+
+/*]]>*/-->
+</style>
+<script type="text/javascript">var INFRA_PATH_IMAGENS='/infra_css/imagens',INFRA_PATH_JS='/infra_js',INFRA_PATH_CSS='/infra_css';</script>
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-1.12.4.min.js?1.12.4"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/jquery/jquery-ui-1.11.1/jquery-ui.min.js?1.11.1"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/multiple-select/jquery.multiple.select.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/ddslick/jquery.ddslick.min.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/modal/jquery.modalLink-1.0.0.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+
+
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/jquery.smartmenus.js"></script>
+<script type="text/javascript" charset="utf-8" src="/infra_js/smartmenu/addons/keyboard/jquery.smartmenus.keyboard.js"></script>
+			
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUtil.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraCookie.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraUpload.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraBotaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAcaoMenu.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTabelaDinamica.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraLupas.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraSelectEditavel.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraAjax.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/InfraTooltip.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/calendario/InfraCalendario.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript" charset="iso-8859-1" src="/infra_js/arvore/InfraArvore.js?0e1ad6726084379aabdaebcc2dc407fb"></script>
+<script type="text/javascript">
+$(function() {
+	$('#main-menu').smartmenus({
+    subMenusSubOffsetX: 1,
+    subMenusSubOffsetY: -8
+  });
+
+  //MENU CTRL+ALT+F9 
+  $('#main-menu').smartmenus('keyboardSetHotkey', 120, ['ctrlKey', 'altKey']);
+});
+</script>
+
+<script type="text/javascript" charset="iso-8859-1" >
+<!--//--><![CDATA[//><!--
+
+
+function inicializar(){
+
+  
+  infraEfeitoTabelas();
+}
+
+
+
+$(document).unbind("keyup").keyup(function(e){
+	e.preventDefault();
+    var code = e.which;
+    if(code==13){
+    	var modal = document.getElementById('divInfraModal');
+        if(modal.style.display == "block"){
+        	fecharPdfModal();
+        	gerarPdf();
+    		
+    	}
+    }
+});
+
+
+
+function gerarPdfModal(){
+
+	if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    	alert('Nenhum documento selecionado.');
+    	return;
+  	}
+	var modal = document.getElementById('divInfraModal');
+	modal.style.display = "block";
+
+}
+
+function fecharPdfModal(){
+	
+    var modal = document.getElementById('divInfraModal');
+	modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+	var modal = document.getElementById('divInfraModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+function gerarPdf() {
+
+  if (document.getElementById('hdnInfraItensSelecionados').value==''){
+    alert('Nenhum documento selecionado.');
+    return;
+  }
+  
+    	fecharPdfModal();
+  
+  infraExibirAviso(false);
+  
+ document.getElementById('hdnFlagGerar').value = '1';
+ document.getElementById('frmProcessoAcessoExternoConsulta').submit();
+}
+
+
+//--><!]]>
+</script>
+</head>
+<body onload="infraProcessarResize();infraProcessarMouseDown();inicializar();">
+<div id="divInfraAreaGlobal" class="infraAreaGlobal">
+<div id="divInfraBarraSuperior" class="infraBarraSuperior">
+<label>MINISTÉRIO DA ECONOMIA</label>
+</div>
+<div id="divInfraBarraSistema" class="infraBarraSistema">
+<div id="divInfraBarraSistemaD" class="infraBarraSistemaD">
+</div>
+<div id="divInfraBarraSistemaE" class="infraBarraSistemaE">
+<img src="imagens/sei_logo_azul_celeste.jpg" title="Sistema Eletrônico de Informações"/><span class="infraTituloLogoSistema">3.1.7</span>
+</div>
+</div>
+<div id="divInfraAreaTela" class="infraAreaTela">
+<div id="divInfraAreaTelaD" class="infraAreaTelaD" style="width:99%">
+<div id="divInfraBarraLocalizacao" class="infraBarraLocalizacao">Pesquisa Processual</div>
+
+<form id="frmProcessoAcessoExternoConsulta" method="post">
+ 
+ 		<div id="divInfraModal" class="infraFundoTransparente" style="position: fixed; width: 100%; height: 100%; visibility: visible;">
+ 		   <div id="divCaptcha"  class="infraAreaDados" style="height: 220px; width: 230px; background-color:white">
+ 				<div class="modal-header">
+      				<span id="spnClose" class="close" onclick="fecharPdfModal();">×</span>
+      				<h2 style ="color: white;font-size: 1.2em;font-weight: bold;">Digite o Código da Imagem</h2>
+    			</div>
+ 				<div class="modal-body">
+ 		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=50-114" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
+  					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
+  		   		</div>
+    			
+  			</div>
+    	</div>
+  			<input type="hidden" id="hdnInfraTipoPagina" name="hdnInfraTipoPagina" value="3" />
+<div id="divInfraBarraComandosSuperior" class="infraBarraComandos">
+<button tabindex="451" type="button" id="btnPush" value="Push" onclick="location.href='https://sei.economia.gov.br/sei/modulos/PUSH/push_assinar_processo.php?idProcedimento=20174995'" class="infraButton">Incluir no PUSH</button>&nbsp;
+</div>
+<table id="tblCabecalho" width="99.3%" class="infraTable" summary="Cabeçalho de Processo" >
+<tr><th class="infraTh" colspan="2">Autuação</th></tr>
+<tr class="infraTrClara"><td width="20%">Processo:</td><td>10372.100168/2021-82<img src="/infra_css/imagens/espaco.gif"><img src="imagens/sei_chave_restrito.gif" align="absbottom"  title="Acesso Restrito.&#13CRSFN Inicial (CRSFN Inicial)"></td></tr>
+<tr class="infraTrClara"><td width="20%">Tipo:</td><td>Recurso - CRSFN-CVM</td></tr>
+<tr class="infraTrClara"><td width="20%">Data de Registro:</td><td>12/08/2021</td></tr>
+<tr class="infraTrClara"><td width="20%">Interessados:</td><td> Banco BTG Pactual S.A. (30.306.294/0001-45)<br /> </td></tr>
+</table>
+<p style="font-size: 1.2em;"> Para condições de acesso a processo ou documento, favor consultar a unidade onde o processo se encontra em andamento. Eventualmente a unidade pode solicitar o <a style="font-size: 1em;" href="https://www.gov.br/economia/pt-br/acesso-a-informacao/sei/usuario-externo-1" target="_blank">cadastro de usuário externo no SEI/ME</a> para tal disponibilização.</p><div id="divInfraAreaTabela" class="infraAreaTabela" >
+
+</div>
+
+<input type="hidden" id="hdnInfraNroItens" name="hdnInfraNroItens" value="0" />
+<input type="hidden" id="hdnInfraItemId" name="hdnInfraItemId" value="" />
+<input type="hidden" id="hdnInfraItens" name="hdnInfraItens" value="" />
+<input type="hidden" id="hdnInfraItensHash" name="hdnInfraItensHash" value="" />
+<input type="hidden" id="hdnInfraItensSelecionados" name="hdnInfraItensSelecionados" value="" />
+
+<input type="hidden" id="hdnInfraSelecoes" name="hdnInfraSelecoes" value="Infra" />
+
+<input type="hidden" id="hdnInfraCampoOrd" name="hdnInfraCampoOrd" value="Registro" />
+<input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
+<div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
+<table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
+<caption class="infraCaption">Lista de Andamentos (62 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+
+
+<!-- 135388261 -->
+<tr class="andamentoAberto">
+<td align="center">10/06/2022 14:01</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Matheus Vasconcellos Jacobina Aires" title="Conselheiro Matheus Vasconcellos Jacobina Aires" class="ancoraSigla">CRSFN-CONS.MATHEUS</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 135337390 -->
+<tr class="andamentoConcluido">
+<td align="center">10/06/2022 10:56</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 135319903 -->
+<tr class="andamentoConcluido">
+<td align="center">10/06/2022 10:09</td>
+<td align="center"><a alt="Envio de voto e declaração de voto - SE / CRSFN" title="Envio de voto e declaração de voto - SE / CRSFN" class="ancoraSigla">CRSFN-SE-PÓS-JULGAMENTO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 135256990 -->
+<tr class="andamentoAberto">
+<td align="center">09/06/2022 17:32</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo julgado (Conselho de Recursos do Sistema Financeiro Nacional)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 134780110 -->
+<tr class="andamentoAberto">
+<td align="center">07/06/2022 15:03</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 134738058 -->
+<tr class="andamentoConcluido">
+<td align="center">07/06/2022 12:22</td>
+<td align="center"><a alt="Conselheiro Pedro Frade de Andrade" title="Conselheiro Pedro Frade de Andrade" class="ancoraSigla">CRSFN-CONS.PEDRO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 134648282 -->
+<tr class="andamentoAberto">
+<td align="center">06/06/2022 22:42</td>
+<td align="center"><a alt="Conselheiro Igor Muniz" title="Conselheiro Igor Muniz" class="ancoraSigla">CRSFN-CONS.IGOR MUNIZ</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 134458317 -->
+<tr class="andamentoConcluido">
+<td align="center">06/06/2022 08:42</td>
+<td align="center"><a alt="Conselheiro Igor Muniz" title="Conselheiro Igor Muniz" class="ancoraSigla">CRSFN-CONS.IGOR MUNIZ</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 134143217 -->
+<tr class="andamentoConcluido">
+<td align="center">02/06/2022 14:32</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 25342929 (Ata da 460ª sessão de julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133102599 -->
+<tr class="andamentoConcluido">
+<td align="center">26/05/2022 14:10</td>
+<td align="center"><a alt="Conselheiro Matheus Vasconcellos Jacobina Aires" title="Conselheiro Matheus Vasconcellos Jacobina Aires" class="ancoraSigla">CRSFN-CONS.MATHEUS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133052226 -->
+<tr class="andamentoConcluido">
+<td align="center">26/05/2022 10:50</td>
+<td align="center"><a alt="Conselheiro Matheus Vasconcellos Jacobina Aires" title="Conselheiro Matheus Vasconcellos Jacobina Aires" class="ancoraSigla">CRSFN-CONS.MATHEUS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133052195 -->
+<tr class="andamentoConcluido">
+<td align="center">26/05/2022 10:50</td>
+<td align="center"><a alt="Conselheiro Matheus Vasconcellos Jacobina Aires" title="Conselheiro Matheus Vasconcellos Jacobina Aires" class="ancoraSigla">CRSFN-CONS.MATHEUS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133004591 -->
+<tr class="andamentoConcluido">
+<td align="center">26/05/2022 07:36</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 25127158 (Pauta DOU - 461ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133004568 -->
+<tr class="andamentoConcluido">
+<td align="center">26/05/2022 07:36</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 133004334 -->
+<tr class="andamentoConcluido">
+<td align="center">26/05/2022 07:29</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 131460927 -->
+<tr class="andamentoConcluido">
+<td align="center">16/05/2022 15:38</td>
+<td align="center"><a alt="Conselheira Ilene Patrícia de Noronha Najjarian" title="Conselheira Ilene Patrícia de Noronha Najjarian" class="ancoraSigla">CRSFN-CONS.ILENE</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 131457980 -->
+<tr class="andamentoConcluido">
+<td align="center">16/05/2022 15:27</td>
+<td align="center"><a alt="Conselheira Ilene Patrícia de Noronha Najjarian" title="Conselheira Ilene Patrícia de Noronha Najjarian" class="ancoraSigla">CRSFN-CONS.ILENE</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130947287 -->
+<tr class="andamentoConcluido">
+<td align="center">12/05/2022 10:38</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo incluído em pauta (Conselho de Recursos do Sistema Financeiro Nacional, 07/06/2022 08:00)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130946775 -->
+<tr class="andamentoConcluido">
+<td align="center">12/05/2022 10:37</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130912157 -->
+<tr class="andamentoConcluido">
+<td align="center">12/05/2022 08:45</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130608637 -->
+<tr class="andamentoConcluido">
+<td align="center">10/05/2022 15:52</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo retirado da pauta (Conselho de Recursos do Sistema Financeiro Nacional).<br />
+retirado de pauta a pedido do Relator.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130342796 -->
+<tr class="andamentoConcluido">
+<td align="center">09/05/2022 13:58</td>
+<td align="center"><a alt="Conselheiro Sérgio Varella" title="Conselheiro Sérgio Varella" class="ancoraSigla">CRSFN-CONS.SERGIO VARELLA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130341414 -->
+<tr class="andamentoConcluido">
+<td align="center">09/05/2022 13:54</td>
+<td align="center"><a alt="Conselheiro Sérgio Varella" title="Conselheiro Sérgio Varella" class="ancoraSigla">CRSFN-CONS.SERGIO VARELLA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130249989 -->
+<tr class="andamentoConcluido">
+<td align="center">09/05/2022 09:13</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130226170 -->
+<tr class="andamentoConcluido">
+<td align="center">09/05/2022 00:10</td>
+<td align="center"><a alt="Serviço de controle de diligências - SEPAS / SE / CRSFN" title="Serviço de controle de diligências - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DILIGÊNCIAS</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Ana Maria Imbiriba Corrêa" title="Conselheira Ana Maria Imbiriba Corrêa" class="ancoraSigla">CRSFN-CONS.CORRÊA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130225628 -->
+<tr class="andamentoConcluido">
+<td align="center">08/05/2022 22:41</td>
+<td align="center"><a alt="Conselheira Ana Maria Imbiriba Corrêa" title="Conselheira Ana Maria Imbiriba Corrêa" class="ancoraSigla">CRSFN-CONS.CORRÊA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 130213192 -->
+<tr class="andamentoConcluido">
+<td align="center">07/05/2022 14:28</td>
+<td align="center"><a alt="Conselheira Ana Maria Imbiriba Corrêa" title="Conselheira Ana Maria Imbiriba Corrêa" class="ancoraSigla">CRSFN-CONS.CORRÊA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 129914532 -->
+<tr class="andamentoConcluido">
+<td align="center">05/05/2022 13:27</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 129914506 -->
+<tr class="andamentoConcluido">
+<td align="center">05/05/2022 13:27</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheira Márcia Gomes Lencastre" title="Conselheira Márcia Gomes Lencastre" class="ancoraSigla">CRSFN-CONS.MARCIA</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 129913333 -->
+<tr class="andamentoConcluido">
+<td align="center">05/05/2022 13:18</td>
+<td align="center"><a alt="Conselheira Márcia Gomes Lencastre" title="Conselheira Márcia Gomes Lencastre" class="ancoraSigla">CRSFN-CONS.MARCIA</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 129909645 -->
+<tr class="andamentoConcluido">
+<td align="center">05/05/2022 12:55</td>
+<td align="center"><a alt="Conselheira Márcia Gomes Lencastre" title="Conselheira Márcia Gomes Lencastre" class="ancoraSigla">CRSFN-CONS.MARCIA</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128895288 -->
+<tr class="andamentoConcluido">
+<td align="center">28/04/2022 10:34</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Registro de documento externo público 24358262 (Pauta DOU - 460ª Sessão de Julgamento)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128887416 -->
+<tr class="andamentoConcluido">
+<td align="center">28/04/2022 10:13</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128886925 -->
+<tr class="andamentoConcluido">
+<td align="center">28/04/2022 10:11</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128209964 -->
+<tr class="andamentoConcluido">
+<td align="center">23/04/2022 15:36</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Publicação do documento 23399544 (CRSFN - Relatório) no veículo Boletim de Serviço Eletrônico de 25/04/2022 <span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 128209864 -->
+<tr class="andamentoConcluido">
+<td align="center">23/04/2022 15:29</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo incluído em pauta (Conselho de Recursos do Sistema Financeiro Nacional, 10/05/2022 00:00)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105173610 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 15:48</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105151043 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 14:55</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Conselheiro Haroldo Mavignier Guedes Alcoforado" title=" Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105151036 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 14:55</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>O Usuário Externo Glaucia Mara Coelho efetivou Peticionamento Intercorrente, tendo gerado o recibo 19954329 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105150955 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 14:54</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19954324 (Carteira da OAB), conferido com cópia simples<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105150931 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 14:54</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19954321 (Procuração e substabelecimento), conferido com cópia simples<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105150913 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 14:54</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19954317 (Formulário Indentificação de Partes e Procuradores)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 105150887 -->
+<tr class="andamentoConcluido">
+<td align="center">04/11/2021 14:54</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19954311 (Petição Cadastro Glaucia Mara Coelho)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104948406 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 15:24</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104921731 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 14:14</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt=" Conselheiro Haroldo Mavignier Guedes Alcoforado" title=" Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO </a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104921730 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 14:14</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>O Usuário Externo João Paulo Saueia Godoy efetivou Peticionamento Intercorrente, tendo gerado o recibo 19910474 (Recibo Eletrônico de Protocolo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104921720 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 14:14</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19910471 (Documento OAB do procurador), conferido com cópia simples<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104921711 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 14:14</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19910469 (Ata de eleição diretores do BTG)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104921694 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 14:14</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19910467 (Estatuto do BTG)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104921683 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 14:14</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19910465 (Procuração outorgada por BTG), conferido com documento original<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 104921676 -->
+<tr class="andamentoConcluido">
+<td align="center">03/11/2021 14:14</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Registro de documento externo público 19910464 (Formulário Identificação de Partes e Procuradores), conferido com cópia simples<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98090920 -->
+<tr class="andamentoConcluido">
+<td align="center">14/09/2021 20:52</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98083224 -->
+<tr class="andamentoConcluido">
+<td align="center">14/09/2021 18:51</td>
+<td align="center"><a alt="Conselheiro Haroldo Mavignier Guedes Alcoforado" title="Conselheiro Haroldo Mavignier Guedes Alcoforado" class="ancoraSigla">CRSFN-CONS.HAROLDO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 98083223 -->
+<tr class="andamentoConcluido">
+<td align="center">14/09/2021 18:51</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo distribuído (Conselho de Recursos do Sistema Financeiro Nacional, Haroldo Mavignier Guedes Alcoforado)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97727849 -->
+<tr class="andamentoConcluido">
+<td align="center">12/09/2021 23:54</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 97727846 -->
+<tr class="andamentoConcluido">
+<td align="center">12/09/2021 23:54</td>
+<td align="center"><a alt="Secretaria do Colegiado" title="Secretaria do Colegiado" class="ancoraSigla">CRSFN-SE-COLEGIADO</a></td>
+
+<td>Processo remetido pela unidade <a href="javascript:void(0);" alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a><span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 93793634 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2021 08:36</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 17906486 (Decisão de 1ª instância)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 93790421 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2021 08:13</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Autuado no CRSFN.<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 93789983 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2021 08:09</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 17905717 (Anexo)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 93789973 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2021 08:09</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 17905716 (Inteiro teor 2)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 93789904 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2021 08:09</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Registro de documento externo público 17905710 (Inteiro teor 1)<span style="line-height:.5em"><br /></span></td></tr>
+
+<!-- 93789899 -->
+<tr class="andamentoConcluido">
+<td align="center">12/08/2021 08:08</td>
+<td align="center"><a alt="Serviço de autuação de recursos - SEPAS / SE / CRSFN" title="Serviço de autuação de recursos - SEPAS / SE / CRSFN" class="ancoraSigla">CRSFN-SE-DISTRIBUIÇÃO</a></td>
+
+<td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
+</div>
+<input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="c77c0d52f5b7f95978a1457565ad605b" />
+  	</form>
+</div></div>
+</div>
+<input type="hidden" id="hdnInfraPrefixoCookie" name="hdnInfraPrefixoCookie" value="ME_SEI_" />
+<div id="infraDivImpressao" class="infraImpressao"></div>
+</body>
+</html>

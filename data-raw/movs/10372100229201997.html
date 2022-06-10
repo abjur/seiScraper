@@ -237,7 +237,7 @@ function gerarPdf() {
     			</div>
  				<div class="modal-body">
  		   			<label id="lblCaptcha" accesskey="" class="infraLabelObrigatorio">
-		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=51-56" alt="Não foi possível carregar imagem de confirmação" /> </label>
+		   			<img src="/infra_js/infra_gerar_captcha.php?codetorandom=109-65" alt="Não foi possível carregar imagem de confirmação" /> </label>
 		   			<input type="text" id="txtCaptcha" name="txtCaptcha" class="infraText" maxlength="4" value="" />
   					<button id="btnEnviarCaptcha" type="submit" accesskey="G" name="btnEnviarCaptcha" value="Enviar" onclick="gerarPdf();" class="infraButton"><span class="infraTeclaAtalho">E</span>nviar</button>
   		   		</div>
@@ -271,11 +271,18 @@ function gerarPdf() {
 <input type="hidden" id="hdnInfraTipoOrd" name="hdnInfraTipoOrd" value="ASC" />
 <div id="divinfraAndamentoAreaTabela" class="infraAreaTabela" >
 <table id="tblHistorico" width="99.3%" class="infraTable" summary="Histórico de Andamentos">
-<caption class="infraCaption">Lista de Andamentos (114 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
+<caption class="infraCaption">Lista de Andamentos (115 registros):</caption><tr><th class="infraTh" width="20%">Data/Hora</th><th class="infraTh" width="10%">Unidade</th><th class="infraTh">Descrição</th></tr>
 
+
+<!-- 134642108 -->
+<tr class="andamentoAberto">
+<td align="center">06/06/2022 19:51</td>
+<td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
+
+<td>Processo recebido na unidade<span style="line-height:.5em"><br /></span></td></tr>
 
 <!-- 133973004 -->
-<tr class="andamentoAberto">
+<tr class="andamentoConcluido">
 <td align="center">01/06/2022 15:58</td>
 <td align="center"><a alt="CRSFN - Comissão de Valores Mobiliários - 1ª instância" title="CRSFN - Comissão de Valores Mobiliários - 1ª instância" class="ancoraSigla">CRSFN-CVM</a></td>
 
@@ -1075,7 +1082,7 @@ Processo será pautado para a reunião de junho/2021.<span style="line-height:.5em
 <td>Processo restrito gerado, CRSFN Inicial (CRSFN Inicial)<span style="line-height:.5em"><br /></span></td></tr></table><br />
 </div>
 <input type="hidden" id="hdnFlagGerar" name="hdnFlagGerar" value="0" />
-     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="866d90e0921ac7b024b47d672445a086" />
+     	<input type="hidden" id="hdnCaptchaMd5" name="hdnCaptchaMd5" class="infraText" value="fc924ef5fe0a8512a4dca154d6f6e16f" />
   	</form>
 </div></div>
 </div>
