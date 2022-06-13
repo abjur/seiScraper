@@ -134,6 +134,54 @@ aux_dt_julgamento <- dados_movs |>
   dplyr::select(id, dt_julgamento) |>
   dplyr::full_join(todos_processos)
 
+
+# aux_parecer_teve --------------------------------------------------------
+aux_parecer_teve <- dados_movs |>
+  dplyr::mutate(
+    parecer = stringr::str_detect(descricao, stringr::regex("PGFN", TRUE))
+  ) |>
+  dplyr::group_by(id) |>
+  dplyr::summarise(
+    parecer_teve = any(parecer)
+  ) |>
+  dplyr::ungroup()
+
+# aux_parecer_numero ------------------------------------------------------
+aux_parecer_numero <- dados_movs |>
+  dplyr::mutate(
+    parecer_numero = stringr::str_extract(descricao, stringr::regex("pgfn.+", TRUE)),
+    parecer_numero = stringr::str_extract(parecer_numero, stringr::regex("[0-9\\.]+/[0-9\\-\\.]+", TRUE))
+  ) |>
+  dplyr::filter(!is.na(parecer_numero)) |>
+  dplyr::select(id, parecer_numero) |>
+  dplyr::group_by(id) |>
+  tidyr::nest() |>
+  dplyr::ungroup() |>
+  dplyr::rename(parecer_numero = data)
+
+# aux_dt_parecer ----------------------------------------------------------
+aux_dt_parecer <- dados_movs |>
+  dplyr::transmute(
+    id,
+    data = substr(data_hora, 0,10),
+    data = lubridate::dmy(data),
+    unidade,
+    descricao
+  ) |>
+  dplyr::mutate(
+    parecer = stringr::str_detect(descricao, stringr::regex("PGFN", TRUE)),
+    dt_parecer = NA_real_,
+    dt_parecer = dplyr::case_when(
+      parecer ~ as.integer(data)
+    )
+  ) |>
+  dplyr::group_by(id) |>
+  dplyr::slice(which.min(dt_parecer)) |>
+  dplyr::ungroup() |>
+  dplyr::mutate(dt_parecer = lubridate::as_date(dt_parecer)) |>
+  dplyr::select(id, dt_parecer) |>
+  dplyr::full_join(todos_processos)
+
 # join --------------------------------------------------------------------
 
 da_crsfn <- list(aux_dt_primeira,
@@ -141,7 +189,10 @@ da_crsfn <- list(aux_dt_primeira,
        aux_dt_dist1,
        aux_dt_dist2,
        aux_dt_pauta,
-       aux_dt_julgamento)|>
+       aux_dt_julgamento,
+       aux_parecer_teve,
+       aux_parecer_numero,
+       aux_dt_parecer)|>
   purrr::reduce(dplyr::left_join, by = "id")
 
 # salvar ------------------------------------------------------------------
