@@ -33,3 +33,18 @@ captcha_classify_sei <- function(x, y) {
   if (is.na(l4)) l4 <- ifelse(x > y, l1, l2)
   paste(c(l1, l2, l3, l4), collapse = "")
 }
+
+sei_captcha <- function(r0) {
+  html_sei <- xml2::read_html(r0)
+  u_captcha_endpoint <- html_sei |>
+    xml2::xml_find_all("//img[contains(@src,'captcha')]") |>
+    xml2::xml_attr("src")
+  u_captcha <- paste0("https://sei.economia.gov.br", u_captcha_endpoint)
+  xy <- u_captcha_endpoint |>
+    urltools::param_get("codetorandom") |>
+    stringr::str_split("-") |>
+    unlist() |>
+    as.numeric()
+  ans <- captcha_classify_sei(xy[1], xy[2])
+  ans
+}
