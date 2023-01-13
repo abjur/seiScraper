@@ -33,13 +33,17 @@ sei_body <- function(ans, tipo_processo) {
   )
 }
 
+u_sei <- function() {
+  "https://sei.economia.gov.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar_paginado&id_orgao_acesso_externo=0"
+}
+
 sei_pag <- function(pag, ans, tipo, path) {
   id_pag <- (pag-1)*10
   body <- sei_body(ans, tipo)
   fs::dir_create(path)
   fname <- sprintf("%s/pag_%04d.html", path, pag)
   r <- httr::POST(
-    u_sei,
+    u_sei(),
     query = list(inicio = id_pag),
     body = sei_body(ans, tipo),
     httr::write_disk(fname, TRUE)

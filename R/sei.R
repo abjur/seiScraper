@@ -127,6 +127,8 @@ download_varias_paginas <- function(pag, hash, ano, path) {
   dt_fim_pf <- lubridate::dmy(dt_fim)
   partialfields <- glue::glue("id_tipo_proc:100000502 AND sta_prot:P AND dta_ger:[{dt_inicio_pf}T00:00:00Z TO {dt_fim_pf}T00:00:00Z]")
 
+  ans <- ""
+
   body <- list(
     "txtProtocoloPesquisa" = "",
     "txtCaptcha" = ans,
@@ -248,7 +250,7 @@ download_uma_pagina <- function(ano, path) {
     httr::write_disk(file, TRUE)
   )
 
-  invisble(file)
+  invisible(file)
 }
 
 
